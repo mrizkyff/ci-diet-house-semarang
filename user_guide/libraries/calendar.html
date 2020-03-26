@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Calendaring Class &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Calendaring Class &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="Shopping Cart Class" href="cart.html"/>
         <link rel="prev" title="Caching Driver" href="caching.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -125,7 +124,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="benchmark.html">Benchmarking Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">Caching Driver</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Calendaring Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Calendaring Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cart.html">Shopping Cart Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="config.html">Config Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">Email Class</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -309,7 +310,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="benchmark.html">Benchmarking Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">Caching Driver</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Calendaring Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Calendaring Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cart.html">Shopping Cart Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="config.html">Config Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">Email Class</a></li>
@@ -493,11 +494,11 @@ parameter of the calendar generating function. Consider this example:</p>
 </pre></div>
 </div>
 <p>Using the above example, day numbers 3, 7, 13, and 26 will become links
-pointing to the URLs you’ve provided.</p>
+pointing to the URLs you&#8217;ve provided.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">By default it is assumed that your array will contain links.
-In the section that explains the calendar template below you’ll see how
+In the section that explains the calendar template below you&#8217;ll see how
 you can customize how data passed to your cells is handled so you can
 pass different types of information.</p>
 </div>
@@ -518,8 +519,8 @@ the second parameter of the loading function. Here is an example:</p>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">generate</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>The above code would start the calendar on saturday, use the “long”
-month heading, and the “short” day names. More information regarding
+<p>The above code would start the calendar on saturday, use the &#8220;long&#8221;
+month heading, and the &#8220;short&#8221; day names. More information regarding
 preferences below.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -614,13 +615,13 @@ to this example:</p>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">generate</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>You’ll notice a few things about the above example:</p>
+<p>You&#8217;ll notice a few things about the above example:</p>
 <ul class="simple">
-<li>You must set the “show_next_prev” to TRUE.</li>
+<li>You must set the &#8220;show_next_prev&#8221; to TRUE.</li>
 <li>You must supply the URL to the controller containing your calendar in
-the “next_prev_url” preference. If you don’t, it will be set to the current
+the &#8220;next_prev_url&#8221; preference. If you don&#8217;t, it will be set to the current
 <em>controller/method</em>.</li>
-<li>You must supply the “year” and “month” to the calendar generating
+<li>You must supply the &#8220;year&#8221; and &#8220;month&#8221; to the calendar generating
 function via the URI segments where they appear (Note: The calendar
 class automatically adds the year/month to the base URL you
 provide.).</li>
@@ -676,7 +677,7 @@ will be placed within a pair of pseudo-variables as shown here:</p>
 </pre></div>
 </div>
 <p>Using the array method, you will pass <cite>key =&gt; value</cite> pairs. You can pass as
-many or as few values as you’d like. Omitted keys will use the default values
+many or as few values as you&#8217;d like. Omitted keys will use the default values
 inherited in the calendar class.</p>
 <p>Example:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$prefs</span><span class="p">[</span><span class="s1">&#39;template&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -705,7 +706,7 @@ inherited in the calendar class.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$config</strong> (<em>array</em>) – Configuration parameters</li>
+<li><strong>$config</strong> (<em>array</em>) &#8211; Configuration parameters</li>
 </ul>
 </td>
 </tr>
@@ -728,9 +729,9 @@ inherited in the calendar class.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$year</strong> (<em>int</em>) – Year</li>
-<li><strong>$month</strong> (<em>int</em>) – Month</li>
-<li><strong>$data</strong> (<em>array</em>) – Data to be shown in the calendar cells</li>
+<li><strong>$year</strong> (<em>int</em>) &#8211; Year</li>
+<li><strong>$month</strong> (<em>int</em>) &#8211; Month</li>
+<li><strong>$data</strong> (<em>array</em>) &#8211; Data to be shown in the calendar cells</li>
 </ul>
 </td>
 </tr>
@@ -753,7 +754,7 @@ inherited in the calendar class.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$month</strong> (<em>int</em>) – Month</li>
+<li><strong>$month</strong> (<em>int</em>) &#8211; Month</li>
 </ul>
 </td>
 </tr>
@@ -776,7 +777,7 @@ inherited in the calendar class.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$day_type</strong> (<em>string</em>) – ‘long’, ‘short’, or ‘abr’</li>
+<li><strong>$day_type</strong> (<em>string</em>) &#8211; &#8216;long&#8217;, &#8216;short&#8217;, or &#8216;abr&#8217;</li>
 </ul>
 </td>
 </tr>
@@ -790,7 +791,7 @@ inherited in the calendar class.</p>
 </table>
 <p>Returns an array of day names (Sunday, Monday, etc.) based on the type
 provided. Options: long, short, abr. If no <code class="docutils literal"><span class="pre">$day_type</span></code> is provided (or
-if an invalid type is provided) this method will return the “abbreviated”
+if an invalid type is provided) this method will return the &#8220;abbreviated&#8221;
 style.</p>
 </dd></dl>
 
@@ -802,8 +803,8 @@ style.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$month</strong> (<em>int</em>) – Month</li>
-<li><strong>$year</strong> (<em>int</em>) – Year</li>
+<li><strong>$month</strong> (<em>int</em>) &#8211; Month</li>
+<li><strong>$year</strong> (<em>int</em>) &#8211; Year</li>
 </ul>
 </td>
 </tr>
@@ -839,8 +840,8 @@ become January:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$month</strong> (<em>int</em>) – Month</li>
-<li><strong>$year</strong> (<em>int</em>) – Year</li>
+<li><strong>$month</strong> (<em>int</em>) &#8211; Month</li>
+<li><strong>$year</strong> (<em>int</em>) &#8211; Year</li>
 </ul>
 </td>
 </tr>
@@ -859,7 +860,7 @@ become January:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This method is an alias for <a class="reference internal" href="../helpers/date_helper.html"><span class="doc">Date Helper</span></a> function <a class="reference internal" href="../helpers/date_helper.html#days_in_month" title="days_in_month"><code class="xref php php-func docutils literal"><span class="pre">days_in_month()</span></code></a>.</p>
+<p class="last">This method is an alias for <a class="reference internal" href="../helpers/date_helper.html"><em>Date Helper</em></a> function <a class="reference internal" href="../helpers/date_helper.html#days_in_month" title="days_in_month"><code class="xref php php-func docutils literal"><span class="pre">days_in_month()</span></code></a>.</p>
 </div>
 </dd></dl>
 
@@ -920,8 +921,8 @@ display the calendar.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -942,7 +943,7 @@ display the calendar.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

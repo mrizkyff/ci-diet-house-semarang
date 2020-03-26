@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DB Driver Reference &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>DB Driver Reference &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Helpers" href="../helpers/index.html"/>
         <link rel="prev" title="Database Utility Class" href="utilities.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -171,7 +170,7 @@
 <li class="toctree-l2"><a class="reference internal" href="caching.html">Query Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forge.html">Database Manipulation with Database Forge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utilities.html">Database Utilities Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Database Driver Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Database Driver Reference</a></li>
 </ul>
 </li>
 </ul>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -355,7 +356,7 @@
 <li class="toctree-l2"><a class="reference internal" href="caching.html">Query Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forge.html">Database Manipulation with Database Forge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utilities.html">Database Utilities Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Database Driver Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Database Driver Reference</a></li>
 </ul>
 </li>
 </ul>
@@ -463,7 +464,7 @@ the database.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$persistent</strong> (<em>bool</em>) – Whether to establish a persistent connection or a regular one</li>
+<li><strong>$persistent</strong> (<em>bool</em>) &#8211; Whether to establish a persistent connection or a regular one</li>
 </ul>
 </td>
 </tr>
@@ -480,7 +481,7 @@ the database.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">The returned value depends on the underlying
 driver in use. For example, a <code class="docutils literal"><span class="pre">mysqli</span></code> instance
-will be returned with the ‘mysqli’ driver.</p>
+will be returned with the &#8216;mysqli&#8217; driver.</p>
 </div>
 </dd></dl>
 
@@ -519,7 +520,7 @@ will be returned with the ‘mysqli’ driver.</p>
 </table>
 <p>Keep / reestablish the database connection if no queries
 have been sent for a length of time exceeding the
-server’s idle timeout.</p>
+server&#8217;s idle timeout.</p>
 </dd></dl>
 
 <dl class="method">
@@ -530,7 +531,7 @@ server’s idle timeout.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$database</strong> (<em>string</em>) – Database name</li>
+<li><strong>$database</strong> (<em>string</em>) &#8211; Database name</li>
 </ul>
 </td>
 </tr>
@@ -553,7 +554,7 @@ server’s idle timeout.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$charset</strong> (<em>string</em>) – Character set name</li>
+<li><strong>$charset</strong> (<em>string</em>) &#8211; Character set name</li>
 </ul>
 </td>
 </tr>
@@ -581,7 +582,7 @@ server’s idle timeout.</p>
 </tr>
 </tbody>
 </table>
-<p>The name of the platform in use (mysql, mssql, etc…).</p>
+<p>The name of the platform in use (mysql, mssql, etc...).</p>
 </dd></dl>
 
 <dl class="method">
@@ -608,13 +609,13 @@ server’s idle timeout.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$sql</strong> (<em>string</em>) – The SQL statement to execute</li>
-<li><strong>$binds</strong> (<em>array</em>) – An array of binding data</li>
-<li><strong>$return_object</strong> (<em>bool</em>) – Whether to return a result object or not</li>
+<li><strong>$sql</strong> (<em>string</em>) &#8211; The SQL statement to execute</li>
+<li><strong>$binds</strong> (<em>array</em>) &#8211; An array of binding data</li>
+<li><strong>$return_object</strong> (<em>bool</em>) &#8211; Whether to return a result object or not</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">TRUE for successful “write-type” queries, CI_DB_result instance (method chaining) on “query” success, FALSE on failure</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">TRUE for successful &#8220;write-type&#8221; queries, CI_DB_result instance (method chaining) on &#8220;query&#8221; success, FALSE on failure</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">mixed</p>
@@ -624,13 +625,13 @@ server’s idle timeout.</p>
 </table>
 <p>Execute an SQL query.</p>
 <p>Accepts an SQL string as input and returns a result object
-upon successful execution of a “read” type query.</p>
+upon successful execution of a &#8220;read&#8221; type query.</p>
 <p>Returns:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Boolean TRUE upon successful execution of a “write type” queries</li>
+<li>Boolean TRUE upon successful execution of a &#8220;write type&#8221; queries</li>
 <li>Boolean FALSE upon failure</li>
-<li><code class="docutils literal"><span class="pre">CI_DB_result</span></code> object for “read type” queries</li>
+<li><code class="docutils literal"><span class="pre">CI_DB_result</span></code> object for &#8220;read type&#8221; queries</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -643,11 +644,11 @@ upon successful execution of a “read” type query.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$sql</strong> (<em>string</em>) – The SQL statement to execute</li>
+<li><strong>$sql</strong> (<em>string</em>) &#8211; The SQL statement to execute</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whatever the underlying driver’s “query” function returns</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whatever the underlying driver&#8217;s &#8220;query&#8221; function returns</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">mixed</p>
@@ -656,7 +657,7 @@ upon successful execution of a “read” type query.</p>
 </tbody>
 </table>
 <p>A simplified version of the <code class="docutils literal"><span class="pre">query()</span></code> method, appropriate
-for use when you don’t need to get a result object or to
+for use when you don&#8217;t need to get a result object or to
 just send a query to the database and not care for the result.</p>
 </dd></dl>
 
@@ -686,7 +687,7 @@ during the last executed query.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$mode</strong> (<em>bool</em>) – Strict mode flag</li>
+<li><strong>$mode</strong> (<em>bool</em>) &#8211; Strict mode flag</li>
 </ul>
 </td>
 </tr>
@@ -695,7 +696,7 @@ during the last executed query.</p>
 </tr>
 </tbody>
 </table>
-<p>Enable/disable transaction “strict” mode.</p>
+<p>Enable/disable transaction &#8220;strict&#8221; mode.</p>
 <p>When strict mode is enabled, if you are running multiple
 groups of transactions and one group fails, all subsequent
 groups will be rolled back.</p>
@@ -726,7 +727,7 @@ affect any others.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$test_mode</strong> (<em>bool</em>) – Test mode flag</li>
+<li><strong>$test_mode</strong> (<em>bool</em>) &#8211; Test mode flag</li>
 </ul>
 </td>
 </tr>
@@ -782,8 +783,8 @@ determine if it has failed.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$sql</strong> (<em>string</em>) – The SQL statement</li>
-<li><strong>$binds</strong> (<em>array</em>) – An array of binding data</li>
+<li><strong>$sql</strong> (<em>string</em>) &#8211; The SQL statement</li>
+<li><strong>$binds</strong> (<em>array</em>) &#8211; An array of binding data</li>
 </ul>
 </td>
 </tr>
@@ -806,11 +807,11 @@ determine if it has failed.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$sql</strong> (<em>string</em>) – The SQL statement</li>
+<li><strong>$sql</strong> (<em>string</em>) &#8211; The SQL statement</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">TRUE if the SQL statement is of “write type”, FALSE if not</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">TRUE if the SQL statement is of &#8220;write type&#8221;, FALSE if not</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
@@ -818,8 +819,8 @@ determine if it has failed.</p>
 </tr>
 </tbody>
 </table>
-<p>Determines if a query is of a “write” type (such as
-INSERT, UPDATE, DELETE) or “read” type (i.e. SELECT).</p>
+<p>Determines if a query is of a &#8220;write&#8221; type (such as
+INSERT, UPDATE, DELETE) or &#8220;read&#8221; type (i.e. SELECT).</p>
 </dd></dl>
 
 <dl class="method">
@@ -830,7 +831,7 @@ INSERT, UPDATE, DELETE) or “read” type (i.e. SELECT).</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$decimals</strong> (<em>int</em>) – The number of decimal places</li>
+<li><strong>$decimals</strong> (<em>int</em>) &#8211; The number of decimal places</li>
 </ul>
 </td>
 </tr>
@@ -886,7 +887,7 @@ executed so far.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$str</strong> (<em>mixed</em>) – The value to escape, or an array of multiple ones</li>
+<li><strong>$str</strong> (<em>mixed</em>) &#8211; The value to escape, or an array of multiple ones</li>
 </ul>
 </td>
 </tr>
@@ -910,8 +911,8 @@ NULLs.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$str</strong> (<em>mixed</em>) – A string value or array of multiple ones</li>
-<li><strong>$like</strong> (<em>bool</em>) – Whether or not the string will be used in a LIKE condition</li>
+<li><strong>$str</strong> (<em>mixed</em>) &#8211; A string value or array of multiple ones</li>
+<li><strong>$like</strong> (<em>bool</em>) &#8211; Whether or not the string will be used in a LIKE condition</li>
 </ul>
 </td>
 </tr>
@@ -939,7 +940,7 @@ around them.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$str</strong> (<em>mixed</em>) – A string value or array of multiple ones</li>
+<li><strong>$str</strong> (<em>mixed</em>) &#8211; A string value or array of multiple ones</li>
 </ul>
 </td>
 </tr>
@@ -953,15 +954,15 @@ around them.</p>
 </table>
 <p>Escape LIKE strings.</p>
 <p>Similar to <code class="docutils literal"><span class="pre">escape_str()</span></code>, but will also escape the <code class="docutils literal"><span class="pre">%</span></code>
-and <code class="docutils literal"><span class="pre">_</span></code> wildcard characters, so that they don’t cause
+and <code class="docutils literal"><span class="pre">_</span></code> wildcard characters, so that they don&#8217;t cause
 false-positives in LIKE conditions.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">The <code class="docutils literal"><span class="pre">escape_like_str()</span></code> method uses ‘!’ (exclamation mark)
+<p class="last">The <code class="docutils literal"><span class="pre">escape_like_str()</span></code> method uses &#8216;!&#8217; (exclamation mark)
 to escape special characters for <em>LIKE</em> conditions. Because this
 method escapes partial strings that you would wrap in quotes
 yourself, it cannot automatically add the <code class="docutils literal"><span class="pre">ESCAPE</span> <span class="pre">'!'</span></code>
-condition for you, and so you’ll have to manually do that.</p>
+condition for you, and so you&#8217;ll have to manually do that.</p>
 </div>
 </dd></dl>
 
@@ -973,7 +974,7 @@ condition for you, and so you’ll have to manually do that.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
 </ul>
 </td>
 </tr>
@@ -1002,7 +1003,7 @@ as the primary key.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
 </ul>
 </td>
 </tr>
@@ -1026,7 +1027,7 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$constrain_by_prefix</strong> (<em>bool</em>) – TRUE to match table names by the configured dbprefix</li>
+<li><strong>$constrain_by_prefix</strong> (<em>bool</em>) &#8211; TRUE to match table names by the configured dbprefix</li>
 </ul>
 </td>
 </tr>
@@ -1049,7 +1050,7 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table_name</strong> (<em>string</em>) – The table name</li>
+<li><strong>$table_name</strong> (<em>string</em>) &#8211; The table name</li>
 </ul>
 </td>
 </tr>
@@ -1072,7 +1073,7 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – The table name</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; The table name</li>
 </ul>
 </td>
 </tr>
@@ -1095,8 +1096,8 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table_name</strong> (<em>string</em>) – The table name</li>
-<li><strong>$field_name</strong> (<em>string</em>) – The field name</li>
+<li><strong>$table_name</strong> (<em>string</em>) &#8211; The table name</li>
+<li><strong>$field_name</strong> (<em>string</em>) &#8211; The field name</li>
 </ul>
 </td>
 </tr>
@@ -1119,7 +1120,7 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – The table name</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; The table name</li>
 </ul>
 </td>
 </tr>
@@ -1142,7 +1143,7 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$item</strong> (<em>mixed</em>) – The item or array of items to escape</li>
+<li><strong>$item</strong> (<em>mixed</em>) &#8211; The item or array of items to escape</li>
 </ul>
 </td>
 </tr>
@@ -1165,8 +1166,8 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – The target table</li>
-<li><strong>$data</strong> (<em>array</em>) – An associative array of key/value pairs</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; The target table</li>
+<li><strong>$data</strong> (<em>array</em>) &#8211; An associative array of key/value pairs</li>
 </ul>
 </td>
 </tr>
@@ -1189,9 +1190,9 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – The target table</li>
-<li><strong>$data</strong> (<em>array</em>) – An associative array of key/value pairs</li>
-<li><strong>$where</strong> (<em>mixed</em>) – The WHERE statement conditions</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; The target table</li>
+<li><strong>$data</strong> (<em>array</em>) &#8211; An associative array of key/value pairs</li>
+<li><strong>$where</strong> (<em>mixed</em>) &#8211; The WHERE statement conditions</li>
 </ul>
 </td>
 </tr>
@@ -1214,7 +1215,7 @@ table was provided.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$function</strong> (<em>string</em>) – Function name</li>
+<li><strong>$function</strong> (<em>string</em>) &#8211; Function name</li>
 </ul>
 </td>
 </tr>
@@ -1238,7 +1239,7 @@ wrapper.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$path</strong> (<em>string</em>) – Path to the cache directory</li>
+<li><strong>$path</strong> (<em>string</em>) &#8211; Path to the cache directory</li>
 </ul>
 </td>
 </tr>
@@ -1290,8 +1291,8 @@ wrapper.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$segment_one</strong> (<em>string</em>) – First URI segment</li>
-<li><strong>$segment_two</strong> (<em>string</em>) – Second URI segment</li>
+<li><strong>$segment_one</strong> (<em>string</em>) &#8211; First URI segment</li>
+<li><strong>$segment_two</strong> (<em>string</em>) &#8211; Second URI segment</li>
 </ul>
 </td>
 </tr>
@@ -1344,9 +1345,9 @@ wrapper.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$error</strong> (<em>string</em>) – The error message</li>
-<li><strong>$swap</strong> (<em>string</em>) – Any “swap” values</li>
-<li><strong>$native</strong> (<em>bool</em>) – Whether to localize the message</li>
+<li><strong>$error</strong> (<em>string</em>) &#8211; The error message</li>
+<li><strong>$swap</strong> (<em>string</em>) &#8211; Any &#8220;swap&#8221; values</li>
+<li><strong>$native</strong> (<em>bool</em>) &#8211; Whether to localize the message</li>
 </ul>
 </td>
 </tr>
@@ -1374,10 +1375,10 @@ wrapper.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$item</strong> (<em>string</em>) – The item to work with</li>
-<li><strong>$prefix_single</strong> (<em>bool</em>) – Whether to apply the dbprefix even if the input item is a single identifier</li>
-<li><strong>$protect_identifiers</strong> (<em>bool</em>) – Whether to quote identifiers</li>
-<li><strong>$field_exists</strong> (<em>bool</em>) – Whether the supplied item contains a field name or not</li>
+<li><strong>$item</strong> (<em>string</em>) &#8211; The item to work with</li>
+<li><strong>$prefix_single</strong> (<em>bool</em>) &#8211; Whether to apply the dbprefix even if the input item is a single identifier</li>
+<li><strong>$protect_identifiers</strong> (<em>bool</em>) &#8211; Whether to quote identifiers</li>
+<li><strong>$field_exists</strong> (<em>bool</em>) &#8211; Whether the supplied item contains a field name or not</li>
 </ul>
 </td>
 </tr>
@@ -1431,8 +1432,8 @@ position, and escape only the correct identifiers.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -1453,7 +1454,7 @@ position, and escape only the correct identifiers.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

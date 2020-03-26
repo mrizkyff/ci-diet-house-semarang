@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CAPTCHA Helper &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>CAPTCHA Helper &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
         <link rel="next" title="Cookie Helper" href="cookie_helper.html"/>
         <link rel="prev" title="Array Helper" href="array_helper.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -178,7 +177,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Helpers</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="array_helper.html">Array Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">CAPTCHA Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">CAPTCHA Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="date_helper.html">Date Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">Directory Helper</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -362,7 +363,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Helpers</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="array_helper.html">Array Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">CAPTCHA Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">CAPTCHA Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="date_helper.html">Date Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">Directory Helper</a></li>
@@ -480,13 +481,13 @@ ASCII string. You might put together your own word library that you
 can draw randomly from.</li>
 <li>If you do not specify a path to a TRUE TYPE font, the native ugly GD
 font will be used.</li>
-<li>The “captcha” directory must be writable</li>
+<li>The &#8220;captcha&#8221; directory must be writable</li>
 <li>The <strong>expiration</strong> (in seconds) signifies how long an image will remain
 in the captcha folder before it will be deleted. The default is two
 hours.</li>
-<li><strong>word_length</strong> defaults to 8, <strong>pool</strong> defaults to ‘0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ’</li>
-<li><strong>font_size</strong> defaults to 16, the native GD font has a size limit. Specify a “true type” font for bigger sizes.</li>
-<li>The <strong>img_id</strong> will be set as the “id” of the captcha image.</li>
+<li><strong>word_length</strong> defaults to 8, <strong>pool</strong> defaults to &#8216;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#8217;</li>
+<li><strong>font_size</strong> defaults to 16, the native GD font has a size limit. Specify a &#8220;true type&#8221; font for bigger sizes.</li>
+<li>The <strong>img_id</strong> will be set as the &#8220;id&#8221; of the captcha image.</li>
 <li>If any of the <strong>colors</strong> values is missing, it will be replaced by the default.</li>
 </ul>
 <div class="section" id="adding-a-database">
@@ -508,7 +509,7 @@ and has not expired.</p>
 </pre></div>
 </div>
 <p>Here is an example of usage with a database. On the page where the
-CAPTCHA will be shown you’ll have something like this:</p>
+CAPTCHA will be shown you&#8217;ll have something like this:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;captcha&#39;</span><span class="p">);</span>
 <span class="nv">$vals</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;img_path&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;./captcha/&#39;</span><span class="p">,</span>
@@ -530,7 +531,7 @@ CAPTCHA will be shown you’ll have something like this:</p>
 <span class="k">echo</span> <span class="s1">&#39;&lt;input type=&quot;text&quot; name=&quot;captcha&quot; value=&quot;&quot; /&gt;&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Then, on the page that accepts the submission you’ll have something like
+<p>Then, on the page that accepts the submission you&#8217;ll have something like
 this:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// First, delete old captchas</span>
 <span class="nv">$expiration</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="o">-</span> <span class="mi">7200</span><span class="p">;</span> <span class="c1">// Two hour limit</span>
@@ -562,14 +563,14 @@ this:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$data</strong> (<em>array</em>) – Array of data for the CAPTCHA</li>
-<li><strong>$img_path</strong> (<em>string</em>) – Path to create the image in (DEPRECATED)</li>
-<li><strong>$img_url</strong> (<em>string</em>) – URL to the CAPTCHA image folder (DEPRECATED)</li>
-<li><strong>$font_path</strong> (<em>string</em>) – Server path to font (DEPRECATED)</li>
+<li><strong>$data</strong> (<em>array</em>) &#8211; Array of data for the CAPTCHA</li>
+<li><strong>$img_path</strong> (<em>string</em>) &#8211; Path to create the image in</li>
+<li><strong>$img_url</strong> (<em>string</em>) &#8211; URL to the CAPTCHA image folder</li>
+<li><strong>$font_path</strong> (<em>string</em>) &#8211; Server path to font</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">array(‘word’ =&gt; $word, ‘time’ =&gt; $now, ‘image’ =&gt; $img)</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">array(&#8216;word&#8217; =&gt; $word, &#8216;time&#8217; =&gt; $now, &#8216;image&#8217; =&gt; $img)</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
@@ -595,12 +596,6 @@ associative data about the image.</p>
 file extension. It will be a number like this: 1139612155.3422</p>
 <p>The <strong>word</strong> is the word that appears in the captcha image, which if not
 supplied to the function, will be a random string.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Usage of the <code class="docutils literal"><span class="pre">$img_path</span></code>, <code class="docutils literal"><span class="pre">$img_url</span></code> and <code class="docutils literal"><span class="pre">$font_path</span></code>
-parameters is DEPRECATED. Provide them in the <code class="docutils literal"><span class="pre">$data</span></code> array
-instead.</p>
-</div>
 </dd></dl>
 
 </div>
@@ -624,8 +619,8 @@ instead.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -646,7 +641,7 @@ instead.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

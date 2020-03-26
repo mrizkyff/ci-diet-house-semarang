@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Migrations Class &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Migrations Class &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="Output Class" href="output.html"/>
         <link rel="prev" title="Loader Class" href="loader.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -139,7 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="language.html">Language Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loader.html">Loader Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Migrations Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Migrations Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">Output Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parser.html">Template Parser Class</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -323,7 +324,7 @@
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="language.html">Language Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loader.html">Loader Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Migrations Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Migrations Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">Output Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parser.html">Template Parser Class</a></li>
@@ -554,7 +555,7 @@ to update the schema.:</p>
 <td>Enable or disable migrations.</td>
 </tr>
 <tr class="row-odd"><td><strong>migration_path</strong></td>
-<td>APPPATH.’migrations/’</td>
+<td>APPPATH.&#8217;migrations/&#8217;</td>
 <td>None</td>
 <td>The path to your migrations folder.</td>
 </tr>
@@ -576,8 +577,8 @@ version number.</td>
 running migrations.</td>
 </tr>
 <tr class="row-odd"><td><strong>migration_type</strong></td>
-<td>‘timestamp’</td>
-<td>‘timestamp’ / ‘sequential’</td>
+<td>&#8216;timestamp&#8217;</td>
+<td>&#8216;timestamp&#8217; / &#8216;sequential&#8217;</td>
 <td>The type of numeric identifier used to name
 migration files.</td>
 </tr>
@@ -664,7 +665,7 @@ newest migration found in the filesystem.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$target_version</strong> (<em>mixed</em>) – Migration version to process</li>
+<li><strong>$target_version</strong> (<em>mixed</em>) &#8211; Migration version to process</li>
 </ul>
 </td>
 </tr>
@@ -706,8 +707,8 @@ specific versions. It works just like <code class="docutils literal"><span class
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -728,7 +729,7 @@ specific versions. It works just like <code class="docutils literal"><span class
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

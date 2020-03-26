@@ -13,18 +13,18 @@
 		public function index(){
 			$this->load->model('menu_model');
 			$data['menu'] = $this->menu_model->loadMenu();
-			$this->load->view('template/header.php');
-			$this->load->view('home/index.php',$data);
-			$this->load->view('template/footer.php');
+			$this->load->view('public/template/header.php');
+			$this->load->view('public/home/index.php',$data);
+			$this->load->view('public/template/footer.php');
 		
 
 		}		
 		public function daftar_barang(){
 			$this->load->model('menu_model');
 			$data['item'] = $this->menu_model->loadMenu();
-			$this->load->view('template/header.php');
-			$this->load->view('page/daftar_barang.php',$data);
-			$this->load->view('template/footer.php');
+			$this->load->view('public/template/header.php');
+			$this->load->view('public/page/daftar_barang.php',$data);
+			$this->load->view('public/template/footer.php');
 		}
 		public function tambahItem(){
 			$this->load->model('menu_model');
@@ -41,12 +41,12 @@
 			$this->load->library('upload',$config);
 			if(!$this->upload->do_upload('foto')){
 				// $this->session->set_flashdata('gagal','Registrasi Gagal');
-				// redirect('home/index');
+				// redirect('public/home/index');
 			}
 			else{
 				$this->tambahItem();
 				// $this->session->set_flashdata('sukses','Registrasi Berhasil!');
-				// redirect('home/index');
+				// redirect('public/home/index');
 
 			}
 		}
@@ -65,9 +65,9 @@
 		public function laporanPenjualan(){
 			$this->load->model('menu_model');
 			$data['penjualan'] = $this->menu_model->loadLaporanPenjualan();
-			$this->load->view('template/header.php');
-			$this->load->view('page/laporanPenjualan.php',$data);
-			$this->load->view('template/footer.php');
+			$this->load->view('public/template/header.php');
+			$this->load->view('public/page/laporanPenjualan.php',$data);
+			$this->load->view('public/template/footer.php');
 		}
 
 
@@ -80,9 +80,9 @@
 				'jumlahBeli' => $this->input->post('jmlBeli'),
 				'total' => $total
 			];
-			$this->load->view('template/header.php');
-			$this->load->view('page/checkOut.php',$data);
-			$this->load->view('template/footer.php');	
+			$this->load->view('public/template/header.php');
+			$this->load->view('public/page/checkOut.php',$data);
+			$this->load->view('public/template/footer.php');	
 		}
 
 		public function updateStok(){
