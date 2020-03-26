@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Smiley Helper &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Smiley Helper &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
         <link rel="next" title="String Helper" href="string_helper.html"/>
         <link rel="prev" title="Security Helper" href="security_helper.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -192,7 +191,7 @@
 <li class="toctree-l2"><a class="reference internal" href="number_helper.html">Number Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="path_helper.html">Path Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security_helper.html">Security Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Smiley Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Smiley Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">String Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">Text Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">Typography Helper</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -376,7 +377,7 @@
 <li class="toctree-l2"><a class="reference internal" href="number_helper.html">Number Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="path_helper.html">Path Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security_helper.html">Security Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Smiley Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Smiley Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">String Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">Text Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">Typography Helper</a></li>
@@ -482,8 +483,8 @@ Smileys.php and place the code below in it.</p>
 <p class="last">Change the URL in the <a class="reference internal" href="#get_clickable_smileys" title="get_clickable_smileys"><code class="xref php php-func docutils literal"><span class="pre">get_clickable_smileys()</span></code></a>
 function below so that it points to your smiley folder.</p>
 </div>
-<p>You’ll notice that in addition to the smiley helper, we are also using
-the <a class="reference internal" href="../libraries/table.html"><span class="doc">Table Class</span></a>:</p>
+<p>You&#8217;ll notice that in addition to the smiley helper, we are also using
+the <a class="reference internal" href="../libraries/table.html"><em>Table Class</em></a>:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="k">class</span> <span class="nc">Smileys</span> <span class="k">extends</span> <span class="nx">CI_Controller</span> <span class="p">{</span>
@@ -547,8 +548,8 @@ links a generic name that will be tied to a specific id in your view.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$image_url</strong> (<em>string</em>) – URL path to the smileys directory</li>
-<li><strong>$alias</strong> (<em>string</em>) – Field alias</li>
+<li><strong>$image_url</strong> (<em>string</em>) &#8211; URL path to the smileys directory</li>
+<li><strong>$alias</strong> (<em>string</em>) &#8211; Field alias</li>
 </ul>
 </td>
 </tr>
@@ -577,9 +578,9 @@ field alias.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$alias</strong> (<em>string</em>) – Field alias</li>
-<li><strong>$field_id</strong> (<em>string</em>) – Field ID</li>
-<li><strong>$inline</strong> (<em>bool</em>) – Whether we’re inserting an inline smiley</li>
+<li><strong>$alias</strong> (<em>string</em>) &#8211; Field alias</li>
+<li><strong>$field_id</strong> (<em>string</em>) &#8211; Field ID</li>
+<li><strong>$inline</strong> (<em>bool</em>) &#8211; Whether we&#8217;re inserting an inline smiley</li>
 </ul>
 </td>
 </tr>
@@ -610,9 +611,9 @@ placed into the &lt;head&gt; area of your web page.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$str</strong> (<em>string</em>) – Text containing smiley codes</li>
-<li><strong>$image_url</strong> (<em>string</em>) – URL path to the smileys directory</li>
-<li><strong>$smileys</strong> (<em>array</em>) – An array of smileys</li>
+<li><strong>$str</strong> (<em>string</em>) &#8211; Text containing smiley codes</li>
+<li><strong>$image_url</strong> (<em>string</em>) &#8211; URL path to the smileys directory</li>
+<li><strong>$smileys</strong> (<em>array</em>) &#8211; An array of smileys</li>
 </ul>
 </td>
 </tr>
@@ -656,8 +657,8 @@ string, the second must contain the URL to your smiley folder</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -678,7 +679,7 @@ string, the second must contain the URL to your smiley folder</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

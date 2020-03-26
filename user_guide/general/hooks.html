@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Hooks - Extending the Framework Core &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Hooks - Extending the Framework Core &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="General Topics" href="index.html"/>
         <link rel="next" title="Auto-loading Resources" href="autoloader.html"/>
         <link rel="prev" title="Creating Ancillary Classes" href="ancillary_classes.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="creating_drivers.html">Creating Drivers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ancillary_classes.html">Creating Ancillary Classes</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Hooks - Extending the Framework Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">Auto-loading Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">Common Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">Compatibility Functions</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -288,7 +289,7 @@
 <li class="toctree-l2"><a class="reference internal" href="creating_drivers.html">Creating Drivers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ancillary_classes.html">Creating Ancillary Classes</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Hooks - Extending the Framework Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">Auto-loading Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">Common Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">Compatibility Functions</a></li>
@@ -424,11 +425,11 @@
             
   <div class="section" id="hooks-extending-the-framework-core">
 <h1>Hooks - Extending the Framework Core<a class="headerlink" href="#hooks-extending-the-framework-core" title="Permalink to this headline">¶</a></h1>
-<p>CodeIgniter’s Hooks feature provides a means to tap into and modify the
+<p>CodeIgniter&#8217;s Hooks feature provides a means to tap into and modify the
 inner workings of the framework without hacking the core files. When
 CodeIgniter runs it follows a specific execution process, diagramed in
-the <a class="reference internal" href="../overview/appflow.html"><span class="doc">Application Flow</span></a> page. There may be
-instances, however, where you’d like to cause some action to take place
+the <a class="reference internal" href="../overview/appflow.html"><em>Application Flow</em></a> page. There may be
+instances, however, where you&#8217;d like to cause some action to take place
 at a particular stage in the execution process. For example, you might
 want to run a script right before your controllers get loaded, or right
 after, or you might want to trigger one of your own scripts in some
@@ -469,8 +470,8 @@ Note:
 Your script must be located in a directory INSIDE your <em>application/</em>
 directory, so the file path is relative to that directory. For example,
 if your script is located in <em>application/hooks/</em>, you will simply use
-‘hooks’ as your filepath. If your script is located in
-<em>application/hooks/utilities/</em> you will use ‘hooks/utilities’ as your
+&#8216;hooks&#8217; as your filepath. If your script is located in
+<em>application/hooks/utilities/</em> you will use &#8216;hooks/utilities&#8217; as your
 filepath. No trailing slash.</li>
 <li><strong>params</strong> Any parameters you wish to pass to your script. This item
 is optional.</li>
@@ -537,7 +538,7 @@ then the finalized data will be available by calling
 <code class="docutils literal"><span class="pre">$this-&gt;CI-&gt;output-&gt;get_output()</span></code>.</li>
 <li><strong>cache_override</strong>
 Enables you to call your own method instead of the <code class="docutils literal"><span class="pre">_display_cache()</span></code>
-method in the <a class="reference internal" href="../libraries/output.html"><span class="doc">Output Library</span></a>. This permits
+method in the <a class="reference internal" href="../libraries/output.html"><em>Output Library</em></a>. This permits
 you to use your own cache display mechanism.</li>
 <li><strong>post_system</strong>
 Called after the final rendered page is sent to the browser, at the
@@ -565,8 +566,8 @@ browser.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -587,7 +588,7 @@ browser.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Date Helper &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Date Helper &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
         <link rel="next" title="Directory Helper" href="directory_helper.html"/>
         <link rel="prev" title="Cookie Helper" href="cookie_helper.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -180,7 +179,7 @@
 <li class="toctree-l2"><a class="reference internal" href="array_helper.html">Array Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="captcha_helper.html">CAPTCHA Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Date Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Date Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">Directory Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download_helper.html">Download Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email_helper.html">Email Helper</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -364,7 +365,7 @@
 <li class="toctree-l2"><a class="reference internal" href="array_helper.html">Array Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="captcha_helper.html">CAPTCHA Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Date Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Date Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">Directory Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download_helper.html">Download Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email_helper.html">Email Helper</a></li>
@@ -450,7 +451,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$timezone</strong> (<em>string</em>) – Timezone</li>
+<li><strong>$timezone</strong> (<em>string</em>) &#8211; Timezone</li>
 </ul>
 </td>
 </tr>
@@ -462,12 +463,12 @@
 </tr>
 </tbody>
 </table>
-<p>Returns the current time as a UNIX timestamp, referenced either to your server’s
-local time or any PHP supported timezone, based on the “time reference” setting
+<p>Returns the current time as a UNIX timestamp, referenced either to your server&#8217;s
+local time or any PHP suported timezone, based on the &#8220;time reference&#8221; setting
 in your config file. If you do not intend to set your master time reference to
-any other PHP supported timezone (which you’ll typically do if you run a site
+any other PHP supported timezone (which you&#8217;ll typically do if you run a site
 that lets each user set their own timezone settings) there is no benefit to using
-this function over PHP’s <code class="docutils literal"><span class="pre">time()</span></code> function.</p>
+this function over PHP&#8217;s <code class="docutils literal"><span class="pre">time()</span></code> function.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">now</span><span class="p">(</span><span class="s1">&#39;Australia/Victoria&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -483,8 +484,8 @@ this function over PHP’s <code class="docutils literal"><span class="pre">time
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$datestr</strong> (<em>string</em>) – Date string</li>
-<li><strong>$time</strong> (<em>int</em>) – UNIX timestamp</li>
+<li><strong>$datestr</strong> (<em>string</em>) &#8211; Date string</li>
+<li><strong>$time</strong> (<em>int</em>) &#8211; UNIX timestamp</li>
 </ul>
 </td>
 </tr>
@@ -496,10 +497,10 @@ this function over PHP’s <code class="docutils literal"><span class="pre">time
 </tr>
 </tbody>
 </table>
-<p>This function is identical to PHP’s <a class="reference external" href="http://php.net/manual/en/function.date.php">date()</a>
+<p>This function is identical to PHP&#8217;s <a class="reference external" href="http://php.net/manual/en/function.date.php">date()</a>
 function, except that it lets you use MySQL style date codes, where each
 code letter is preceded with a percent sign, e.g. <cite>%Y %m %d</cite></p>
-<p>The benefit of doing dates this way is that you don’t have to worry
+<p>The benefit of doing dates this way is that you don&#8217;t have to worry
 about escaping any characters that are not date codes, as you would
 normally have to do with the <code class="docutils literal"><span class="pre">date()</span></code> function.</p>
 <p>Example:</p>
@@ -520,8 +521,8 @@ will be used.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$fmt</strong> (<em>string</em>) – Date format</li>
-<li><strong>$time</strong> (<em>int</em>) – UNIX timestamp</li>
+<li><strong>$fmt</strong> (<em>string</em>) &#8211; Date format</li>
+<li><strong>$time</strong> (<em>int</em>) &#8211; UNIX timestamp</li>
 </ul>
 </td>
 </tr>
@@ -543,7 +544,7 @@ will be used.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>This function is DEPRECATED. Use the native <code class="docutils literal"><span class="pre">date()</span></code> combined with
-<a class="reference external" href="https://secure.php.net/manual/en/class.datetime.php#datetime.constants.types">DateTime’s format constants</a>
+<a class="reference external" href="http://php.net/manual/en/class.datetime.php#datetime.constants.types">DateTime&#8217;s format constants</a>
 instead:</p>
 <div class="last highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nb">date</span><span class="p">(</span><span class="nx">DATE_RFC822</span><span class="p">,</span> <span class="nb">time</span><span class="p">());</span>
 </pre></div>
@@ -615,7 +616,7 @@ instead:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$time</strong> (<em>int</em>) – UNIX timestamp</li>
+<li><strong>$time</strong> (<em>int</em>) &#8211; UNIX timestamp</li>
 </ul>
 </td>
 </tr>
@@ -642,9 +643,9 @@ instead:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$time</strong> (<em>int</em>) – UNIX timestamp</li>
-<li><strong>$timezone</strong> (<em>string</em>) – Timezone</li>
-<li><strong>$dst</strong> (<em>bool</em>) – Whether DST is active</li>
+<li><strong>$time</strong> (<em>int</em>) &#8211; UNIX timestamp</li>
+<li><strong>$timezone</strong> (<em>string</em>) &#8211; Timezone</li>
+<li><strong>$dst</strong> (<em>bool</em>) &#8211; Whether DST is active</li>
 </ul>
 </td>
 </tr>
@@ -680,7 +681,7 @@ submitted.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$time</strong> (<em>string</em>) – MySQL timestamp</li>
+<li><strong>$time</strong> (<em>string</em>) &#8211; MySQL timestamp</li>
 </ul>
 </td>
 </tr>
@@ -707,9 +708,9 @@ submitted.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$time</strong> (<em>int</em>) – UNIX timestamp</li>
-<li><strong>$seconds</strong> (<em>bool</em>) – Whether to show seconds</li>
-<li><strong>$fmt</strong> (<em>string</em>) – format (us or euro)</li>
+<li><strong>$time</strong> (<em>int</em>) &#8211; UNIX timestamp</li>
+<li><strong>$seconds</strong> (<em>bool</em>) &#8211; Whether to show seconds</li>
+<li><strong>$fmt</strong> (<em>string</em>) &#8211; format (us or euro)</li>
 </ul>
 </td>
 </tr>
@@ -748,7 +749,7 @@ the time without seconds formatted for the U.S.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$datestr</strong> (<em>int</em>) – Date string</li>
+<li><strong>$datestr</strong> (<em>int</em>) &#8211; Date string</li>
 </ul>
 </td>
 </tr>
@@ -760,9 +761,9 @@ the time without seconds formatted for the U.S.</p>
 </tr>
 </tbody>
 </table>
-<p>The opposite of the <code class="xref php php-func docutils literal"><span class="pre">unix_to_time()</span></code> function. Takes a “human”
+<p>The opposite of the <code class="xref php php-func docutils literal"><span class="pre">unix_to_time()</span></code> function. Takes a &#8220;human&#8221;
 time as input and returns it as a UNIX timestamp. This is useful if you
-accept “human” formatted dates submitted via a form. Returns boolean FALSE
+accept &#8220;human&#8221; formatted dates submitted via a form. Returns boolean FALSE
 date string passed to it is not formatted as indicated above.</p>
 <p>Example:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$now</span> <span class="o">=</span> <span class="nb">time</span><span class="p">();</span>
@@ -780,8 +781,8 @@ date string passed to it is not formatted as indicated above.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$bad_date</strong> (<em>int</em>) – The terribly formatted date-like string</li>
-<li><strong>$format</strong> (<em>string</em>) – Date format to return (same as PHP’s <code class="docutils literal"><span class="pre">date()</span></code> function)</li>
+<li><strong>$bad_date</strong> (<em>int</em>) &#8211; The terribly formatted date-like string</li>
+<li><strong>$format</strong> (<em>string</em>) &#8211; Date format to return (same as PHP&#8217;s <code class="docutils literal"><span class="pre">date()</span></code> function)</li>
 </ul>
 </td>
 </tr>
@@ -808,10 +809,6 @@ as the second parameter.</p>
 <span class="nv">$better_date</span> <span class="o">=</span> <span class="nx">nice_date</span><span class="p">(</span><span class="nv">$bad_date</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This function is DEPRECATED. Use PHP’s native <a class="reference external" href="https://secure.php.net/datetime">DateTime class</a> instead.</p>
-</div>
 </dd></dl>
 
 <dl class="function">
@@ -822,9 +819,9 @@ as the second parameter.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$seconds</strong> (<em>int</em>) – Number of seconds</li>
-<li><strong>$time</strong> (<em>string</em>) – UNIX timestamp</li>
-<li><strong>$units</strong> (<em>int</em>) – Number of time units to display</li>
+<li><strong>$seconds</strong> (<em>int</em>) &#8211; Number of seconds</li>
+<li><strong>$time</strong> (<em>string</em>) &#8211; UNIX timestamp</li>
+<li><strong>$units</strong> (<em>int</em>) &#8211; Number of time units to display</li>
 </ul>
 </td>
 </tr>
@@ -869,8 +866,8 @@ file: <cite>language/&lt;your_lang&gt;/date_lang.php</cite></p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$month</strong> (<em>int</em>) – a numeric month</li>
-<li><strong>$year</strong> (<em>int</em>) – a numeric year</li>
+<li><strong>$month</strong> (<em>int</em>) &#8211; a numeric month</li>
+<li><strong>$year</strong> (<em>int</em>) &#8211; a numeric year</li>
 </ul>
 </td>
 </tr>
@@ -904,10 +901,10 @@ it is available.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$unix_start</strong> (<em>int</em>) – UNIX timestamp of the range start date</li>
-<li><strong>$mixed</strong> (<em>int</em>) – UNIX timestamp of the range end date or interval in days</li>
-<li><strong>$is_unix</strong> (<em>bool</em>) – set to FALSE if $mixed is not a timestamp</li>
-<li><strong>$format</strong> (<em>string</em>) – Output date format, same as in <code class="docutils literal"><span class="pre">date()</span></code></li>
+<li><strong>$unix_start</strong> (<em>int</em>) &#8211; UNIX timestamp of the range start date</li>
+<li><strong>$mixed</strong> (<em>int</em>) &#8211; UNIX timestamp of the range end date or interval in days</li>
+<li><strong>$is_unix</strong> (<em>bool</em>) &#8211; set to FALSE if $mixed is not a timestamp</li>
+<li><strong>$format</strong> (<em>string</em>) &#8211; Output date format, same as in <code class="docutils literal"><span class="pre">date()</span></code></li>
 </ul>
 </td>
 </tr>
@@ -939,7 +936,7 @@ it is available.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$tz</strong> (<em>string</em>) – A numeric timezone</li>
+<li><strong>$tz</strong> (<em>string</em>) &#8211; A numeric timezone</li>
 </ul>
 </td>
 </tr>
@@ -952,7 +949,7 @@ it is available.</p>
 </tbody>
 </table>
 <p>Takes a timezone reference (for a list of valid timezones, see the
-“Timezone Reference” below) and returns the number of hours offset from
+&#8220;Timezone Reference&#8221; below) and returns the number of hours offset from
 UTC.</p>
 <p>Example:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">timezones</span><span class="p">(</span><span class="s1">&#39;UM5&#39;</span><span class="p">);</span>
@@ -969,10 +966,10 @@ UTC.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$default</strong> (<em>string</em>) – Timezone</li>
-<li><strong>$class</strong> (<em>string</em>) – Class name</li>
-<li><strong>$name</strong> (<em>string</em>) – Menu name</li>
-<li><strong>$attributes</strong> (<em>mixed</em>) – HTML attributes</li>
+<li><strong>$default</strong> (<em>string</em>) &#8211; Timezone</li>
+<li><strong>$class</strong> (<em>string</em>) &#8211; Class name</li>
+<li><strong>$name</strong> (<em>string</em>) &#8211; Menu name</li>
+<li><strong>$attributes</strong> (<em>mixed</em>) &#8211; HTML attributes</li>
 </ul>
 </td>
 </tr>
@@ -1030,7 +1027,7 @@ UTC.</p>
         </select>
 </form><p>This menu is useful if you run a membership site in which your users are
 allowed to set their local timezone value.</p>
-<p>The first parameter lets you set the “selected” state of the menu. For
+<p>The first parameter lets you set the &#8220;selected&#8221; state of the menu. For
 example, to set Pacific time as the default you will do this:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">timezone_menu</span><span class="p">(</span><span class="s1">&#39;UM8&#39;</span><span class="p">);</span>
 </pre></div>
@@ -1204,8 +1201,8 @@ language file: <cite>language/&lt;your_lang&gt;/date_lang.php</cite></p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -1226,7 +1223,7 @@ language file: <cite>language/&lt;your_lang&gt;/date_lang.php</cite></p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

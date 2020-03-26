@@ -6,7 +6,7 @@
  *
  * This content is released under the MIT License (MIT)
  *
- * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+ * Copyright (c) 2014 - 2016, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,8 +29,8 @@
  * @package	CodeIgniter
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
- * @license	https://opensource.org/licenses/MIT	MIT License
+ * @copyright	Copyright (c) 2014 - 2016, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 3.0.0
  * @filesource
@@ -145,8 +145,6 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 			return $this->_fail();
 		}
 
-		$this->php5_validate_id();
-
 		return $this->_success;
 	}
 
@@ -188,7 +186,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 	 */
 	public function write($session_id, $session_data)
 	{
-		if ( ! isset($this->_memcached, $this->_lock_key))
+		if ( ! isset($this->_memcached))
 		{
 			return $this->_fail();
 		}
@@ -204,25 +202,28 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 			$this->_session_id = $session_id;
 		}
 
-		$key = $this->_key_prefix.$session_id;
-
-		$this->_memcached->replace($this->_lock_key, time(), 300);
-		if ($this->_fingerprint !== ($fingerprint = md5($session_data)))
+		if (isset($this->_lock_key))
 		{
-			if ($this->_memcached->set($key, $session_data, $this->_config['expiration']))
+			$key = $this->_key_prefix.$session_id;
+
+			$this->_memcached->replace($this->_lock_key, time(), 300);
+			if ($this->_fingerprint !== ($fingerprint = md5($session_data)))
 			{
-				$this->_fingerprint = $fingerprint;
+				if ($this->_memcached->set($key, $session_data, $this->_config['expiration']))
+				{
+					$this->_fingerprint = $fingerprint;
+					return $this->_success;
+				}
+
+				return $this->_fail();
+			}
+			elseif (
+				$this->_memcached->touch($key, $this->_config['expiration'])
+				OR ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND && $this->_memcached->set($key, $session_data, $this->_config['expiration']))
+			)
+			{
 				return $this->_success;
 			}
-
-			return $this->_fail();
-		}
-		elseif (
-			$this->_memcached->touch($key, $this->_config['expiration'])
-			OR ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND && $this->_memcached->set($key, $session_data, $this->_config['expiration']))
-		)
-		{
-			return $this->_success;
 		}
 
 		return $this->_fail();
@@ -292,23 +293,6 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 		return $this->_success;
 	}
 
-	// --------------------------------------------------------------------
-
-	/**
-	 * Validate ID
-	 *
-	 * Checks whether a session ID record exists server-side,
-	 * to enforce session.use_strict_mode.
-	 *
-	 * @param	string	$id
-	 * @return	bool
-	 */
-	public function validateSessionId($id)
-	{
-		$this->_memcached->get($this->_key_prefix.$id);
-		return ($this->_memcached->getResultCode() === Memcached::RES_SUCCESS);
-	}
-
 	// ------------------------------------------------------------------------
 
 	/**
@@ -329,11 +313,9 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 			if ( ! $this->_memcached->replace($this->_lock_key, time(), 300))
 			{
 				return ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND)
-					? $this->_memcached->add($this->_lock_key, time(), 300)
+					? $this->_memcached->set($this->_lock_key, time(), 300)
 					: FALSE;
 			}
-
-			return TRUE;
 		}
 
 		// 30 attempts to obtain a lock, in case another request already has it
@@ -347,8 +329,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 				continue;
 			}
 
-			$method = ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND) ? 'add' : 'set';
-			if ( ! $this->_memcached->$method($lock_key, time(), 300))
+			if ( ! $this->_memcached->set($lock_key, time(), 300))
 			{
 				log_message('error', 'Session: Error while trying to obtain lock for '.$this->_key_prefix.$session_id);
 				return FALSE;

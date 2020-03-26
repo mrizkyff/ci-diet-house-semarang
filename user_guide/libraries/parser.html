@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Template Parser Class &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Template Parser Class &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="Security Class" href="security.html"/>
         <link rel="prev" title="Pagination Class" href="pagination.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -142,7 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="migration.html">Migrations Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">Output Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Template Parser Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Template Parser Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html">Security Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sessions.html">Session Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table.html">HTML Table Class</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +327,7 @@
 <li class="toctree-l2"><a class="reference internal" href="migration.html">Migrations Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">Output Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Template Parser Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Template Parser Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html">Security Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sessions.html">Session Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table.html">HTML Table Class</a></li>
@@ -427,7 +428,7 @@
 <p>The Template Parser Class can perform simple text substitution for
 pseudo-variables contained within your view files.
 It can parse simple variables or variable tag pairs.</p>
-<p>If you’ve never used a template engine,
+<p>If you&#8217;ve never used a template engine,
 pseudo-variable names are enclosed in braces, like this:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
@@ -459,7 +460,7 @@ confusion working with PHP.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">The Template Parser Class is <strong>not</strong> a full-blown
-template parsing solution. We’ve kept it very lean on purpose in order
+template parsing solution. We&#8217;ve kept it very lean on purpose in order
 to maintain maximum performance.</p>
 </div>
 <div class="contents local topic" id="contents">
@@ -499,12 +500,12 @@ like this:</p>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">parser</span><span class="o">-&gt;</span><span class="na">parse</span><span class="p">(</span><span class="s1">&#39;blog_template&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The first parameter contains the name of the <a class="reference internal" href="../general/views.html"><span class="doc">view
-file</span></a> (in this example the file would be called
+<p>The first parameter contains the name of the <a class="reference internal" href="../general/views.html"><em>view
+file</em></a> (in this example the file would be called
 blog_template.php), and the second parameter contains an associative
 array of data to be replaced in the template. In the above example, the
 template would contain two variables: {blog_title} and {blog_heading}</p>
-<p>There is no need to “echo” or do something with the data returned by
+<p>There is no need to &#8220;echo&#8221; or do something with the data returned by
 $this-&gt;parser-&gt;parse(). It is automatically passed to the output class
 to be sent to the browser. However, if you do want the data returned
 instead of sent to the output class you can pass TRUE (boolean) as the
@@ -535,10 +536,10 @@ at the top of the page:</p>
 <span class="o">&lt;/</span><span class="nx">html</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>In the above code you’ll notice a pair of variables: {blog_entries}
-data… {/blog_entries}. In a case like this, the entire chunk of data
+<p>In the above code you&#8217;ll notice a pair of variables: {blog_entries}
+data... {/blog_entries}. In a case like this, the entire chunk of data
 between these pairs would be repeated multiple times, corresponding to
-the number of rows in the “blog_entries” element of the parameters array.</p>
+the number of rows in the &#8220;blog_entries&#8221; element of the parameters array.</p>
 <p>Parsing variable pairs is done using the identical code shown above to
 parse single variables, except, you will add a multi-dimensional array
 corresponding to your variable pair data. Consider this example:</p>
@@ -559,7 +560,7 @@ corresponding to your variable pair data. Consider this example:</p>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">parser</span><span class="o">-&gt;</span><span class="na">parse</span><span class="p">(</span><span class="s1">&#39;blog_template&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>If your “pair” data is coming from a database result, which is already a
+<p>If your &#8220;pair&#8221; data is coming from a database result, which is already a
 multi-dimensional array, you can simply use the database <code class="docutils literal"><span class="pre">result_array()</span></code>
 method:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM blog&quot;</span><span class="p">);</span>
@@ -710,9 +711,9 @@ using a view fragment:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$template</strong> (<em>string</em>) – Path to view file</li>
-<li><strong>$data</strong> (<em>array</em>) – Variable data</li>
-<li><strong>$return</strong> (<em>bool</em>) – Whether to only return the parsed template</li>
+<li><strong>$template</strong> (<em>string</em>) &#8211; Path to view file</li>
+<li><strong>$data</strong> (<em>array</em>) &#8211; Variable data</li>
+<li><strong>$return</strong> (<em>bool</em>) &#8211; Whether to only return the parsed template</li>
 </ul>
 </td>
 </tr>
@@ -735,9 +736,9 @@ using a view fragment:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$template</strong> (<em>string</em>) – Path to view file</li>
-<li><strong>$data</strong> (<em>array</em>) – Variable data</li>
-<li><strong>$return</strong> (<em>bool</em>) – Whether to only return the parsed template</li>
+<li><strong>$template</strong> (<em>string</em>) &#8211; Path to view file</li>
+<li><strong>$data</strong> (<em>array</em>) &#8211; Variable data</li>
+<li><strong>$return</strong> (<em>bool</em>) &#8211; Whether to only return the parsed template</li>
 </ul>
 </td>
 </tr>
@@ -761,8 +762,8 @@ the template as a string instead of loading a view file.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$l</strong> (<em>string</em>) – Left delimiter</li>
-<li><strong>$r</strong> (<em>string</em>) – Right delimiter</li>
+<li><strong>$l</strong> (<em>string</em>) &#8211; Left delimiter</li>
+<li><strong>$r</strong> (<em>string</em>) &#8211; Right delimiter</li>
 </ul>
 </td>
 </tr>
@@ -772,7 +773,7 @@ the template as a string instead of loading a view file.</p>
 </tbody>
 </table>
 <p>Sets the delimiters (opening and closing) for a
-pseudo-variable “tag” in a template.</p>
+pseudo-variable &#8220;tag&#8221; in a template.</p>
 </dd></dl>
 
 </dd></dl>
@@ -798,8 +799,8 @@ pseudo-variable “tag” in a template.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -820,7 +821,7 @@ pseudo-variable “tag” in a template.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

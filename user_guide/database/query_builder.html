@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Query Builder Class &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>Query Builder Class &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Transactions" href="transactions.html"/>
         <link rel="prev" title="Query Helper Methods" href="helpers.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +163,7 @@
 <li class="toctree-l2"><a class="reference internal" href="queries.html">Running Queries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="results.html">Generating Query Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helpers.html">Query Helper Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Query Builder Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Query Builder Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">Getting MetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">Custom Function Calls</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -348,7 +349,7 @@
 <li class="toctree-l2"><a class="reference internal" href="queries.html">Running Queries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="results.html">Generating Query Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helpers.html">Query Helper Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Query Builder Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Query Builder Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">Getting MetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">Custom Function Calls</a></li>
@@ -475,7 +476,7 @@ clause:</p>
 <span class="c1">// (in MySQL. Other databases have slightly different syntax)</span>
 </pre></div>
 </div>
-<p>You’ll notice that the above function is assigned to a variable named
+<p>You&#8217;ll notice that the above function is assigned to a variable named
 $query, which can be used to show the results:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">);</span>
 
@@ -485,7 +486,7 @@ $query, which can be used to show the results:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Please visit the <a class="reference internal" href="results.html"><span class="doc">result functions</span></a> page for a full
+<p>Please visit the <a class="reference internal" href="results.html"><em>result functions</em></a> page for a full
 discussion regarding result generation.</p>
 <p><strong>$this-&gt;db-&gt;get_compiled_select()</strong></p>
 <p>Compiles the selection query just like <strong>$this-&gt;db-&gt;get()</strong> but does not <em>run</em>
@@ -516,7 +517,7 @@ executed using <strong>$this-&gt;db-&gt;get()</strong> which resets values or re
 using <strong>$this-&gt;db-&gt;reset_query()</strong>.</p>
 <p><strong>$this-&gt;db-&gt;get_where()</strong></p>
 <p>Identical to the above function except that it permits you to add a
-“where” clause in the second parameter, instead of using the db-&gt;where()
+&#8220;where&#8221; clause in the second parameter, instead of using the db-&gt;where()
 function:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get_where</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">),</span> <span class="nv">$limit</span><span class="p">,</span> <span class="nv">$offset</span><span class="p">);</span>
 </pre></div>
@@ -538,14 +539,14 @@ function:</p>
 <p class="first admonition-title">Note</p>
 <p class="last">If you are selecting all (*) from a table you do not need to
 use this function. When omitted, CodeIgniter assumes that you wish
-to select all fields and automatically adds ‘SELECT *’.</p>
+to select all fields and automatically adds &#8216;SELECT *&#8217;.</p>
 </div>
 <p><code class="docutils literal"><span class="pre">$this-&gt;db-&gt;select()</span></code> accepts an optional second parameter. If you set it
 to FALSE, CodeIgniter will not try to protect your field or table names.
 This is useful if you need a compound select statement where automatic
 escaping of fields may break them.</p>
-<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;(SELECT SUM(payments.amount) FROM payments WHERE payments.invoice_id=4) AS amount_paid&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
-<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span>$this-&gt;db-&gt;select(&#39;(SELECT SUM(payments.amount) FROM payments WHERE payments.invoice_id=4&#39;) AS amount_paid&#39;, FALSE);
+$query = $this-&gt;db-&gt;get(&#39;mytable&#39;);
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_max()</strong></p>
@@ -559,7 +560,7 @@ include a second parameter to rename the resulting field.</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_min()</strong></p>
-<p>Writes a “SELECT MIN(field)” portion for your query. As with
+<p>Writes a &#8220;SELECT MIN(field)&#8221; portion for your query. As with
 select_max(), You can optionally include a second parameter to rename
 the resulting field.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_min</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
@@ -567,7 +568,7 @@ the resulting field.</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_avg()</strong></p>
-<p>Writes a “SELECT AVG(field)” portion for your query. As with
+<p>Writes a &#8220;SELECT AVG(field)&#8221; portion for your query. As with
 select_max(), You can optionally include a second parameter to rename
 the resulting field.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_avg</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
@@ -575,7 +576,7 @@ the resulting field.</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_sum()</strong></p>
-<p>Writes a “SELECT SUM(field)” portion for your query. As with
+<p>Writes a &#8220;SELECT SUM(field)&#8221; portion for your query. As with
 select_max(), You can optionally include a second parameter to rename
 the resulting field.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_sum</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
@@ -695,7 +696,7 @@ instances are joined by OR:</p>
 removed.</p>
 </div>
 <p><strong>$this-&gt;db-&gt;where_in()</strong></p>
-<p>Generates a WHERE field IN (‘item’, ‘item’) SQL query joined with AND if
+<p>Generates a WHERE field IN (&#8216;item&#8217;, &#8216;item&#8217;) SQL query joined with AND if
 appropriate</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$names</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Frank&#39;</span><span class="p">,</span> <span class="s1">&#39;Todd&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where_in</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nv">$names</span><span class="p">);</span>
@@ -703,7 +704,7 @@ appropriate</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;or_where_in()</strong></p>
-<p>Generates a WHERE field IN (‘item’, ‘item’) SQL query joined with OR if
+<p>Generates a WHERE field IN (&#8216;item&#8217;, &#8216;item&#8217;) SQL query joined with OR if
 appropriate</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$names</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Frank&#39;</span><span class="p">,</span> <span class="s1">&#39;Todd&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">or_where_in</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nv">$names</span><span class="p">);</span>
@@ -711,7 +712,7 @@ appropriate</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;where_not_in()</strong></p>
-<p>Generates a WHERE field NOT IN (‘item’, ‘item’) SQL query joined with
+<p>Generates a WHERE field NOT IN (&#8216;item&#8217;, &#8216;item&#8217;) SQL query joined with
 AND if appropriate</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$names</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Frank&#39;</span><span class="p">,</span> <span class="s1">&#39;Todd&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where_not_in</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nv">$names</span><span class="p">);</span>
@@ -719,7 +720,7 @@ AND if appropriate</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;or_where_not_in()</strong></p>
-<p>Generates a WHERE field NOT IN (‘item’, ‘item’) SQL query joined with OR
+<p>Generates a WHERE field NOT IN (&#8216;item&#8217;, &#8216;item&#8217;) SQL query joined with OR
 if appropriate</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$names</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;Frank&#39;</span><span class="p">,</span> <span class="s1">&#39;Todd&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">or_where_not_in</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nv">$names</span><span class="p">);</span>
@@ -751,11 +752,10 @@ AND between them:</p>
 </pre></div>
 </div>
 <p>If you want to control where the wildcard (%) is placed, you can use
-an optional third argument. Your options are ‘before’, ‘after’, ‘none’ and
-‘both’ (which is the default).</p>
+an optional third argument. Your options are &#8216;before&#8217;, &#8216;after&#8217; and
+&#8216;both&#8217; (which is the default).</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;before&#39;</span><span class="p">);</span>    <span class="c1">// Produces: WHERE `title` LIKE &#39;%match&#39; ESCAPE &#39;!&#39;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;after&#39;</span><span class="p">);</span>     <span class="c1">// Produces: WHERE `title` LIKE &#39;match%&#39; ESCAPE &#39;!&#39;</span>
-<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">);</span>      <span class="c1">// Produces: WHERE `title` LIKE &#39;match&#39; ESCAPE &#39;!&#39;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;both&#39;</span><span class="p">);</span>      <span class="c1">// Produces: WHERE `title` LIKE &#39;%match%&#39; ESCAPE &#39;!&#39;</span>
 </pre></div>
 </div>
@@ -811,7 +811,7 @@ instances are joined by OR:</p>
 removed.</p>
 </div>
 <p><strong>$this-&gt;db-&gt;distinct()</strong></p>
-<p>Adds the “DISTINCT” keyword to a query</p>
+<p>Adds the &#8220;DISTINCT&#8221; keyword to a query</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">distinct</span><span class="p">();</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">);</span> <span class="c1">// Produces: SELECT DISTINCT * FROM table</span>
 </pre></div>
@@ -836,7 +836,7 @@ setting it to FALSE.</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;or_having()</strong></p>
-<p>Identical to having(), only separates multiple clauses with “OR”.</p>
+<p>Identical to having(), only separates multiple clauses with &#8220;OR&#8221;.</p>
 </div>
 <div class="section" id="ordering-results">
 <h2><a class="toc-backref" href="#id4">Ordering results</a><a class="headerlink" href="#ordering-results" title="Permalink to this headline">¶</a></h2>
@@ -940,11 +940,11 @@ you to create queries with complex WHERE clauses. Nested groups are supported. E
 <p><strong>$this-&gt;db-&gt;group_start()</strong></p>
 <p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query.</p>
 <p><strong>$this-&gt;db-&gt;or_group_start()</strong></p>
-<p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query, prefixing it with ‘OR’.</p>
+<p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query, prefixing it with &#8216;OR&#8217;.</p>
 <p><strong>$this-&gt;db-&gt;not_group_start()</strong></p>
-<p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query, prefixing it with ‘NOT’.</p>
+<p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query, prefixing it with &#8216;NOT&#8217;.</p>
 <p><strong>$this-&gt;db-&gt;or_not_group_start()</strong></p>
-<p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query, prefixing it with ‘OR NOT’.</p>
+<p>Starts a new group by adding an opening parenthesis to the WHERE clause of the query, prefixing it with &#8216;OR NOT&#8217;.</p>
 <p><strong>$this-&gt;db-&gt;group_end()</strong></p>
 <p>Ends the current group by adding an closing parenthesis to the WHERE clause of the query.</p>
 </div>
@@ -1003,7 +1003,7 @@ object.</p>
 </pre></div>
 </div>
 <p>The second parameter enables you to set whether or not the query builder query
-will be reset (by default it will be–just like $this-&gt;db-&gt;insert()):</p>
+will be reset (by default it will be&#8211;just like $this-&gt;db-&gt;insert()):</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;My Title&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get_compiled_insert</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 
 <span class="c1">// Produces string: INSERT INTO mytable (`title`) VALUES (&#39;My Title&#39;)</span>
@@ -1014,13 +1014,13 @@ will be reset (by default it will be–just like $this-&gt;db-&gt;insert()):</p>
 </pre></div>
 </div>
 <p>The key thing to notice in the above example is that the second query did not
-utilize <cite>$this-&gt;db-&gt;from()</cite> nor did it pass a table name into the first
+utlize <cite>$this-&gt;db-&gt;from()</cite> nor did it pass a table name into the first
 parameter. The reason this worked is because the query has not been executed
 using <cite>$this-&gt;db-&gt;insert()</cite> which resets values or reset directly using
 <cite>$this-&gt;db-&gt;reset_query()</cite>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This method doesn’t work for batched inserts.</p>
+<p class="last">This method doesn&#8217;t work for batched inserts.</p>
 </div>
 <p><strong>$this-&gt;db-&gt;insert_batch()</strong></p>
 <p>Generates an insert string based on the data you supply, and runs the
@@ -1072,7 +1072,7 @@ logics with different combinations of  <code class="docutils literal"><span clas
 </pre></div>
 </div>
 <p>In the above example, if we assume that the <em>title</em> field is our primary
-key, then if a row containing ‘My title’ as the <em>title</em> value, that row
+key, then if a row containing &#8216;My title&#8217; as the <em>title</em> value, that row
 will be deleted with our new row data replacing it.</p>
 <p>Usage of the <code class="docutils literal"><span class="pre">set()</span></code> method is also allowed and all fields are
 automatically escaped, just like with <code class="docutils literal"><span class="pre">insert()</span></code>.</p>
@@ -1172,7 +1172,7 @@ is an example using an array:</p>
 <p class="first admonition-title">Note</p>
 <p class="last">All values are escaped automatically producing safer queries.</p>
 </div>
-<p>You’ll notice the use of the $this-&gt;db-&gt;where() function, enabling you
+<p>You&#8217;ll notice the use of the $this-&gt;db-&gt;where() function, enabling you
 to set the WHERE clause. You can optionally pass this information
 directly into the update function as a string:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s2">&quot;id = 4&quot;</span><span class="p">);</span>
@@ -1223,7 +1223,7 @@ array of values, the third parameter is the where key.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">affected_rows()</span></code> won’t give you proper results with this method,
+<p class="last"><code class="docutils literal"><span class="pre">affected_rows()</span></code> won&#8217;t give you proper results with this method,
 due to the very nature of how it works. Instead, <code class="docutils literal"><span class="pre">update_batch()</span></code>
 returns the number of rows affected.</p>
 </div>
@@ -1233,7 +1233,7 @@ that it produces an UPDATE SQL string instead of an INSERT SQL string.</p>
 <p>For more information view documentation for <cite>$this-&gt;db-&gt;get_compiled_insert()</cite>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This method doesn’t work for batched updates.</p>
+<p class="last">This method doesn&#8217;t work for batched updates.</p>
 </div>
 </div>
 <div class="section" id="deleting-data">
@@ -1284,8 +1284,8 @@ query.:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If the TRUNCATE command isn’t available, truncate() will
-execute as “DELETE FROM table”.</p>
+<p class="last">If the TRUNCATE command isn&#8217;t available, truncate() will
+execute as &#8220;DELETE FROM table&#8221;.</p>
 </div>
 <p><strong>$this-&gt;db-&gt;get_compiled_delete()</strong></p>
 <p>This works exactly the same way as <code class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_insert()</span></code> except
@@ -1305,9 +1305,9 @@ multiple functions. Consider this example:</p>
 </div>
 <div class="section" id="query-builder-caching">
 <span id="ar-caching"></span><h2><a class="toc-backref" href="#id11">Query Builder Caching</a><a class="headerlink" href="#query-builder-caching" title="Permalink to this headline">¶</a></h2>
-<p>While not “true” caching, Query Builder enables you to save (or “cache”)
+<p>While not &#8220;true&#8221; caching, Query Builder enables you to save (or &#8220;cache&#8221;)
 certain parts of your queries for reuse at a later point in your
-script’s execution. Normally, when an Query Builder call is completed,
+script&#8217;s execution. Normally, when an Query Builder call is completed,
 all stored information is reset for the next call. With caching, you can
 prevent this reset, and reuse information easily.</p>
 <p>Cached calls are cumulative. If you make 2 cached select() calls, and
@@ -1323,7 +1323,7 @@ later use.</p>
 <p>This function deletes all items from the Query Builder cache.</p>
 <div class="section" id="an-example-of-caching">
 <h3>An example of caching<a class="headerlink" href="#an-example-of-caching" title="Permalink to this headline">¶</a></h3>
-<p>Here’s a usage example:</p>
+<p>Here&#8217;s a usage example:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">start_cache</span><span class="p">();</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;field1&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">stop_cache</span><span class="p">();</span>
@@ -1352,7 +1352,7 @@ where, like, group_by, having, order_by</p>
 <p><strong>$this-&gt;db-&gt;reset_query()</strong></p>
 <p>Resetting Query Builder allows you to start fresh with your query without
 executing it first using a method like $this-&gt;db-&gt;get() or $this-&gt;db-&gt;insert().
-Just like the methods that execute a query, this will <em>not</em> reset items you’ve
+Just like the methods that execute a query, this will <em>not</em> reset items you&#8217;ve
 cached using <a class="reference internal" href="#query-builder-caching">Query Builder Caching</a>.</p>
 <p>This is useful in situations where you are using Query Builder to generate SQL
 (ex. <code class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_select()</span></code>) but then choose to, for instance,
@@ -1375,10 +1375,10 @@ run the query:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Double calls to <code class="docutils literal"><span class="pre">get_compiled_select()</span></code> while you’re using the
+<p class="last">Double calls to <code class="docutils literal"><span class="pre">get_compiled_select()</span></code> while you&#8217;re using the
 Query Builder Caching functionality and NOT resetting your queries
 will results in the cache being merged twice. That in turn will
-i.e. if you’re caching a <code class="docutils literal"><span class="pre">select()</span></code> - select the same field twice.</p>
+i.e. if you&#8217;re caching a <code class="docutils literal"><span class="pre">select()</span></code> - select the same field twice.</p>
 </div>
 </div>
 <div class="section" id="class-reference">
@@ -1459,7 +1459,7 @@ to build a query that can be cancelled under certain conditions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$prefix</strong> (<em>string</em>) – The new prefix to use</li>
+<li><strong>$prefix</strong> (<em>string</em>) &#8211; The new prefix to use</li>
 </ul>
 </td>
 </tr>
@@ -1482,7 +1482,7 @@ to build a query that can be cancelled under certain conditions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – The table name to prefix</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; The table name to prefix</li>
 </ul>
 </td>
 </tr>
@@ -1505,8 +1505,8 @@ to build a query that can be cancelled under certain conditions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$reset</strong> (<em>bool</em>) – Whether to reset values for SELECTs</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$reset</strong> (<em>bool</em>) &#8211; Whether to reset values for SELECTs</li>
 </ul>
 </td>
 </tr>
@@ -1530,9 +1530,9 @@ all records returned by an Query Builder query.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – The table to query</li>
-<li><strong>$limit</strong> (<em>int</em>) – The LIMIT clause</li>
-<li><strong>$offset</strong> (<em>int</em>) – The OFFSET clause</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; The table to query</li>
+<li><strong>$limit</strong> (<em>int</em>) &#8211; The LIMIT clause</li>
+<li><strong>$offset</strong> (<em>int</em>) &#8211; The OFFSET clause</li>
 </ul>
 </td>
 </tr>
@@ -1556,10 +1556,10 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>mixed</em>) – The table(s) to fetch data from; string or array</li>
-<li><strong>$where</strong> (<em>string</em>) – The WHERE clause</li>
-<li><strong>$limit</strong> (<em>int</em>) – The LIMIT clause</li>
-<li><strong>$offset</strong> (<em>int</em>) – The OFFSET clause</li>
+<li><strong>$table</strong> (<em>mixed</em>) &#8211; The table(s) to fetch data from; string or array</li>
+<li><strong>$where</strong> (<em>string</em>) &#8211; The WHERE clause</li>
+<li><strong>$limit</strong> (<em>int</em>) &#8211; The LIMIT clause</li>
+<li><strong>$offset</strong> (<em>int</em>) &#8211; The OFFSET clause</li>
 </ul>
 </td>
 </tr>
@@ -1582,8 +1582,8 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$select</strong> (<em>string</em>) – The SELECT portion of a query</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$select</strong> (<em>string</em>) &#8211; The SELECT portion of a query</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1606,8 +1606,8 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$select</strong> (<em>string</em>) – Field to compute the average of</li>
-<li><strong>$alias</strong> (<em>string</em>) – Alias for the resulting value name</li>
+<li><strong>$select</strong> (<em>string</em>) &#8211; Field to compute the average of</li>
+<li><strong>$alias</strong> (<em>string</em>) &#8211; Alias for the resulting value name</li>
 </ul>
 </td>
 </tr>
@@ -1630,8 +1630,8 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$select</strong> (<em>string</em>) – Field to compute the maximum of</li>
-<li><strong>$alias</strong> (<em>string</em>) – Alias for the resulting value name</li>
+<li><strong>$select</strong> (<em>string</em>) &#8211; Field to compute the maximum of</li>
+<li><strong>$alias</strong> (<em>string</em>) &#8211; Alias for the resulting value name</li>
 </ul>
 </td>
 </tr>
@@ -1654,8 +1654,8 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$select</strong> (<em>string</em>) – Field to compute the minimum of</li>
-<li><strong>$alias</strong> (<em>string</em>) – Alias for the resulting value name</li>
+<li><strong>$select</strong> (<em>string</em>) &#8211; Field to compute the minimum of</li>
+<li><strong>$alias</strong> (<em>string</em>) &#8211; Alias for the resulting value name</li>
 </ul>
 </td>
 </tr>
@@ -1678,8 +1678,8 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$select</strong> (<em>string</em>) – Field to compute the sum of</li>
-<li><strong>$alias</strong> (<em>string</em>) – Alias for the resulting value name</li>
+<li><strong>$select</strong> (<em>string</em>) &#8211; Field to compute the sum of</li>
+<li><strong>$alias</strong> (<em>string</em>) &#8211; Alias for the resulting value name</li>
 </ul>
 </td>
 </tr>
@@ -1702,7 +1702,7 @@ called Query Builder methods.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$val</strong> (<em>bool</em>) – Desired value of the “distinct” flag</li>
+<li><strong>$val</strong> (<em>bool</em>) &#8211; Desired value of the &#8220;distinct&#8221; flag</li>
 </ul>
 </td>
 </tr>
@@ -1726,7 +1726,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$from</strong> (<em>mixed</em>) – Table name(s); string or array</li>
+<li><strong>$from</strong> (<em>mixed</em>) &#8211; Table name(s); string or array</li>
 </ul>
 </td>
 </tr>
@@ -1749,10 +1749,10 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name to join</li>
-<li><strong>$cond</strong> (<em>string</em>) – The JOIN ON condition</li>
-<li><strong>$type</strong> (<em>string</em>) – The JOIN type</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name to join</li>
+<li><strong>$cond</strong> (<em>string</em>) &#8211; The JOIN ON condition</li>
+<li><strong>$type</strong> (<em>string</em>) &#8211; The JOIN type</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1775,9 +1775,9 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Name of field to compare, or associative array</li>
-<li><strong>$value</strong> (<em>mixed</em>) – If a single key, compared to this value</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Name of field to compare, or associative array</li>
+<li><strong>$value</strong> (<em>mixed</em>) &#8211; If a single key, compared to this value</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1790,7 +1790,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 </tbody>
 </table>
 <p>Generates the WHERE portion of the query.
-Separates multiple calls with ‘AND’.</p>
+Separates multiple calls with &#8216;AND&#8217;.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1801,9 +1801,9 @@ Separates multiple calls with ‘AND’.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Name of field to compare, or associative array</li>
-<li><strong>$value</strong> (<em>mixed</em>) – If a single key, compared to this value</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Name of field to compare, or associative array</li>
+<li><strong>$value</strong> (<em>mixed</em>) &#8211; If a single key, compared to this value</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1816,7 +1816,7 @@ Separates multiple calls with ‘AND’.</p>
 </tbody>
 </table>
 <p>Generates the WHERE portion of the query.
-Separates multiple calls with ‘OR’.</p>
+Separates multiple calls with &#8216;OR&#8217;.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1827,9 +1827,9 @@ Separates multiple calls with ‘OR’.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>string</em>) – The field to search</li>
-<li><strong>$values</strong> (<em>array</em>) – The values searched on</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>string</em>) &#8211; The field to search</li>
+<li><strong>$values</strong> (<em>array</em>) &#8211; The values searched on</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1841,8 +1841,8 @@ Separates multiple calls with ‘OR’.</p>
 </tr>
 </tbody>
 </table>
-<p>Generates a WHERE field IN(‘item’, ‘item’) SQL query,
-joined with ‘OR’ if appropriate.</p>
+<p>Generates a WHERE field IN(&#8216;item&#8217;, &#8216;item&#8217;) SQL query,
+joined with &#8216;OR&#8217; if appropriate.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1853,9 +1853,9 @@ joined with ‘OR’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>string</em>) – The field to search</li>
-<li><strong>$values</strong> (<em>array</em>) – The values searched on</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>string</em>) &#8211; The field to search</li>
+<li><strong>$values</strong> (<em>array</em>) &#8211; The values searched on</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1867,8 +1867,8 @@ joined with ‘OR’ if appropriate.</p>
 </tr>
 </tbody>
 </table>
-<p>Generates a WHERE field NOT IN(‘item’, ‘item’) SQL query,
-joined with ‘OR’ if appropriate.</p>
+<p>Generates a WHERE field NOT IN(&#8216;item&#8217;, &#8216;item&#8217;) SQL query,
+joined with &#8216;OR&#8217; if appropriate.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1879,9 +1879,9 @@ joined with ‘OR’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>string</em>) – Name of field to examine</li>
-<li><strong>$values</strong> (<em>array</em>) – Array of target values</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>string</em>) &#8211; Name of field to examine</li>
+<li><strong>$values</strong> (<em>array</em>) &#8211; Array of target values</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1893,8 +1893,8 @@ joined with ‘OR’ if appropriate.</p>
 </tr>
 </tbody>
 </table>
-<p>Generates a WHERE field IN(‘item’, ‘item’) SQL query,
-joined with ‘AND’ if appropriate.</p>
+<p>Generates a WHERE field IN(&#8216;item&#8217;, &#8216;item&#8217;) SQL query,
+joined with &#8216;AND&#8217; if appropriate.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1905,9 +1905,9 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>string</em>) – Name of field to examine</li>
-<li><strong>$values</strong> (<em>array</em>) – Array of target values</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>string</em>) &#8211; Name of field to examine</li>
+<li><strong>$values</strong> (<em>array</em>) &#8211; Array of target values</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -1919,8 +1919,8 @@ joined with ‘AND’ if appropriate.</p>
 </tr>
 </tbody>
 </table>
-<p>Generates a WHERE field NOT IN(‘item’, ‘item’) SQL query,
-joined with ‘AND’ if appropriate.</p>
+<p>Generates a WHERE field NOT IN(&#8216;item&#8217;, &#8216;item&#8217;) SQL query,
+joined with &#8216;AND&#8217; if appropriate.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2011,10 +2011,10 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$field</strong> (<em>string</em>) – Field name</li>
-<li><strong>$match</strong> (<em>string</em>) – Text portion to match</li>
-<li><strong>$side</strong> (<em>string</em>) – Which side of the expression to put the ‘%’ wildcard on</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$field</strong> (<em>string</em>) &#8211; Field name</li>
+<li><strong>$match</strong> (<em>string</em>) &#8211; Text portion to match</li>
+<li><strong>$side</strong> (<em>string</em>) &#8211; Which side of the expression to put the &#8216;%&#8217; wildcard on</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2037,10 +2037,10 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$field</strong> (<em>string</em>) – Field name</li>
-<li><strong>$match</strong> (<em>string</em>) – Text portion to match</li>
-<li><strong>$side</strong> (<em>string</em>) – Which side of the expression to put the ‘%’ wildcard on</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$field</strong> (<em>string</em>) &#8211; Field name</li>
+<li><strong>$match</strong> (<em>string</em>) &#8211; Text portion to match</li>
+<li><strong>$side</strong> (<em>string</em>) &#8211; Which side of the expression to put the &#8216;%&#8217; wildcard on</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2063,10 +2063,10 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$field</strong> (<em>string</em>) – Field name</li>
-<li><strong>$match</strong> (<em>string</em>) – Text portion to match</li>
-<li><strong>$side</strong> (<em>string</em>) – Which side of the expression to put the ‘%’ wildcard on</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$field</strong> (<em>string</em>) &#8211; Field name</li>
+<li><strong>$match</strong> (<em>string</em>) &#8211; Text portion to match</li>
+<li><strong>$side</strong> (<em>string</em>) &#8211; Which side of the expression to put the &#8216;%&#8217; wildcard on</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2089,10 +2089,10 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$field</strong> (<em>string</em>) – Field name</li>
-<li><strong>$match</strong> (<em>string</em>) – Text portion to match</li>
-<li><strong>$side</strong> (<em>string</em>) – Which side of the expression to put the ‘%’ wildcard on</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$field</strong> (<em>string</em>) &#8211; Field name</li>
+<li><strong>$match</strong> (<em>string</em>) &#8211; Text portion to match</li>
+<li><strong>$side</strong> (<em>string</em>) &#8211; Which side of the expression to put the &#8216;%&#8217; wildcard on</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2115,9 +2115,9 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Identifier (string) or associative array of field/value pairs</li>
-<li><strong>$value</strong> (<em>string</em>) – Value sought if $key is an identifier</li>
-<li><strong>$escape</strong> (<em>string</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Identifier (string) or associative array of field/value pairs</li>
+<li><strong>$value</strong> (<em>string</em>) &#8211; Value sought if $key is an identifier</li>
+<li><strong>$escape</strong> (<em>string</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2140,9 +2140,9 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Identifier (string) or associative array of field/value pairs</li>
-<li><strong>$value</strong> (<em>string</em>) – Value sought if $key is an identifier</li>
-<li><strong>$escape</strong> (<em>string</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Identifier (string) or associative array of field/value pairs</li>
+<li><strong>$value</strong> (<em>string</em>) &#8211; Value sought if $key is an identifier</li>
+<li><strong>$escape</strong> (<em>string</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2165,7 +2165,7 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$by</strong> (<em>mixed</em>) – Field(s) to group by; string or array</li>
+<li><strong>$by</strong> (<em>mixed</em>) &#8211; Field(s) to group by; string or array</li>
 </ul>
 </td>
 </tr>
@@ -2188,9 +2188,9 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$orderby</strong> (<em>string</em>) – Field to order by</li>
-<li><strong>$direction</strong> (<em>string</em>) – The order requested - ASC, DESC or random</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$orderby</strong> (<em>string</em>) &#8211; Field to order by</li>
+<li><strong>$direction</strong> (<em>string</em>) &#8211; The order requested - ASC, DESC or random</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2213,8 +2213,8 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$value</strong> (<em>int</em>) – Number of rows to limit the results to</li>
-<li><strong>$offset</strong> (<em>int</em>) – Number of rows to skip</li>
+<li><strong>$value</strong> (<em>int</em>) &#8211; Number of rows to limit the results to</li>
+<li><strong>$offset</strong> (<em>int</em>) &#8211; Number of rows to skip</li>
 </ul>
 </td>
 </tr>
@@ -2237,7 +2237,7 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$offset</strong> (<em>int</em>) – Number of rows to skip</li>
+<li><strong>$offset</strong> (<em>int</em>) &#8211; Number of rows to skip</li>
 </ul>
 </td>
 </tr>
@@ -2260,9 +2260,9 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Field name, or an array of field/value pairs</li>
-<li><strong>$value</strong> (<em>string</em>) – Field value, if $key is a single field</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Field name, or an array of field/value pairs</li>
+<li><strong>$value</strong> (<em>string</em>) &#8211; Field value, if $key is a single field</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2286,9 +2286,9 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$set</strong> (<em>array</em>) – An associative array of field/value pairs</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$set</strong> (<em>array</em>) &#8211; An associative array of field/value pairs</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2311,10 +2311,10 @@ joined with ‘AND’ if appropriate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$set</strong> (<em>array</em>) – Data to insert</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
-<li><strong>$batch_size</strong> (<em>int</em>) – Count of rows to insert at once</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$set</strong> (<em>array</em>) &#8211; Data to insert</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
+<li><strong>$batch_size</strong> (<em>int</em>) &#8211; Count of rows to insert at once</li>
 </ul>
 </td>
 </tr>
@@ -2343,9 +2343,9 @@ up to <code class="docutils literal"><span class="pre">$batch_size</span></code>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Field name or an array of field/value pairs</li>
-<li><strong>$value</strong> (<em>string</em>) – Field value, if $key is a single field</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Field name or an array of field/value pairs</li>
+<li><strong>$value</strong> (<em>string</em>) &#8211; Field value, if $key is a single field</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2368,10 +2368,10 @@ up to <code class="docutils literal"><span class="pre">$batch_size</span></code>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$set</strong> (<em>array</em>) – An associative array of field/value pairs</li>
-<li><strong>$where</strong> (<em>string</em>) – The WHERE clause</li>
-<li><strong>$limit</strong> (<em>int</em>) – The LIMIT clause</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$set</strong> (<em>array</em>) &#8211; An associative array of field/value pairs</li>
+<li><strong>$where</strong> (<em>string</em>) &#8211; The WHERE clause</li>
+<li><strong>$limit</strong> (<em>int</em>) &#8211; The LIMIT clause</li>
 </ul>
 </td>
 </tr>
@@ -2394,10 +2394,10 @@ up to <code class="docutils literal"><span class="pre">$batch_size</span></code>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$set</strong> (<em>array</em>) – Field name, or an associative array of field/value pairs</li>
-<li><strong>$value</strong> (<em>string</em>) – Field value, if $set is a single field</li>
-<li><strong>$batch_size</strong> (<em>int</em>) – Count of conditions to group in a single query</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$set</strong> (<em>array</em>) &#8211; Field name, or an associative array of field/value pairs</li>
+<li><strong>$value</strong> (<em>string</em>) &#8211; Field value, if $set is a single field</li>
+<li><strong>$batch_size</strong> (<em>int</em>) &#8211; Count of conditions to group in a single query</li>
 </ul>
 </td>
 </tr>
@@ -2426,9 +2426,9 @@ multiple queries will be executed, each handling up to
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>mixed</em>) – Field name or an array of field/value pairs</li>
-<li><strong>$value</strong> (<em>string</em>) – Field value, if $key is a single field</li>
-<li><strong>$escape</strong> (<em>bool</em>) – Whether to escape values and identifiers</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; Field name or an array of field/value pairs</li>
+<li><strong>$value</strong> (<em>string</em>) &#8211; Field value, if $key is a single field</li>
+<li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
 </ul>
 </td>
 </tr>
@@ -2451,8 +2451,8 @@ multiple queries will be executed, each handling up to
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$set</strong> (<em>array</em>) – An associative array of field/value pairs</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$set</strong> (<em>array</em>) &#8211; An associative array of field/value pairs</li>
 </ul>
 </td>
 </tr>
@@ -2475,10 +2475,10 @@ multiple queries will be executed, each handling up to
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>mixed</em>) – The table(s) to delete from; string or array</li>
-<li><strong>$where</strong> (<em>string</em>) – The WHERE clause</li>
-<li><strong>$limit</strong> (<em>int</em>) – The LIMIT clause</li>
-<li><strong>$reset_data</strong> (<em>bool</em>) – TRUE to reset the query “write” clause</li>
+<li><strong>$table</strong> (<em>mixed</em>) &#8211; The table(s) to delete from; string or array</li>
+<li><strong>$where</strong> (<em>string</em>) &#8211; The WHERE clause</li>
+<li><strong>$limit</strong> (<em>int</em>) &#8211; The LIMIT clause</li>
+<li><strong>$reset_data</strong> (<em>bool</em>) &#8211; TRUE to reset the query &#8220;write&#8221; clause</li>
 </ul>
 </td>
 </tr>
@@ -2501,7 +2501,7 @@ multiple queries will be executed, each handling up to
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
 </ul>
 </td>
 </tr>
@@ -2516,7 +2516,7 @@ multiple queries will be executed, each handling up to
 <p>Executes a TRUNCATE statement on a table.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If the database platform in use doesn’t support TRUNCATE,
+<p class="last">If the database platform in use doesn&#8217;t support TRUNCATE,
 a DELETE statement will be used instead.</p>
 </div>
 </dd></dl>
@@ -2529,7 +2529,7 @@ a DELETE statement will be used instead.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
 </ul>
 </td>
 </tr>
@@ -2552,8 +2552,8 @@ a DELETE statement will be used instead.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$reset</strong> (<em>bool</em>) – Whether to reset the current QB values or not</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$reset</strong> (<em>bool</em>) &#8211; Whether to reset the current QB values or not</li>
 </ul>
 </td>
 </tr>
@@ -2576,8 +2576,8 @@ a DELETE statement will be used instead.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$reset</strong> (<em>bool</em>) – Whether to reset the current QB values or not</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$reset</strong> (<em>bool</em>) &#8211; Whether to reset the current QB values or not</li>
 </ul>
 </td>
 </tr>
@@ -2600,8 +2600,8 @@ a DELETE statement will be used instead.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$reset</strong> (<em>bool</em>) – Whether to reset the current QB values or not</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$reset</strong> (<em>bool</em>) &#8211; Whether to reset the current QB values or not</li>
 </ul>
 </td>
 </tr>
@@ -2624,8 +2624,8 @@ a DELETE statement will be used instead.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table</strong> (<em>string</em>) – Table name</li>
-<li><strong>$reset</strong> (<em>bool</em>) – Whether to reset the current QB values or not</li>
+<li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$reset</strong> (<em>bool</em>) &#8211; Whether to reset the current QB values or not</li>
 </ul>
 </td>
 </tr>
@@ -2663,8 +2663,8 @@ a DELETE statement will be used instead.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -2685,7 +2685,7 @@ a DELETE statement will be used instead.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

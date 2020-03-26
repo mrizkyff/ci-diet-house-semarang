@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>XML Helper &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>XML Helper &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,12 +30,9 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
-        <link rel="next" title="Change Log" href="../changelog.html"/>
+        <link rel="next" title="Tutorial" href="../tutorial/index.html"/>
         <link rel="prev" title="URL Helper" href="url_helper.html"/> 
 
   
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -197,7 +196,7 @@
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">Text Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">Typography Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_helper.html">URL Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">XML Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">XML Helper</a></li>
 </ul>
 </li>
 </ul>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -381,7 +382,7 @@
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">Text Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">Typography Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_helper.html">URL Helper</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">XML Helper</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">XML Helper</a></li>
 </ul>
 </li>
 </ul>
@@ -450,8 +451,8 @@ data.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$str</strong> (<em>string</em>) – the text string to convert</li>
-<li><strong>$protect_all</strong> (<em>bool</em>) – Whether to protect all content that looks like a potential entity instead of just numbered entities, e.g. &amp;foo;</li>
+<li><strong>$str</strong> (<em>string</em>) &#8211; the text string to convert</li>
+<li><strong>$protect_all</strong> (<em>bool</em>) &#8211; Whether to protect all content that looks like a potential entity instead of just numbered entities, e.g. &amp;foo;</li>
 </ul>
 </td>
 </tr>
@@ -469,7 +470,7 @@ characters to entities:</p>
 <div><ul class="simple">
 <li>Ampersands: &amp;</li>
 <li>Less than and greater than characters: &lt; &gt;</li>
-<li>Single and double quotes: ‘ “</li>
+<li>Single and double quotes: &#8216; &#8220;</li>
 <li>Dashes: -</li>
 </ul>
 </div></blockquote>
@@ -495,7 +496,7 @@ character entities, e.g. &amp;#123;. Example:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../changelog.html" class="btn btn-neutral float-right" title="Change Log">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../tutorial/index.html" class="btn btn-neutral float-right" title="Tutorial">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="url_helper.html" class="btn btn-neutral" title="URL Helper"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -507,8 +508,8 @@ character entities, e.g. &amp;#123;. Example:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -529,7 +530,7 @@ character entities, e.g. &amp;#123;. Example:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

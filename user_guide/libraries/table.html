@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>HTML Table Class &mdash; CodeIgniter 3.1.10 documentation</title>
+  <title>HTML Table Class &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="Trackback Class" href="trackback.html"/>
         <link rel="prev" title="Session Library" href="sessions.html"/> 
@@ -52,7 +49,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -86,7 +85,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -145,7 +144,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parser.html">Template Parser Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html">Security Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sessions.html">Session Library</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">HTML Table Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">HTML Table Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackback.html">Trackback Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography.html">Typography Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_testing.html">Unit Testing Class</a></li>
@@ -236,7 +235,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
@@ -270,7 +271,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer’s Certificate of Origin 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
 </ul>
 </li>
 </ul>
@@ -329,7 +330,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parser.html">Template Parser Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html">Security Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sessions.html">Session Library</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">HTML Table Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">HTML Table Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackback.html">Trackback Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography.html">Typography Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_testing.html">Unit Testing Class</a></li>
@@ -543,7 +544,7 @@ specify the design of your layout. Here is the template prototype:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You’ll notice there are two sets of “row” blocks in the
+<p class="last">You&#8217;ll notice there are two sets of &#8220;row&#8221; blocks in the
 template. These permit you to create alternating row colors or design
 elements that alternate with each iteration of the row data.</p>
 </div>
@@ -578,7 +579,7 @@ example, only the table opening tag is being changed:</p>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">table</span><span class="o">-&gt;</span><span class="na">generate</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>In the above example, all cell data would be ran through PHP’s <code class="xref php php-func docutils literal"><span class="pre">htmlspecialchars()</span></code> function, resulting in:</p>
+<p>In the above example, all cell data would be ran through PHP&#8217;s <code class="xref php php-func docutils literal"><span class="pre">htmlspecialchars()</span></code> function, resulting in:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">td</span><span class="o">&gt;</span><span class="nx">Fred</span><span class="o">&lt;/</span><span class="nx">td</span><span class="o">&gt;&lt;</span><span class="nx">td</span><span class="o">&gt;&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">strong</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">Blue</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">/</span><span class="nx">strong</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&lt;/</span><span class="nx">td</span><span class="o">&gt;&lt;</span><span class="nx">td</span><span class="o">&gt;</span><span class="nx">Small</span><span class="o">&lt;/</span><span class="nx">td</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -592,7 +593,7 @@ example, only the table opening tag is being changed:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$table_data</strong> (<em>mixed</em>) – Data to populate the table rows with</li>
+<li><strong>$table_data</strong> (<em>mixed</em>) &#8211; Data to populate the table rows with</li>
 </ul>
 </td>
 </tr>
@@ -615,7 +616,7 @@ example, only the table opening tag is being changed:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$caption</strong> (<em>string</em>) – Table caption</li>
+<li><strong>$caption</strong> (<em>string</em>) &#8211; Table caption</li>
 </ul>
 </td>
 </tr>
@@ -641,7 +642,7 @@ example, only the table opening tag is being changed:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$args</strong> (<em>mixed</em>) – An array or multiple strings containing the table column titles</li>
+<li><strong>$args</strong> (<em>mixed</em>) &#8211; An array or multiple strings containing the table column titles</li>
 </ul>
 </td>
 </tr>
@@ -669,7 +670,7 @@ example, only the table opening tag is being changed:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$args</strong> (<em>mixed</em>) – An array or multiple strings containing the row values</li>
+<li><strong>$args</strong> (<em>mixed</em>) &#8211; An array or multiple strings containing the row values</li>
 </ul>
 </td>
 </tr>
@@ -687,8 +688,8 @@ example, only the table opening tag is being changed:</p>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">table</span><span class="o">-&gt;</span><span class="na">add_row</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>If you would like to set an individual cell’s tag attributes, you can use an associative array for that cell.
-The associative key <strong>data</strong> defines the cell’s data. Any other key =&gt; val pairs are added as key=’val’ attributes to the tag:</p>
+<p>If you would like to set an individual cell&#8217;s tag attributes, you can use an associative array for that cell.
+The associative key <strong>data</strong> defines the cell&#8217;s data. Any other key =&gt; val pairs are added as key=&#8217;val&#8217; attributes to the tag:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$cell</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;data&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;highlight&#39;</span><span class="p">,</span> <span class="s1">&#39;colspan&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">table</span><span class="o">-&gt;</span><span class="na">add_row</span><span class="p">(</span><span class="nv">$cell</span><span class="p">,</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">);</span>
 
@@ -706,8 +707,8 @@ The associative key <strong>data</strong> defines the cell’s data. Any other k
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$array</strong> (<em>array</em>) – An array containing multiple rows’ data</li>
-<li><strong>$col_limit</strong> (<em>int</em>) – Count of columns in the table</li>
+<li><strong>$array</strong> (<em>array</em>) &#8211; An array containing multiple rows&#8217; data</li>
+<li><strong>$col_limit</strong> (<em>int</em>) &#8211; Count of columns in the table</li>
 </ul>
 </td>
 </tr>
@@ -751,7 +752,7 @@ This allows a single array with many elements to be displayed in a table that ha
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$template</strong> (<em>array</em>) – An associative array containing template values</li>
+<li><strong>$template</strong> (<em>array</em>) &#8211; An associative array containing template values</li>
 </ul>
 </td>
 </tr>
@@ -781,7 +782,7 @@ This allows a single array with many elements to be displayed in a table that ha
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$value</strong> (<em>mixed</em>) – Value to put in empty cells</li>
+<li><strong>$value</strong> (<em>mixed</em>) &#8211; Value to put in empty cells</li>
 </ul>
 </td>
 </tr>
@@ -859,8 +860,8 @@ after each table has been generated to clear the previous table information. Exa
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
-      Last updated on Jan 16, 2019.
+        &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -881,7 +882,7 @@ after each table has been generated to clear the previous table information. Exa
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.10',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
