@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url().'administrator/brg_perencanaan' ?>" class="nav-link">
+            <a href="<?php echo base_url().'administrator/produk' ?>" class="nav-link">
               <i class="nav-icon fas fa-cart-plus"></i>
               <p>
                 Produk
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url().'administrator/summary' ?>" class="nav-link">
+            <a href="<?php echo base_url().'administrator/laporan' ?>" class="nav-link">
               <i class="nav-icon fas fa-swatchbook"></i>
               <p>
                 Laporan Penjualan
