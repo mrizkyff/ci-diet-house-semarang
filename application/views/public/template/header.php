@@ -37,12 +37,12 @@
 	      <li class="nav-item active">
 	        <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
 	      </li>
-		<li class="nav-item">
+		<!-- <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url(). 'main/daftar_barang' ?>">Daftar Barang</a>
 	      </li>
 	      <li class="nav-item">
 	      	<a class="nav-link" href="<?php echo base_url(). 'main/laporanPenjualan' ?>">Laporan Penjualan</a>
-	      </li>	       
+	      </li>	        -->
 	    </ul>
 	  </div>
 	</nav>

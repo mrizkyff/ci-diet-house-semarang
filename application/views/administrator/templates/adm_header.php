@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Inventory Barang PDAM Kota Semarang</title>
+  <title>Administrator Diet House Semarang</title>
   <!-- Datatables -->
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> -->
   

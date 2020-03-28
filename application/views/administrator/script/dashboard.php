@@ -1,4 +1,4 @@
 <script>
     console.log('Pengelolaan Makanan')
-    $('#tableProduk').dataTable()
+    $('#tableLogSys').dataTable()
 </script>
