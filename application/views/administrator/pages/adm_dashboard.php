@@ -34,7 +34,7 @@
               <div class="small-box bg-info">
                 <div class="inner">
                   <h3><?php echo $perencanaan ?></h3>
-                  <p>Perencanaan Barang</p>
+                  <p>Produk</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
@@ -49,7 +49,7 @@
                 <div class="inner">
                   <h3><?php echo $baru ?><sup style="font-size: 20px"></sup></h3>
 
-                  <p>Barang Baru</p>
+                  <p>Terjual</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-cube"></i>
@@ -64,7 +64,7 @@
                 <div class="inner">
                   <h3><?php echo $register ?></h3>
 
-                  <p>Register Barang</p>
+                  <p>Dipesan</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-pricetags"></i>
@@ -79,7 +79,7 @@
                 <div class="inner">
                   <h3><?php echo $rusak ?></h3>
 
-                  <p>Barang Rusak</p>
+                  <p>Stok Habis</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-md-construct"></i>
