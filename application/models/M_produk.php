@@ -4,6 +4,9 @@
         public function getProduk(){
             return $this->db->get('item')->result();
         }
+        public function simpanProduk($data){
+            return $this->db->insert('item',$data);
+        }
     }
     
 ?>
