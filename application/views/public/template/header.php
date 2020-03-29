@@ -37,6 +37,18 @@
 	      <li class="nav-item active">
 	        <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
 	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Cancer <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Maag <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Diet<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Pregnant <span class="sr-only">(current)</span></a>
+	      </li>
 		<!-- <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url(). 'main/daftar_barang' ?>">Daftar Barang</a>
 	      </li>
