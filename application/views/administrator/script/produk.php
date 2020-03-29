@@ -34,18 +34,23 @@
             })
         }
 
-        $('#btnTambah').on('click',function(){
-            var namaBarang = $('#nmbrg').val();
-            var jumlah = $('#jml').val();
-            var harga = $('#hrg').val();
-            var deskripsi = $('#desc').val();
-            var gambar = $('#file').val();
-            console.log(namaBarang);
-            console.log(jumlah);
-            console.log(harga);
-            console.log(deskripsi);
-            console.log(gambar);
-        })
+
+        $('#submit').submit(function(e){
+            e.preventDefault();
+                $.ajax({
+                    url: '<?php echo base_url('produk/do_upload') ?>',
+                    type: 'POST',
+                    data: new FormData(this),
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    async: false,
+                    success: function(data){
+                        alert('Produk Berhasil ditambahkan');
+                    }
+                });
+            // console.log('halo');
+        });
 
 
     })

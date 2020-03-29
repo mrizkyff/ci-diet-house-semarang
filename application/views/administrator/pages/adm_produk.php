@@ -70,7 +70,7 @@
               </div>
               <div class="modal-body">
                 <!-- form -->
-                <form>
+                <form id="submit">
                   <div class="form-group">
                     <label for="nmbrg">Nama Barang</label>
                     <input type="text" class="form-control" id="nmbrg" name="nmbrg">
@@ -88,15 +88,15 @@
                     <input type="text" class="form-control" id="desc" name="desc">
                   </div>
                   <div class="form-group">
-                    <label for="gambar">Gambar Display</label>
-                    <input type="file" id="gambar" name="gambar">
+                    <label for="file">Gambar Display</label>
+                    <input type="file" id="file" name="file">
                   </div>
-                </form>
                 <!-- akhir form -->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btnTambah">Tambah</button>
+                <button type="submit" class="btn btn-primary" id="btnTambah">Tambah</button>
+                </form>
               </div>
             </div>
           </div>
