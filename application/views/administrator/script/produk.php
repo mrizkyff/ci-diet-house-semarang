@@ -17,6 +17,7 @@
                                         '<td>'+(i+1)+'</td>'+
                                         '<td>'+data[i].id+'</td>'+
                                         '<td>'+data[i].kdbrg+'</td>'+
+                                        '<td>'+data[i].kategori+'</td>'+
                                         '<td>'+data[i].nmbrg+'</td>'+
                                         '<td>'+data[i].stok+'</td>'+
                                         '<td>'+data[i].harga+'</td>'+

@@ -29,6 +29,7 @@
             <th>NO</th>
             <th>ID</th>
             <th>Kode Barang</th>
+            <th>Kategori</th>
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
@@ -43,6 +44,7 @@
             <th>NO</th>
             <th>ID</th>
             <th>Kode Barang</th>
+            <th>Kategori</th>
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>

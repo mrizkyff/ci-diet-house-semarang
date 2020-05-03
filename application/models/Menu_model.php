@@ -11,47 +11,47 @@
 		// 	# code...
 		// }
 		public function loadMenu(){
-			$query = $this->db->get('item');
+			$query = $this->db->get('tb_item');
 			return $query->result_array();
 		}
-		public function addItem(){
-			$img = $this->upload->data();
-			$gambar = $img['file_name'];
-			$data = [
-				"kdbrg" => $this->input->post('kdbrg'),
-				"nmbrg" => $this->input->post('nmbrg'),
-				"stok" => $this->input->post('stok'),
-				"harga" => $this->input->post('harga'),
-				"deskripsi" => $this->input->post('deskripsi'),
-				"gambar" => $gambar
-			];
-			$this->db->insert('item',$data);
-		}
-		public function editItem(){
-			$stok = $this->input->post('stok');
-			$harga = $this->input->post('harga');
-			$deskripsi = $this->input->post('deskripsi');
-			$kode = $this->input->post('kodes');
+		// public function addItem(){
+		// 	$img = $this->upload->data();
+		// 	$gambar = $img['file_name'];
+		// 	$data = [
+		// 		"kdbrg" => $this->input->post('kdbrg'),
+		// 		"nmbrg" => $this->input->post('nmbrg'),
+		// 		"stok" => $this->input->post('stok'),
+		// 		"harga" => $this->input->post('harga'),
+		// 		"deskripsi" => $this->input->post('deskripsi'),
+		// 		"gambar" => $gambar
+		// 	];
+		// 	$this->db->insert('item',$data);
+		// }
+		// public function editItem(){
+		// 	$stok = $this->input->post('stok');
+		// 	$harga = $this->input->post('harga');
+		// 	$deskripsi = $this->input->post('deskripsi');
+		// 	$kode = $this->input->post('kodes');
 
-			$query = $this->db->query("UPDATE item SET stok='$stok', harga='$harga', deskripsi='$deskripsi' WHERE kdbrg='$kode'");
-			return $query;
-		}
-		public function deleteItem(){
-			$kode = $this->input->get('kode');
-			$query = $this->db->query("DELETE from item where kdbrg='$kode'");
-			return $query;
-		}
-		public function loadLaporanPenjualan(){
-			$query = $this->db->get('nota');
-			return $query->result_array();
-		}
-		public function hitungBelanja(){
-			$jumlahBeli = $this->input->post('jmlBeli');
-			$hargaBarang = $this->input->post('hargaBarang');
-			$namaBarang = $this->input->post('namaBarang');
-			$total = ($jumlahBeli * $hargaBarang);
-			return $total;
-		}
+		// 	$query = $this->db->query("UPDATE item SET stok='$stok', harga='$harga', deskripsi='$deskripsi' WHERE kdbrg='$kode'");
+		// 	return $query;
+		// }
+		// public function deleteItem(){
+		// 	$kode = $this->input->get('kode');
+		// 	$query = $this->db->query("DELETE from item where kdbrg='$kode'");
+		// 	return $query;
+		// }
+		// public function loadLaporanPenjualan(){
+		// 	$query = $this->db->get('nota');
+		// 	return $query->result_array();
+		// }
+		// public function hitungBelanja(){
+		// 	$jumlahBeli = $this->input->post('jmlBeli');
+		// 	$hargaBarang = $this->input->post('hargaBarang');
+		// 	$namaBarang = $this->input->post('namaBarang');
+		// 	$total = ($jumlahBeli * $hargaBarang);
+		// 	return $total;
+		// }
 
 
 
