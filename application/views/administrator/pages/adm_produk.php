@@ -60,7 +60,7 @@
         <!-- Button trigger modal -->
         
 
-        <!-- Modal -->
+        <!-- Modal tambah produk-->
         <div class="modal fade" id="modalTambah" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -104,3 +104,28 @@
           </div>
         </div>
         <!-- akhir modal tambah produk -->
+
+        <!-- Modal hapus produk-->
+        <div class="modal fade" id="modalHapus" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Hapus Produk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id='textHapus'></p>
+                <form>
+                  <input type="hidden" name="id_delete" id="id_delete">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-danger" id="btnHapus">Hapus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- akhir modal hapus produk -->

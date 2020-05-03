@@ -8,6 +8,12 @@
             $result = $this->db->insert('tb_item',$data);
             return $result;
         }
+        public function delete_product($id){
+            $this->db->where('id_produk',$id);
+            $result = $this->db->delete('tb_item');
+            return $result;
+        }
+        
     }
     
 ?>

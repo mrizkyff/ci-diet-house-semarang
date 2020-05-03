@@ -1,7 +1,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         tampilProduk();
-        $('#tableProduk').DataTable()
+        $('#tableProduk').DataTable();
         
         function tampilProduk(){
             $.ajax({
@@ -25,8 +25,8 @@
                                         '<td>'+data[i].tgl_stok+'</td>'+
                                         '<td>'+data[i].gambar+'</td>'+
                                         '<td style "text-align:right;">'+
-                                            '<a href="javascript:;" class="btn btn-info btn-xs item_edit" data="'+data[i].id+'">   <i class="fas fa-edit"></i> Edit   </a>'+' '+
-                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_hapus" data="'+data[i].id+'" nama="'+data[i].nama+'"> <i class="fas fa-trash"></i> Hapus </a>'+' '+
+                                            '<a href="javascript:;" class="btn btn-info btn-xs item_edit" id="'+data[i].id_produk+'">   <i class="fas fa-edit"></i> Edit   </a>'+' '+
+                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_hapus" id="'+data[i].id_produk+'" nama="'+data[i].nmbrg+'"> <i class="fas fa-trash"></i> Hapus </a>'+' '+
                                         '</td>'+
                                     '</tr>';
                         }
@@ -36,7 +36,6 @@
         }
 
         $('#btnTambah').on('click',function(){
-
             var nmbrg = $('#nmbrg').val();
             var jml = $('#jml').val();
             var hrg = $('#hrg').val();
@@ -60,7 +59,39 @@
                     alert('Produk Berhasil Ditambahkan');
                     tampilProduk();
                 }
-            })
+            });
+        });
+
+        // get hapus
+        $('#show_produk').on('click','.item_hapus',function(){
+            var id = $(this).attr('id');
+            var nama = $(this).attr('nama');
+            $('#modalHapus').modal('show');
+            $('#id_delete').val(id);
+            $('#textHapus').text('Anda yakin untuk menghapus item '+nama+'?');
         })
+
+        // aksi hapus
+        $('#btnHapus').on('click',function(){
+            var id = $('#id_delete').val();
+            $.ajax({
+                type : 'POST',
+                url : '<?php echo base_url('product/delete') ?>',
+                dataType : 'JSON',
+                data : {id:id},
+                success : function(data){
+                    alert('Produk '+id+' berhasil dihapus!');
+                    $('#modalHapus').modal('hide');
+                    tampilProduk();
+                    $('#tableProduk').DataTable();
+                    // console.log(data);
+                    
+                }
+            });
+
+            return false;
+        });
+        
+
     })
 </script>

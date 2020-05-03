@@ -27,6 +27,11 @@
             $hasil = $this->M_Product->save_product($data);
             echo json_encode($hasil);
         }
+        public function delete(){
+            $id = $this->input->post('id');
+            $hasil = $this->M_Product->delete_product($id);
+            echo json_encode($hasil);
+        }
     }
     
 ?>
