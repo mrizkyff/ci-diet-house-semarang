@@ -72,7 +72,7 @@
               </div>
               <div class="modal-body">
                 <!-- form -->
-                <form id="submit">
+                <form>
                   <div class="form-group">
                     <label for="nmbrg">Nama Barang</label>
                     <input type="text" class="form-control" id="nmbrg" name="nmbrg">
