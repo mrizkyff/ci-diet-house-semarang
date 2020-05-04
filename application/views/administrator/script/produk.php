@@ -14,6 +14,7 @@
                         var i;
                         for(i=0;i<data.length; i++){
                             var cat  = 0
+                            var jenis = 0
                             if (data[i].kategori == 1){
                                 cat = 'Weight Gain';
                             }
@@ -38,11 +39,19 @@
                             else if (data[i].kategori == 7){
                                 cat = 'Hypertensi';
                             }
+
+                            if (data[i].jenis == 1){
+                                jenis = 'Makanan';
+                            }
+                            else if(data[i].jenis == 2){
+                                jenis = 'Minuman';
+                            }
                             html += '<tr>'+
                                         '<td>'+(i+1)+'</td>'+
                                         '<td>'+data[i].id_produk+'</td>'+
                                         '<td>'+data[i].kdbrg+'</td>'+
                                         '<td>'+cat+'</td>'+
+                                        '<td>'+jenis+'</td>'+
                                         '<td>'+data[i].nmbrg+'</td>'+
                                         '<td>'+data[i].stok+'</td>'+
                                         '<td>'+data[i].harga+'</td>'+
@@ -77,6 +86,8 @@
                         success: function(data){
                             $('#modalTambah').modal('hide');
                             $('#nmbrg').val('');
+                            $('#kategori').val('');
+                            $('#jenis').val('');
                             $('#jml').val('');
                             $('#hrg').val('');
                             $('#desc').val('');
@@ -112,6 +123,7 @@
                     $('#id_edit').val(id);
                     $('#nmbrgx').val(data[0]['nmbrg'])
                     $('#kategorix').val(data[0]['kategori'])
+                    $('#jenisx').val(data[0]['jenis'])
                     $('#jmlx').val(data[0]['stok'])
                     $('#hrgx').val(data[0]['harga'])
                     $('#descx').val(data[0]['deskripsi'])
@@ -147,6 +159,7 @@
             var id = $('#id_edit').val();
             var nmbrg = $('#nmbrgx').val();
             var kategori = $('#kategorix').val();
+            var jenis = $('#jenisx').val();
             var jml = $('#jmlx').val();
             var hrg = $('#hrgx').val();
             var desc = $('#descx').val();
@@ -159,6 +172,7 @@
                     id:id,
                     nmbrg:nmbrg,
                     kategori:kategori,
+                    jenis:jenis,
                     jml:jml,
                     hrg:hrg,
                     desc:desc

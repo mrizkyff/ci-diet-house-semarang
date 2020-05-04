@@ -23,11 +23,12 @@
             $hrg = $this->input->post('hrg');
             $desc = $this->input->post('desc');
             $kategori = $this->input->post('kategori');
+            $jenis = $this->input->post('jenis');
 
             // membuat kombinasi kode
             $kode = date('Ymd');
             $jam = date('Hi');
-            $kode = $kode.'DHS'.$kategori.$kategori.$jam;
+            $kode = $kode.'DHS'.$kategori.$jenis.$jam;
 
                 $config['upload_path']          = './asset/img/food/';
                 $config['allowed_types']        = 'jpg|png|jpeg';
@@ -45,6 +46,7 @@
                     $data = array(
                         'nmbrg' => $nmbrg,
                         'kdbrg' => $kode,
+                        'jenis' => $jenis,
                         'stok' => $jml,
                         'harga' => $hrg,
                         'deskripsi' => $desc,
@@ -68,6 +70,7 @@
             $id = $this->input->post('id');
             $nmbrg = $this->input->post('nmbrg');
             $kategori = $this->input->post('kategori');
+            $jenis = $this->input->post('jenis');
             $jml = $this->input->post('jml');
             $hrg = $this->input->post('hrg');
             $desc = $this->input->post('desc');
@@ -75,6 +78,7 @@
             $data = array(
                 'nmbrg' => $nmbrg,
                 'kategori' => $kategori,
+                'jenis' => $jenis,
                 'stok' => $jml,
                 'harga' => $hrg,
                 'deskripsi' => $desc

@@ -30,6 +30,7 @@
             <th>ID</th>
             <th>Kode Barang</th>
             <th>Kategori</th>
+            <th>Jenis</th>
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
@@ -45,6 +46,7 @@
             <th>ID</th>
             <th>Kode Barang</th>
             <th>Kategori</th>
+            <th>Jenis</th>
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
@@ -89,6 +91,14 @@
                       <option value="6">6. Diabetes</option>
                       <option value="7">7. Cholesterol</option>
                       <option value="8">8. Hypertensi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="jenis">Jenis</label>
+                    <select name="jenis" id="jenis" class="form-control">
+                      <option value="">Pilih Jenis Produk</option>
+                      <option value="1">1. Makanan</option>
+                      <option value="2">2. Minuman</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -174,6 +184,14 @@
                       <option value="6">6. Diabetes</option>
                       <option value="7">7. Cholesterol</option>
                       <option value="8">8. Hypertensi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="jenisx">Jenis</label>
+                    <select name="jenisx" id="jenisx" class="form-control">
+                      <option value="">Pilih Jenis Produk</option>
+                      <option value="1">1. Makanan</option>
+                      <option value="2">2. Minuman</option>
                     </select>
                   </div>
                   <div class="form-group">
