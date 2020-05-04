@@ -42,10 +42,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url().'administrator/laporan' ?>" class="nav-link">
+            <a href="<?php echo base_url().'administrator/transaksi' ?>" class="nav-link">
               <i class="nav-icon fas fa-swatchbook"></i>
               <p>
-                Laporan Penjualan
+                Daftar Transaksi
               </p>
             </a>
           </li>
