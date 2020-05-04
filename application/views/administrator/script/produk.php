@@ -36,36 +36,6 @@
         }
 
         // simpan produk
-        $('#btnTambahs').on('click',function(){
-            var nmbrg = $('#nmbrg').val();
-            var jml = $('#jml').val();
-            var hrg = $('#hrg').val();
-            var desc = $('#desc').val();
-            var kategori = $('#kategori').val();
-            
-            $.ajax({
-                type : 'POST',
-                url : '<?php echo base_url('product/save') ?>',
-                dataType : 'JSON',
-                data : {
-                    nmbrg : nmbrg,
-                    jml : jml,
-                    hrg : hrg,
-                    desc : desc,
-                    kategori : kategori
-                },
-                success : function(data){
-                    $('#nmbrg').val('');
-                    $('#jml').val('');
-                    $('#hrg').val('');
-                    $('#desc').val('');
-                    $('#kategori').val('');
-                    alert('Produk Berhasil Ditambahkan');
-                    tampilProduk();
-                }
-            });
-        });
-
         // simpan produk dengan gambar
         $(document).ready(function(){ 
             // upload foto
@@ -80,11 +50,14 @@
                         cache:false,
                         async:false,
                         success: function(data){
-                            // alert("Upload Image Berhasil.");
-                            // $('#modalFoto').modal('hide');
-                            // tampilDataBarang();
-                            console.log(data);
-                            
+                            $('#modalTambah').modal('hide');
+                            $('#nmbrg').val('');
+                            $('#jml').val('');
+                            $('#hrg').val('');
+                            $('#desc').val('');
+                            $('#kategori').val('');
+                            alert('Produk Berhasil Ditambahkan');
+                            tampilProduk();
                         }
                     });
                 });
