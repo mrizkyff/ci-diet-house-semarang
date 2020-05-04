@@ -36,7 +36,7 @@
         }
 
         // simpan produk
-        $('#btnTambah').on('click',function(){
+        $('#btnTambahs').on('click',function(){
             var nmbrg = $('#nmbrg').val();
             var jml = $('#jml').val();
             var hrg = $('#hrg').val();
@@ -65,6 +65,32 @@
                 }
             });
         });
+
+        // simpan produk dengan gambar
+        $(document).ready(function(){ 
+            // upload foto
+            $('#submit').submit(function(e){
+                e.preventDefault(); 
+                    $.ajax({
+                        url:'<?php echo base_url();?>product/do_upload',
+                        type:"post",
+                        data:new FormData(this),
+                        processData:false,
+                        contentType:false,
+                        cache:false,
+                        async:false,
+                        success: function(data){
+                            // alert("Upload Image Berhasil.");
+                            // $('#modalFoto').modal('hide');
+                            // tampilDataBarang();
+                            console.log(data);
+                            
+                        }
+                    });
+                });
+
+            });
+        
 
         // get hapus
         $('#show_produk').on('click','.item_hapus',function(){

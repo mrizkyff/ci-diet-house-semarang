@@ -72,7 +72,7 @@
               </div>
               <div class="modal-body">
                 <!-- form -->
-                <form>
+                <form id="submit">
                   <div class="form-group">
                     <label for="nmbrg">Nama Barang</label>
                     <input type="text" class="form-control" id="nmbrg" name="nmbrg" placeholder="Nama Produk">
@@ -105,13 +105,13 @@
                   </div>
                   <div class="form-group">
                     <label for="file">Gambar Display</label>
-                    <input type="file" id="file" name="file" class="form-control">
+                    <input type="file" id="foto" name="foto" class="form-control">
                   </div>
                 <!-- akhir form -->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btnTambah">Tambah</button>
+                <button type="submit" class="btn btn-primary" id="btnTambah">Tambah</button>
                 </form>
               </div>
             </div>
@@ -144,7 +144,7 @@
         </div>
         <!-- akhir modal hapus produk -->
 
-        <!-- Modal tambah produk-->
+        <!-- Modal edit produk-->
         <div class="modal fade" id="modalEdit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -202,5 +202,5 @@
             </div>
           </div>
         </div>
-        <!-- akhir modal tambah produk -->
+        <!-- akhir modal edit produk -->
         

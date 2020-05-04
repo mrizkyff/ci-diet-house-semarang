@@ -64,6 +64,51 @@
             echo json_encode($result);
             // print_r($data);
         }
+
+        public function do_upload()
+        {
+            // $tanggal = date('Y-m-d H:i:s');
+            // $nmbrg = $this->input->post('nmbrg');
+            // $jml = $this->input->post('jml');
+            // $hrg = $this->input->post('hrg');
+            // $desc = $this->input->post('desc');
+            // $kategori = $this->input->post('kategori');
+            
+            // // membuat kombinasi kode
+            // $kode = date('Ymd');
+            // $jam = date('Hi');
+            // $kode = $kode.'DHS'.$kategori.$kategori.$jam;
+
+            $config['upload_path']          = './asset/';
+            $config['allowed_types']        = 'jpg|png|jpeg';
+               
+            
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('foto');
+            echo json_encode(TRUE);
+            //     if($this->upload->do_upload('foto')){
+
+                //         $upload_data = $this->upload->data();
+                    
+                    
+            //         $nama = $upload_data['file_name'];
+
+            //         $data = array(
+            //             'nmbrg' => $nmbrg,
+            //             'kdbrg' => $kode,
+            //             'stok' => $jml,
+            //             'harga' => $hrg,
+            //             'deskripsi' => $desc,
+            //             'tgl_stok' => $tanggal,
+            //             'kategori' => $kategori,
+            //             'gambar' => $nama
+            //         );
+                    
+                    
+            //         $hasil = $this->M_Product->save_product($data);
+            //         echo json_encode($hasil);
+            //     }
+        }
     }
     
 ?>
