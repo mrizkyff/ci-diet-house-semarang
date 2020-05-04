@@ -15,3 +15,32 @@
             </div><!-- /.col -->
         </div><!-- /.row -->
         <br>
+
+        <!-- tabel transaksi -->
+        <table id="tableTransaksi" class="table table-stripped">
+          <thead>
+            <th>No</th>
+            <th>ID Transaksi</th>
+            <th>Nama Produk</th>
+            <th>Username</th>
+            <th>Jumlah</th>
+            <th>Status</th>
+            <th>Pengiriman</th>
+            <th>Date</th>
+            <th>Aksi</th>
+          </thead>
+          <tbody id="show_transaksi">
+          </tbody>
+          <tfoot>
+            <th>No</th>
+            <th>ID Transaksi</th>
+            <th>Nama Produk</th>
+            <th>Username</th>
+            <th>Jumlah</th>
+            <th>Status</th>
+            <th>Pengiriman</th>
+            <th>Date</th>
+            <th>Aksi</th>
+          </tfoot>
+        </table>
+        <!-- akhir tabel transaksi -->
