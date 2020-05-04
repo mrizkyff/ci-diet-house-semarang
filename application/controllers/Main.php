@@ -22,17 +22,10 @@
 			$this->load->view('public/script/Homepage');
 		}		
 		public function beli(){
-			if($this->session->userdata('status') != "login"){
-				redirect(base_url("login"));
-			}
-			else{
-
 				$id = $this->input->post('id');
 				$jmlBeli = $this->input->post('jmlBeli');
 				echo $id;
 				echo $jmlBeli;
-				
-			}
 		}
 	}
  ?>

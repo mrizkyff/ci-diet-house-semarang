@@ -143,14 +143,24 @@
 								        </button>
 								      </div>
 								      <div class="modal-body">
+									 	<?php
+										$actions = '';
+										if (!$this->session->userdata('status') == 'login'){
+											$actions = base_url('login');
+										}
+										else{
+											$actions = base_url('main/beli');
+										}
+										?>
 								      	<img src="asset/img/food/<?php echo $data['gambar'] ?>" alt="..." class="img-thumbnail">
 								        <p><?php echo $data['nmbrg'] ?></p>
 								        <div class="form-group row" style="margin-left: 60px;">
-								        	<form action="<?php echo base_url('main/beli') ?>" method="POST">
+								        	<form action="<?php echo $actions ?>" method="POST">
 									        	<label for="jmlBeli">Jumlah Pembelian : </label>
 									        	<input type="text" name="jmlBeli" maxlength="10">
 												<input type="hidden" value="<?php echo $data['id_produk']?>" name="id" id="id">
 									        	<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;">
+												
 								        	</form>
 								        </div>
 								      </div>
