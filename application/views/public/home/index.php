@@ -39,7 +39,7 @@
 	  <hr class="my-4" style="border-color: white;">
 	  <p style="font-size: 17px;">Kami akan membantu anda untuk menyediakan menu makanan yang sehat sesuai kebutuhan anda.
 	  Liburan sudah selesai, pastikan kamu kembali sehat dengan memulai catering sehat DietHouseSemarang dan dapatkan Harga Spesial hingga 30%
-	  Periode 1-30 Juni 2019
+	  Periode 1-30 Juni 2020
 	  Syarat dan ketentuan berlaku.
 	  <br>
 	  <br>
@@ -150,7 +150,7 @@
 									        	<input type="text" name="jmlBeli" maxlength="10">
 									        	<input type="hidden" name="hargaBarang" value="<?php echo $data['harga'] ?>">
 									        	<input type="hidden" name="namaBarang" value="<?php echo $data['nmbrg'] ?>">
-									        	<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light">
+									        	<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;">
 								        	</form>
 								        </div>
 								      </div>

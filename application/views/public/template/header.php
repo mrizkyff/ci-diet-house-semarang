@@ -37,18 +37,27 @@
 	      <li class="nav-item active">
 	        <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
 	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Cancer <span class="sr-only">(current)</span></a>
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Weight Loss <span class="sr-only"></span></a>
 	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Maag <span class="sr-only">(current)</span></a>
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Weight Gain <span class="sr-only"></span></a>
 	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Diet<span class="sr-only">(current)</span></a>
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo base_url() ?>">Muscle Building <span class="sr-only"></span></a>
 	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Pregnant <span class="sr-only">(current)</span></a>
-	      </li>
+	      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Special Needs
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Pregnancy</a>
+				<a class="dropdown-item" href="#">Stroke</a>
+				<a class="dropdown-item" href="#">Diabetes</a>
+				<a class="dropdown-item" href="#">Cholesterol</a>
+				<a class="dropdown-item" href="#">Hypertensi</a>
+			</div>
+		</li>
 		<!-- <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url(). 'main/daftar_barang' ?>">Daftar Barang</a>
 	      </li>
