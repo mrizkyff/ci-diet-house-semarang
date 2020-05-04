@@ -60,6 +60,7 @@
     	</div>
     <!-- akhir jumbotron -->
 
+
     <!-- awal container -->
    	<div class="jumbotron jumbotron-fluid bg-secondary text-light" style="margin-top: -100px;">
 	  <div class="container">
@@ -100,7 +101,7 @@
 	  <hr class="my-4" style="border-color: white;">
 		<!-- THUMBNAIL -->
 			<h3>Health Me UP!</h3>
-	  <br><br>
+	  <br>
 	    	<div class="row">
 	    		<?php 
 	    			foreach($menu as $data){
@@ -110,62 +111,28 @@
 
 						<!-- thumbnail -->
 						<div class="col-sm-4">
-			    			<div class="card" style="width: 18rem; height: 600px;margin-top: 50px;">
-							  <img src="asset/img/food/<?php echo $data['gambar'] ?>" class="card-img-top" alt="...">
+			    			<div class="card" style="width: 19rem; height: 600px;margin-top: 50px;">
+							  <img src="asset/img/food/<?php echo $data['gambar'] ?>" class="card-img-top" alt="..." style="height:300px; width:auto;">
 							  <div class="card-body">
-							    <p class="card-text text-dark text-left"><?php echo $data['deskripsi'] ?></p>
-							    <p style="font-size: 14px;" class="text-dark text-left">
-							    Kode Barang : <?php echo $data['kdbrg']; ?>
-							    <br>
-							    Nama Barang : <?php echo $data['nmbrg']; ?>
-							    <br>
-							    Rp. <?php echo $data['harga']; ?>
-							    <br>
-							    Stok : <?php echo $data['stok']; ?></p>
-								<br>
-								
-							    <div class="card-footer">
-							    <!-- <button class="btn btn-warning text-light" style="padding-right: 25px; padding-left: 25px;">Beli</button> -->
-							    <!-- <button class="btn btn-warning text-light">Tambah</button> -->
-							    <a href="" class="btn btn-warning text-light" style="padding-right: 25px; padding-left: 25px;width: 100%" data-toggle="modal" data-target="#modal-<?php echo $data['kdbrg'] ?>">Beli</a>
-							    <!-- <a href="" class="btn btn-warning text-light">Tambah</a> -->
-
-							    <!-- awal modal -->
-							    <div class="modal text-dark" tabindex="-1" role="dialog" id="modal-<?php echo $data['kdbrg']?>">
-								  <div class="modal-dialog" role="document">
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <h5 class="modal-title">Beli <?php echo $data['nmbrg'] ?></h5>
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								          <span aria-hidden="true">&times;</span>
-								        </button>
-								      </div>
-								      <div class="modal-body">
-								      	<img src="asset/img/food/<?php echo $data['gambar'] ?>" alt="..." class="img-thumbnail">
-								        <p><?php echo $data['nmbrg'] ?></p>
-								        <div class="form-group row" style="margin-left: 60px;">
-								        	<form action="<?php echo base_url(). 'main/checkOut' ?>" method="POST">
-									        	<label for="jmlBeli">Jumlah Beli : </label>
-									        	<!-- <input type="text" name="jmlBeli" maxlength="10" form="form-control"> -->
-									        	<input type="text" name="jmlBeli" maxlength="10">
-									        	<input type="hidden" name="hargaBarang" value="<?php echo $data['harga'] ?>">
-									        	<input type="hidden" name="namaBarang" value="<?php echo $data['nmbrg'] ?>">
-									        	<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;">
-								        	</form>
-								        </div>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-								      </div>
-								    </div>
-								  </div>
+								<div class="container text-dark text-left">
+									<h5><b><?php echo $data['nmbrg']; ?></b></h5>
+									<br>
+									<?php echo $data['deskripsi'] ?>
+									<br>
 								</div>
-							    <!-- ahir modal -->
+							  </div>
+							    <div class="card-footer">
+									<div class="container text-dark text-left">
+										SKU : <?php echo $data['kdbrg']; ?>
+										<br>
+										Rp. <?php echo $data['harga']; ?>
+										<br>	
+										Tersedia : <?php echo $data['stok']; ?>
+									</div>
+									<a href="" class="btn btn-warning text-light" style="padding-right: 25px; padding-left: 25px;width: 100%" data-toggle="modal" data-target="#modal-<?php echo $data['kdbrg'] ?>" style="bottom:0;">Beli</a>
 							    </div>
 							</div>
 			    			</div>
-			    		</div>
 
 						<!-- ahir thumbnail -->
 						
