@@ -10,6 +10,12 @@
             $this->db->select('id_user');
             return $this->db->get('tb_user')->result();
         }
+        public function find_level($data){
+            $this->db->where($data);
+            $this->db->select('level');
+            return $this->db->get('tb_user')->result();
+        }
+        
     }
     
 ?>

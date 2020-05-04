@@ -17,10 +17,10 @@
             $where = array(
                 'username' => $username,
                 'password' => $password,
-                'level' => '2'
             );
     
             $idUser = $this->M_Login->find_id($where);
+            $level = $this->M_Login->find_level($where);
             $cek = $this->M_Login->cek_login($where)->num_rows();
             if($cek > 0){
     
@@ -31,8 +31,12 @@
                 );
     
                 $this->session->set_userdata($data_session);
-                // var_dump($data_session);
-                redirect(base_url("main"));
+                if($level[0]->level == 2){
+                    redirect(base_url("main"));
+                }
+                elseif($level[0]->level == 1){
+                    redirect(base_url("administrator"));
+                }
     
             }
             else{
