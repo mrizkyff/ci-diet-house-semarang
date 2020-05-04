@@ -17,11 +17,11 @@
                             html += '<tr>'+
                                         '<td>'+(i+1)+'</td>'+
                                         '<td>'+data[i].id_transaksi+'</td>'+
-                                        '<td>'+data[i].id_produk+'</td>'+
-                                        '<td>'+data[i].id_user+'</td>'+
+                                        '<td>'+data[i].nmbrg+'</td>'+
+                                        '<td>'+data[i].username+'</td>'+
                                         '<td>'+data[i].jmlJual+'</td>'+
                                         '<td>'+data[i].status+'</td>'+
-                                        '<td>'+data[i].id_user+'</td>'+
+                                        '<td>'+data[i].alamat+'</td>'+
                                         '<td>'+data[i].tgl_transaksi+'</td>'+
                                         '<td style "text-align:right;">'+
                                             '<a href="javascript:;" class="btn btn-info btn-xs item_edit" id="'+data[i].id_produk+'">   <i class="fas fa-edit"></i> Edit   </a>'+' '+
