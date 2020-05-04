@@ -68,6 +68,7 @@
         }
         public function update(){
             $id = $this->input->post('id');
+            $tanggal = date('Y-m-d H:i:s');
             $nmbrg = $this->input->post('nmbrg');
             $kategori = $this->input->post('kategori');
             $jenis = $this->input->post('jenis');
@@ -81,7 +82,8 @@
                 'jenis' => $jenis,
                 'stok' => $jml,
                 'harga' => $hrg,
-                'deskripsi' => $desc
+                'deskripsi' => $desc,
+                'tgl_stok' => $tanggal
             );
             $result = $this->M_Product->update_product($data,$id);
             echo json_encode($result);
