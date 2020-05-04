@@ -105,10 +105,7 @@
 	    	<div class="row">
 	    		<?php 
 	    			foreach($menu as $data){
-
-	    				
 	    				?>
-
 						<!-- thumbnail -->
 						<div class="col-sm-4">
 			    			<div class="card" style="width: 19rem; height: 600px;margin-top: 50px;">
@@ -129,13 +126,43 @@
 										<br>	
 										Tersedia : <?php echo $data['stok']; ?>
 									</div>
-									<a href="" class="btn btn-warning text-light" style="padding-right: 25px; padding-left: 25px;width: 100%" data-toggle="modal" data-target="#modal-<?php echo $data['kdbrg'] ?>" style="bottom:0;">Beli</a>
+									<a href="" class="btn btn-warning text-light" style="padding-right: 25px; padding-left: 25px;width: 100%" id="btnBeli" style="bottom:0;" data-toggle="modal" data-target="#modal-<?php echo $data['kdbrg']?>">Beli</a>
 							    </div>
 							</div>
 			    			</div>
-
 						<!-- ahir thumbnail -->
 						
+						<!-- awal modal pembelian -->
+						<div class="modal text-dark" tabindex="-1" role="dialog" id="modal-<?php echo $data['kdbrg']?>">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title">Beli <?php echo $data['nmbrg'] ?></h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">
+								      	<img src="asset/img/food/<?php echo $data['gambar'] ?>" alt="..." class="img-thumbnail">
+								        <p><?php echo $data['nmbrg'] ?></p>
+								        <div class="form-group row" style="margin-left: 60px;">
+								        	<form action="<?php echo base_url('main/beli') ?>" method="POST">
+									        	<label for="jmlBeli">Jumlah Pembelian : </label>
+									        	<input type="text" name="jmlBeli" maxlength="10">
+												<input type="hidden" value="<?php echo $data['id_produk']?>" name="id" id="id">
+									        	<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;">
+								        	</form>
+								        </div>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							    <!-- ahir modal pembelian-->
+
 	    				<?php
 	    			}
 	    		 ?>

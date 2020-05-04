@@ -58,6 +58,16 @@
 			<a class="dropdown-item" href="#">Hypertensi</a>
 			</div>
 		</li>
+	      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Akun
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="#">Akun Saya</a>
+			<a class="dropdown-item" href="#">Logout</a>
+			</div>
+		</li>
+		
 		<!-- <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url(). 'main/daftar_barang' ?>">Daftar Barang</a>
 	      </li>

@@ -6,91 +6,33 @@
 	class Main extends CI_Controller
 	{
 		
-		// function __construct(argument)
-		// {
-		// 	# code...
-		// }
+		function __construct()
+		{
+			parent::__construct();
+			$this->load->model('M_Menu','Menu');
+		}
+		public function login(){
+			echo 'halaman login';
+		}
 		public function index(){
-			$this->load->model('menu_model');
-			$data['menu'] = $this->menu_model->loadMenu();
-			$this->load->view('public/template/header.php');
-			$this->load->view('public/home/index.php',$data);
-			$this->load->view('public/template/footer.php');
-		
-
+			$data['menu'] = $this->Menu->get_menu();
+			$this->load->view('public/template/header');
+			$this->load->view('public/home/index',$data);
+			$this->load->view('public/template/footer');
+			$this->load->view('public/script/Homepage');
 		}		
-		public function daftar_barang(){
-			$this->load->model('menu_model');
-			$data['item'] = $this->menu_model->loadMenu();
-			$this->load->view('public/template/header.php');
-			$this->load->view('public/page/daftar_barang.php',$data);
-			$this->load->view('public/template/footer.php');
-		}
-		public function tambahItem(){
-			$this->load->model('menu_model');
-			$this->menu_model->addItem();
-			redirect('main/daftar_barang');
-		}
-		public function do_upload(){
-			$config['upload_path'] = './asset/img/food';
-			$config['allowed_types'] = 'gif|jpg|png|jpeg';
-			$config['max_size'] = 1000;
-			$config['max_width'] = 10240;
-			$config['max_height'] = 7680;
-
-			$this->load->library('upload',$config);
-			if(!$this->upload->do_upload('foto')){
-				// $this->session->set_flashdata('gagal','Registrasi Gagal');
-				// redirect('public/home/index');
+		public function beli(){
+			if($this->session->userdata('status') != "login"){
+				redirect(base_url("login"));
 			}
 			else{
-				$this->tambahItem();
-				// $this->session->set_flashdata('sukses','Registrasi Berhasil!');
-				// redirect('public/home/index');
 
+				$id = $this->input->post('id');
+				$jmlBeli = $this->input->post('jmlBeli');
+				echo $id;
+				echo $jmlBeli;
+				
 			}
-		}
-		public function editItem(){
-			$this->load->model('menu_model');
-			$this->menu_model->editItem();
-			redirect('main/daftar_barang');
-		}
-
-		public function deleteItem(){
-			$this->load->model('menu_model');
-			$this->menu_model->deleteItem();
-			redirect('main/daftar_barang');
-		}
-
-		public function laporanPenjualan(){
-			$this->load->model('menu_model');
-			$data['penjualan'] = $this->menu_model->loadLaporanPenjualan();
-			$this->load->view('public/template/header.php');
-			$this->load->view('public/page/laporanPenjualan.php',$data);
-			$this->load->view('public/template/footer.php');
-		}
-
-
-		public function checkOut(){
-			$this->load->model('menu_model');
-			$total = $this->menu_model->hitungBelanja();
-			$data = [
-				'namaBarang' => $this->input->post('namaBarang'),
-				'hargaBarang' => $this->input->post('hargaBarang'),
-				'jumlahBeli' => $this->input->post('jmlBeli'),
-				'total' => $total
-			];
-			$this->load->view('public/template/header.php');
-			$this->load->view('public/page/checkOut.php',$data);
-			$this->load->view('public/template/footer.php');	
-		}
-
-		public function updateStok(){
-			$this->load->model('menu_model');
-			$this->menu_model->updateStok();
-			// $this->menu_model->buatNota();
-			$this->laporanPenjualan();
-
 		}
 	}
  ?>
