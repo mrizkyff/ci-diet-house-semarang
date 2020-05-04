@@ -31,13 +31,17 @@
                 );
     
                 $this->session->set_userdata($data_session);
-                var_dump($data_session);
-                // redirect(base_url("administrator"));
+                // var_dump($data_session);
+                redirect(base_url("main"));
     
             }
             else{
                 echo "Username dan password salah!";
             }
+        }
+        function logout(){
+            $this->session->sess_destroy();
+            redirect(base_url("login"));
         }
     }
     

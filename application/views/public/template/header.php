@@ -35,7 +35,7 @@
 	    		<a href="" class="text-dark nav-link">     </a>
 	    	</li>
 	      <li class="nav-item active">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
+	        <a class="nav-link" href="<?php echo base_url('main') ?>">Home <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url() ?>">Weight Loss <span class="sr-only"></span></a>
@@ -58,15 +58,34 @@
 			<a class="dropdown-item" href="#">Hypertensi</a>
 			</div>
 		</li>
-	      <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Akun
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			<a class="dropdown-item" href="#">Akun Saya</a>
-			<a class="dropdown-item" href="#">Logout</a>
-			</div>
-		</li>
+		<?php
+		if($this->session->userdata('status') == 'login'){
+			?>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Akun
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item" href="#">Akun Saya</a>
+			  <a class="dropdown-item" href="<?php echo base_url('login/logout') ?>">Logout</a>
+			  </div>
+		  </li>
+			<?php
+		}
+		else{
+			?>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Akun
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="<?php echo base_url('login') ?>">Login</a>
+				<a class="dropdown-item" href="#">Daftar</a>
+				</div>
+			</li>
+			<?php
+		}
+		?>
 		
 		<!-- <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url(). 'main/daftar_barang' ?>">Daftar Barang</a>
