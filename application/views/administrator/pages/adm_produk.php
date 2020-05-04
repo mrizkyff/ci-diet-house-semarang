@@ -75,29 +75,43 @@
                 <form>
                   <div class="form-group">
                     <label for="nmbrg">Nama Barang</label>
-                    <input type="text" class="form-control" id="nmbrg" name="nmbrg">
+                    <input type="text" class="form-control" id="nmbrg" name="nmbrg" placeholder="Nama Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select name="kategori" id="kategori" class="form-control">
+                      <option value="">Pilih Kategori...</option>
+                      <option value="1">1. Weight Loss</option>
+                      <option value="2">2. Weight Gain</option>
+                      <option value="3">3. Muscle Building</option>
+                      <option value="4">4. Pregnancy</option>
+                      <option value="5">5. Stroke</option>
+                      <option value="6">6. Diabetes</option>
+                      <option value="7">7. Cholesterol</option>
+                      <option value="8">8. Hypertensi</option>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="jml">Jumlah</label>
-                    <input type="text" class="form-control" id="jml" name="jml">
+                    <input type="text" class="form-control" id="jml" name="jml" placeholder="Jumlah Produk">
                   </div>
                   <div class="form-group">
                     <label for="hrg">Harga</label>
-                    <input type="text" class="form-control" id="hrg" name="hrg">
+                    <input type="text" class="form-control" id="hrg" name="hrg" placeholder="Harga Produk">
                   </div>
                   <div class="form-group">
                     <label for="desc">Deskripsi</label>
-                    <input type="text" class="form-control" id="desc" name="desc">
+                    <input type="text" class="form-control" id="desc" name="desc" placeholder="Deskripsi Produk">
                   </div>
                   <div class="form-group">
                     <label for="file">Gambar Display</label>
-                    <input type="file" id="file" name="file">
+                    <input type="file" id="file" name="file" class="form-control">
                   </div>
                 <!-- akhir form -->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id="btnTambah">Tambah</button>
+                <button type="button" class="btn btn-primary" id="btnTambah">Tambah</button>
                 </form>
               </div>
             </div>
@@ -123,9 +137,70 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-danger" id="btnHapus">Hapus</button>
+                <button type="button" class="btn btn-danger" id="btnHapus">Hapus</button>
               </div>
             </div>
           </div>
         </div>
         <!-- akhir modal hapus produk -->
+
+        <!-- Modal tambah produk-->
+        <div class="modal fade" id="modalEdit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Edit Produk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- form -->
+                <form>
+                  <input type="hidden" name="id_edit" id="id_edit">
+                  <div class="form-group">
+                    <label for="nmbrgx">Nama Barang</label>
+                    <input type="text" class="form-control" id="nmbrgx" name="nmbrgx" placeholder="Nama Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="kategorix">Kategori</label>
+                    <select name="kategorix" id="kategorix" class="form-control">
+                      <option value="">Pilih Kategori...</option>
+                      <option value="1">1. Weight Loss</option>
+                      <option value="2">2. Weight Gain</option>
+                      <option value="3">3. Muscle Building</option>
+                      <option value="4">4. Pregnancy</option>
+                      <option value="5">5. Stroke</option>
+                      <option value="6">6. Diabetes</option>
+                      <option value="7">7. Cholesterol</option>
+                      <option value="8">8. Hypertensi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="jmlx">Jumlah</label>
+                    <input type="text" class="form-control" id="jmlx" name="jmlx" placeholder="Jumlah Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="hrgx">Harga</label>
+                    <input type="text" class="form-control" id="hrgx" name="hrgx" placeholder="Harga Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="descx">Deskripsi</label>
+                    <input type="text" class="form-control" id="descx" name="descx" placeholder="Deskripsi Produk">
+                  </div>
+                  <div class="form-group">
+                    <label for="filex">Gambar Display</label>
+                    <input type="file" id="filex" name="filex" class="form-control">
+                  </div>
+                <!-- akhir form -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate">Update</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- akhir modal tambah produk -->
+        
