@@ -24,8 +24,8 @@
                                         '<td>'+data[i].alamat+'</td>'+
                                         '<td>'+data[i].tgl_transaksi+'</td>'+
                                         '<td style "text-align:right;">'+
-                                            '<a href="javascript:;" class="btn btn-info btn-xs item_edit" id="'+data[i].id_produk+'">   <i class="fas fa-edit"></i> Edit   </a>'+' '+
-                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_hapus" id="'+data[i].id_produk+'" nama="'+data[i].nmbrg+'"> <i class="fas fa-trash"></i> Hapus </a>'+' '+
+                                            '<a href="javascript:;" class="btn btn-info btn-xs item_approve" id="'+data[i].id_transaksi+'">   <i class="fas fa-check"></i> Approve   </a>'+' '+
+                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'"> <i class="fas fa-trash"></i> Decline </a>'+' '+
                                         '</td>'+
                                     '</tr>';
                         }
@@ -33,5 +33,37 @@
                     }
             })
         }
+
+        // get decline
+        $('#show_transaksi').on('click','.item_decline',function(){
+            var id = $(this).attr('id');
+            var jml = $(this).attr('jml');
+
+            $('#modalDecline').modal('show');
+            $('#jmlJual').val(jml);
+            $('#idDecline').val(id);
+            $('#notifDecline').text('Yakin untuk menghapus transaksi ini?');
+        })
+
+        // aksi decline
+        $('#btnDrop').on('click',function(){
+            var id = $('#idDecline').val();
+            var jml = $('#jmlJual').val();
+            
+            $.ajax({
+                type : 'POST',
+                url : '<?php echo base_url('transaksi/hapus')?>',
+                data : {
+                    id:id,
+                    jml:jml
+                },
+                dataType : 'JSON',
+                success : function(data){
+                    alert('Transaksi berhasil didrop!');
+                    $('#modalDecline').modal('hide');
+                    tampilTransaksi();
+                }
+            })
+        })
     })
 </script>

@@ -8,6 +8,10 @@
             $this->db->join('tb_user','tb_transaksi.id_user = tb_user.id_user');
             return $this->db->get()->result();
         }
+        public function delete($id){
+            $this->db->where('id_transaksi',$id);
+            return $this->db->delete('tb_transaksi');
+        }
     }
     
 ?>
