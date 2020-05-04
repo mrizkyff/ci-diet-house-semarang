@@ -13,17 +13,42 @@
                         var html = '';
                         var i;
                         for(i=0;i<data.length; i++){
+                            var cat  = 0
+                            if (data[i].kategori == 1){
+                                cat = 'Weight Gain';
+                            }
+                            else if (data[i].kategori == 2){
+                                cat = 'Weight Loss';
+                            }
+                            else if (data[i].kategori == 3){
+                                cat = 'Muscle Building';
+                            }
+                            else if (data[i].kategori == 4){
+                                cat = 'Pregnancy';
+                            }
+                            else if (data[i].kategori == 5){
+                                cat = 'Stroke';
+                            }
+                            else if (data[i].kategori == 6){
+                                cat = 'Diabetes';
+                            }
+                            else if (data[i].kategori == 7){
+                                cat = 'Cholesterol';
+                            }
+                            else if (data[i].kategori == 7){
+                                cat = 'Hypertensi';
+                            }
                             html += '<tr>'+
                                         '<td>'+(i+1)+'</td>'+
                                         '<td>'+data[i].id_produk+'</td>'+
                                         '<td>'+data[i].kdbrg+'</td>'+
-                                        '<td>'+data[i].kategori+'</td>'+
+                                        '<td>'+cat+'</td>'+
                                         '<td>'+data[i].nmbrg+'</td>'+
                                         '<td>'+data[i].stok+'</td>'+
                                         '<td>'+data[i].harga+'</td>'+
                                         '<td>'+data[i].deskripsi+'</td>'+
                                         '<td>'+data[i].tgl_stok+'</td>'+
-                                        '<td>'+data[i].gambar+'</td>'+
+                                        '<td><img src="<?php echo base_url() ?>/asset/img/food/'+data[i].gambar+'" alt="" class="img-thumbnail" style="width: 100px; height:auto;"></td>'+
                                         '<td style "text-align:right;">'+
                                             '<a href="javascript:;" class="btn btn-info btn-xs item_edit" id="'+data[i].id_produk+'">   <i class="fas fa-edit"></i> Edit   </a>'+' '+
                                             '<a href="javascript:;" class="btn btn-danger btn-xs item_hapus" id="'+data[i].id_produk+'" nama="'+data[i].nmbrg+'"> <i class="fas fa-trash"></i> Hapus </a>'+' '+
