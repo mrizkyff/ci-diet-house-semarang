@@ -59,21 +59,21 @@
       
 
         // aksi decline
-        $('#btnDrop').on('click',function(){
-            var id = $('#idDecline').val();
-            var jml = $('#jmlJual').val();
+        $('#btnApprove').on('click',function(){
+            var id = $('#idDeclinex').val();
+            var jml = $('#jmlJualx').val();
             
             $.ajax({
                 type : 'POST',
-                url : '<?php echo base_url('transaksi/hapus')?>',
+                url : '<?php echo base_url('transaksi/approve')?>',
                 data : {
                     id:id,
                     jml:jml
                 },
                 dataType : 'JSON',
                 success : function(data){
-                    alert('Transaksi berhasil didrop!');
-                    $('#modalDecline').modal('hide');
+                    alert('Transaksi berhasil disetujui!');
+                    $('#modalApprove').modal('hide');
                     tampilTransaksi();
                 }
             })
