@@ -81,7 +81,7 @@
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 				<a class="dropdown-item" href="<?php echo base_url('login') ?>">Login</a>
-				<a class="dropdown-item" href="#">Daftar</a>
+				<a class="dropdown-item" href="<?php echo base_url('registrasi') ?>">Daftar</a>
 				</div>
 			</li>
 			<?php

@@ -11,9 +11,6 @@
 			parent::__construct();
 			$this->load->model('M_Main','Main');
 		}
-		public function login(){
-			echo 'halaman login';
-		}
 		public function index(){
 			$data['menu'] = $this->Main->get_menu();
 			$this->load->view('public/template/header');
