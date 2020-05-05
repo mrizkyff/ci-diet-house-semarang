@@ -67,8 +67,7 @@
                 type : 'POST',
                 url : '<?php echo base_url('transaksi/approve')?>',
                 data : {
-                    id:id,
-                    jml:jml
+                    id:id
                 },
                 dataType : 'JSON',
                 success : function(data){
