@@ -11,16 +11,26 @@
                 async: false,
                 dataType: 'JSON',
                 success : function(data){
-                        var html = '';
-                        var i;
-                        for(i=0;i<data.length; i++){
+                    var html = '';
+                    var i;
+                    for(i=0;i<data.length; i++){
+                        var status = '';
+                        if(data[i].status == 1){
+                            status = '<h6><span class="badge badge-warning text-light"><i class="fas fa-shopping-cart"></i>  Keranjang</span></h6>';
+                        }
+                        else if(data[i].status == 2){
+                            status = '<h6><span class="badge badge-success text-light"><i class="fas fa-check"></i>  Terbayar</span></h6>';
+                        }
+                        else if(data[i].status == 3){
+                            status = '<h6><span class="badge badge-info text-light"><i class="fas fa-truck"></i>  Terkirim</span></h6>';
+                        }
                             html += '<tr>'+
                                         '<td>'+(i+1)+'</td>'+
                                         '<td>'+data[i].id_transaksi+'</td>'+
                                         '<td>'+data[i].nmbrg+'</td>'+
                                         '<td>'+data[i].username+'</td>'+
                                         '<td>'+data[i].jmlJual+'</td>'+
-                                        '<td>'+data[i].status+'</td>'+
+                                        '<td>'+status+'</td>'+
                                         '<td>'+data[i].alamat+'</td>'+
                                         '<td>'+data[i].tgl_transaksi+'</td>'+
                                         '<td style "text-align:right;">'+
