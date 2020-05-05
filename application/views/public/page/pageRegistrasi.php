@@ -56,7 +56,7 @@
 		min-width: 140px;
     }
 	.signup-form .btn:hover, .signup-form .btn:focus{
-		background: #2389cd !important;
+		background: #FFFF00 !important;
         outline: none;
 	}
     .signup-form a{
