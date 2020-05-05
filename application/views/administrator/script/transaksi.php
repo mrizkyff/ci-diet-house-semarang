@@ -53,7 +53,7 @@
             $('#modalApprove').modal('show');
             $('#jmlJualx').val(jml);
             $('#idDeclinex').val(id);
-            $('#notifDecline').text('Yakin untuk setujui transaksi ini?');
+            $('#notifApprove').text('Yakin untuk setujui transaksi ini?');
         })
 
       
