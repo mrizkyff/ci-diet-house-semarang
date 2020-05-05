@@ -80,8 +80,8 @@
                 </button>
               </div>
               <div class="modal-body">
-                <input type="text" id="jmlJualx">
-                <input type="text" id="idDeclinex">
+                <input type="hidden" id="jmlJualx">
+                <input type="hidden" id="idDeclinex">
                 <p id="notifApprove"></p>
               </div>
               <div class="modal-footer">
