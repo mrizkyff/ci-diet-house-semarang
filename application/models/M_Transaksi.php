@@ -12,6 +12,10 @@
             $this->db->where('id_transaksi',$id);
             return $this->db->delete('tb_transaksi');
         }
+        public function paid($id,$data){
+            $this->db->where('id_transaksi',$id);
+            return $this->db->update('tb_transaksi',$data);
+        }
     }
     
 ?>
