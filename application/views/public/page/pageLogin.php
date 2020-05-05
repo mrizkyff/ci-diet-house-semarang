@@ -128,7 +128,7 @@
                 <button type="submit" class="btn btn-warning btn-lg pull-right text-light">Sign in</button>
             </div>		
         </form>
-        <div class="hint-text">Don't have an account? <a href="#">Sign up here</a></div>
+        <div class="hint-text">Don't have an account? <a href="<?php echo base_url('registrasi') ?>">Sign up here</a></div>
     </div>
   </div>
   <!-- akhir jumbotron -->
