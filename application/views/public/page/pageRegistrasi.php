@@ -50,7 +50,8 @@
     .signup-form .btn{        
         font-size: 16px;
         font-weight: bold;
-		background: #3598dc;
+		/* background: #3598dc; */
+		color: white;
 		border: none;
 		min-width: 140px;
     }
@@ -155,7 +156,7 @@
 				<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+				<button type="submit" class="btn btn-warning btn-lg">Sign Up</button>
 			</div>
 		</form>
 		<div class="hint-text">Sudah punya akun? <a href="#">Login here</a></div>
