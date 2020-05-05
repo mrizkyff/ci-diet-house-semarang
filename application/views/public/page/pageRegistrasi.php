@@ -116,40 +116,40 @@
   <div class="jumbotron text-light bg-dark">
 
   <div class="signup-form">
-		<form action="/examples/actions/confirmation.php" method="post">
+		<form id="submit">
 			<h2>Sign Up</h2>
 			<p>Please fill in this form to create an account!</p>
 			<hr>
 			<div class="form-group">
-					<div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+					<div class="col-xs-6"><input type="text" class="form-control" id="first_name" placeholder="First Name" required="required"></div>
 			</div>
 			<div class="form-group">
-					<div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>        	
+					<div class="col-xs-6"><input type="text" class="form-control" id="last_name" placeholder="Last Name" required="required"></div>        	
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" name="username" placeholder="Username" required="required">
+				<input type="text" class="form-control" id="username" placeholder="Username" required="required">
 			</div>
 			<div class="form-group">
-				<select name="text" id="gender" required="required" class="form-control">
+				<select name="gender" id="gender" required="required" class="form-control">
 					<option value="">Jenis Kelamin</option>
 					<option value="1">1. Laki-Laki</option>
 					<option value="2">2. Perempuan</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" name="email" placeholder="Email" required="required">
+				<input type="text" class="form-control" id="email" placeholder="Email" required="required">
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" name="password" placeholder="Password" required="required">
+				<input type="password" class="form-control" id="password" placeholder="Password" required="required">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" name="telp" placeholder="Telp" required="required">
+				<input type="text" class="form-control" id="telp" placeholder="Telp" required="required">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" name="alamat" placeholder="Address" required="required">
+				<input type="text" class="form-control" id="alamat" placeholder="Address" required="required">
 			</div>
 			<div class="form-group">
-				<input type="file" class="form-control" name="foto" placeholder="Foto Profil" required="required">
+				<input type="file" class="form-control" id="foto" name="foto" placeholder="Foto Profil" required="required">
 			</div>
 			     
 			<div class="form-group">

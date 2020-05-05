@@ -11,6 +11,9 @@
 			$this->load->view('public/template/footer');
 			$this->load->view('public/script/Registrasi');
         }
+        public function daftar(){
+            
+        }
     }
     
 ?>
