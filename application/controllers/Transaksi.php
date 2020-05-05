@@ -23,7 +23,16 @@
             echo json_encode($result);
         }
         
-        
+        public function approve(){
+            $id = $this->input->post('id');
+            
+            $data = array(
+                'status' => '2'
+            );
+
+            $result = $this->Transaksi->paid($id,$data);
+            echo json_encode($result);
+        }
         
     }
     
