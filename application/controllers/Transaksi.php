@@ -33,6 +33,16 @@
             $result = $this->Transaksi->paid($id,$data);
             echo json_encode($result);
         }
+        public function sent(){
+            $id = $this->input->post('id');
+            
+            $data = array(
+                'status' => '3'
+            );
+
+            $result = $this->Transaksi->sent($id,$data);
+            echo json_encode($result);
+        }
         
     }
     

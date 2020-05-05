@@ -16,6 +16,10 @@
             $this->db->where('id_transaksi',$id);
             return $this->db->update('tb_transaksi',$data);
         }
+        public function sent($id,$data){
+            $this->db->where('id_transaksi',$id);
+            return $this->db->update('tb_transaksi',$data);
+        }
     }
     
 ?>
