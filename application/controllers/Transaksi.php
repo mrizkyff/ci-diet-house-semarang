@@ -22,9 +22,9 @@
             $result = $this->Transaksi->delete($id);
             echo json_encode($result);
         }
-        public function approve(){
-            
-        }
+        
+        
+        
     }
     
 ?>

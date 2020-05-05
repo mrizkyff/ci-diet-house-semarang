@@ -61,7 +61,7 @@
         // aksi decline
         $('#btnApprove').on('click',function(){
             var id = $('#idDeclinex').val();
-            var jml = $('#jmlJualx').val();
+            
             
             $.ajax({
                 type : 'POST',
