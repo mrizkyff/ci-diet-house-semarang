@@ -1,4 +1,3 @@
-<head>
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 <title>Sign Up!</title>
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
@@ -78,8 +77,7 @@
 		text-align: center;
     }
 </style>
-</head>
-<body>
+
     
 <!-- awal slide gambar -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -116,18 +114,18 @@
   <div class="jumbotron text-light bg-dark">
 
   <div class="signup-form">
-		<form id="submit">
+		<form method="POST" action="<?=base_url('registrasi/do_upload')?>" enctype="multipart/form-data">
 			<h2>Sign Up</h2>
 			<p>Please fill in this form to create an account!</p>
 			<hr>
 			<div class="form-group">
-					<div class="col-xs-6"><input type="text" class="form-control" id="first_name" placeholder="First Name" required="required"></div>
+					<div class="col-xs-6"><input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required="required"></div>
 			</div>
 			<div class="form-group">
-					<div class="col-xs-6"><input type="text" class="form-control" id="last_name" placeholder="Last Name" required="required"></div>        	
+					<div class="col-xs-6"><input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required="required"></div>        	
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" id="username" placeholder="Username" required="required">
+				<input type="text" class="form-control" id="username" placeholder="Username" name="username" required="required">
 			</div>
 			<div class="form-group">
 				<select name="gender" id="gender" required="required" class="form-control">
@@ -137,16 +135,16 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" id="email" placeholder="Email" required="required">
+				<input type="text" class="form-control" id="email" placeholder="Email" name="email" required="required">
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="password" placeholder="Password" required="required">
+				<input type="password" class="form-control" id="password" placeholder="Password" name="password" required="required">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" id="telp" placeholder="Telp" required="required">
+				<input type="text" class="form-control" id="telp" placeholder="Telp" name="telp" required="required">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" id="alamat" placeholder="Address" required="required">
+				<input type="text" class="form-control" id="alamat" placeholder="Address" name="alamat" required="required">
 			</div>
 			<div class="form-group">
 				<input type="file" class="form-control" id="foto" name="foto" placeholder="Foto Profil" required="required">
@@ -164,4 +162,3 @@
 
   </div>
   <!-- akhir jumbotron -->
-</body>
