@@ -5,7 +5,10 @@
             parent::__construct();
             $this->load->model('M_UserList','User');
         }
-        
+        public function getAllUser(){
+            $hasil = $this->User->get_all_user();
+            echo json_encode($hasil);
+        }
     }
     
 ?>
