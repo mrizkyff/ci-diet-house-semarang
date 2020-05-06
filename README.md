@@ -1,1 +1,2 @@
 Diet House Semarang
+Diet House Semarang adalah e-commerence berupa jual beli produk makanan untuk orang-orang orang yang mempunya kebutuhan khusus. maksud dari keutuhan khusus itu contohnya orang yang sedang ingin menjalankan program diet, orang yang sedang hamil, penyakit cancer dll. Diet House Semarang akan membantu untuk membuat makanan dengan gizi dan kebutuhan yang pas yang di dampingi oleh ahli khusus. 
