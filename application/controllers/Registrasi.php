@@ -54,8 +54,8 @@
                     // // echo json_encode($hasil);
                     ?>
                     <script type="text/javascript">
-                        alert("Registrasi berhasil! Silakan login");
                         window.location.href = "<?= base_url('main')?>";
+                        alert("Registrasi berhasil! Silakan login");
                     </script>
                     <?php
                 }

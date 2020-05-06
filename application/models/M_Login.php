@@ -13,6 +13,7 @@
         public function find_level($data){
             $this->db->where($data);
             $this->db->select('level');
+            $this->db->select('foto');
             return $this->db->get('tb_user')->result();
         }
         

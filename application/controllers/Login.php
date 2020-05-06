@@ -21,12 +21,15 @@
     
             $idUser = $this->M_Login->find_id($where);
             $level = $this->M_Login->find_level($where);
+            $foto = $level[0]->foto;
+
             $cek = $this->M_Login->cek_login($where)->num_rows();
             if($cek > 0){
     
                 $data_session = array(
                     'username' => $username,
                     'status' => "login",
+                    'foto' => $foto,
                     'idUser' => $idUser[0]->id_user
                 );
     
@@ -37,6 +40,7 @@
                 elseif($level[0]->level == 1){
                     redirect(base_url("administrator"));
                 }
+                var_dump($data_session);
     
             }
             else{
