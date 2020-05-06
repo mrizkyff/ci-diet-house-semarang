@@ -18,7 +18,7 @@
 
         <!-- card transaksi -->
         <div class="card">
-          <h5 class="card-header bg-warning">Transaction Management</h5>
+          <h5 class="card-header bg-success">Transaction Management</h5>
           <div class="card-body">
            
         <!-- tabel transaksi -->

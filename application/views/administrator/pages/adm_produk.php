@@ -16,6 +16,11 @@
         </div><!-- /.row -->
         <br>
         
+        <!-- card tabel -->
+        <div class="card">
+          <h5 class="card-header bg-warning">Product Management</h5>
+          <div class="card-body">
+          
         <!-- tabel produk -->
         <center>
         <h1>Pengelolaan Produk Makanan</h1>
@@ -57,6 +62,9 @@
           </tfoot>
         </table>
         <!-- akhir tabel produk -->
+        </div>
+      </div>
+      <!-- akhir card -->
 
         <!-- modal tambah barang produk-->
         <!-- Button trigger modal -->
