@@ -61,8 +61,8 @@
 			?>
 			<li class="nav-item dropdown">
 			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="img" style="width:25px;">
-			  Akun <?=$this->session->userdata('username');?>  
+			  <img src="<?=base_url()?>/asset/img/user/<?=$this->session->userdata('foto')?>" alt="" class="img" style="width:25px;">
+			  <?=$this->session->userdata('username');?>  
 			  </a>
 			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			  <a class="dropdown-item" href="#">Akun Saya</a>
