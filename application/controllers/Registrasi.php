@@ -48,7 +48,8 @@
                         'level' => '2',
                         'alamat' => $alamat,
                         'tgl_registrasi' => $tanggal,
-                        'foto' => $nama
+                        'foto' => $nama,
+                        'status' => '1'
                     );
                     $this->Registrasi->save_user($data);
                     // // echo json_encode($hasil);
