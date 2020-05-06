@@ -16,6 +16,11 @@
         </div><!-- /.row -->
         <br>
 
+        <!-- card transaksi -->
+        <div class="card">
+          <h5 class="card-header bg-warning">Transaction Management</h5>
+          <div class="card-body">
+           
         <!-- tabel transaksi -->
         <table id="tableTransaksi" class="table table-stripped">
           <thead>
@@ -44,6 +49,9 @@
           </tfoot>
         </table>
         <!-- akhir tabel transaksi -->
+        </div>
+      </div>
+      <!-- akhir card transaksi -->
 
         <!-- modal decline -->
         <div class="modal fade" id="modalDecline" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
