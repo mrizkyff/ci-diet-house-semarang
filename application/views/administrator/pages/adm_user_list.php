@@ -3,10 +3,10 @@
 
 <style type="text/css">
     body {
-        color: #566787;
-		background: #f5f5f5;
-		font-family: 'Varela Round', sans-serif;
-		font-size: 13px;
+        /* color: #566787; */
+		/* background: #f5f5f5; */
+		/* font-family: 'Varela Round', sans-serif;s */
+		/* font-size: 13px; */
 	}
 	.table-wrapper {
         background: #fff;
@@ -14,6 +14,8 @@
         margin: 30px 0;
 		border-radius: 3px;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        font-family: 'Varela Round', sans-serif;s
+		font-size: 13px;
     }
 	.table-title {
 		padding-bottom: 15px;
@@ -159,11 +161,7 @@
         font-size: 13px;
     }
 </style>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();
-});
-</script>
+
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -183,3 +181,52 @@ $(document).ready(function(){
         </div><!-- /.row -->
         <br>
 
+
+        <!-- awal tabel daftar user -->
+        <!-- <div class="container"> -->
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <h2>User <b>Management</b></h2>
+                        </div>
+                        <div class="col-sm-7">
+                            <a href="#" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Tambah User</span></a>
+                            <a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>						
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover" id="tableUser">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>						
+                            <th>Username</th>						
+                            <th>Email</th>						
+                            <th>Telp</th>						
+                            <th>Alamat</th>						
+                            <th>Date</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="show_user_list">
+                        
+                    </tbody>
+                </table>
+                <!-- <div class="clearfix">
+                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#">Previous</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        <!-- </div>      -->
+        <!-- akhir tabel daftar user -->
