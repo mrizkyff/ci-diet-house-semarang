@@ -119,7 +119,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-info" id="btnSent">Kirim</button>
+                <button type="button" class="btn btn-success" id="btnSent">Kirim</button>
               </div>
             </div>
           </div>

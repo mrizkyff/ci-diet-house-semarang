@@ -25,7 +25,7 @@
                         else if(data[i].status == 2){
                             status = '<h6><span class="badge badge-success text-light"><i class="fas fa-check"></i>  Terbayar</span></h6>';
                             tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve disabled" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
-                            tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Approve   </a>';
+                            tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
                             
                         }
                         else if(data[i].status == 3){
