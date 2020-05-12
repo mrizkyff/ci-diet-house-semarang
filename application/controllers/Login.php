@@ -4,6 +4,7 @@
         public function __construct(){
             parent::__construct();
             $this->load->model('M_Login');
+            $this->load->model('M_Logsys');
         }
         public function index(){
             $this->load->view('public/template/header');
@@ -18,13 +19,14 @@
                 'username' => $username,
                 'password' => $password,
             );
-    
-            $idUser = $this->M_Login->find_id($where);
-            $level = $this->M_Login->find_level($where);
-            $foto = $level[0]->foto;
 
+            // data session
+            
             $cek = $this->M_Login->cek_login($where)->num_rows();
             if($cek > 0){
+                $idUser = $this->M_Login->find_id($where);
+                $level = $this->M_Login->find_level($where);
+                $foto = $level[0]->foto;
     
                 $data_session = array(
                     'username' => $username,
