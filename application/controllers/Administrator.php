@@ -30,6 +30,13 @@ class Administrator extends CI_Controller
         $this->load->view('administrator/templates/adm_footer');
         $this->load->view('administrator/script/userlist');
     }
+    public function log_sys(){
+        $this->load->view('administrator/templates/adm_header');
+        $this->load->view('administrator/templates/adm_sidebar');
+        $this->load->view('administrator/pages/adm_logsys');
+        $this->load->view('administrator/templates/adm_footer');
+        $this->load->view('administrator/script/logsys');
+    }
         
 }
 

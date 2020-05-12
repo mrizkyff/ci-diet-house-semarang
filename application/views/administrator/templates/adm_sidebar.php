@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url().'administrator/log_system' ?>" class="nav-link">
+            <a href="<?php echo base_url().'administrator/log_sys' ?>" class="nav-link">
               <i class="nav-icon fas fa-history"></i>
               <p>
                 Log System
