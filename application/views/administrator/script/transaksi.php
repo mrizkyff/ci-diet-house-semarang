@@ -45,7 +45,7 @@
                                         '<td style "text-align:right;">'+
                                             tombol1+' '+
                                             tombol2+' '+
-                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'"> <i class="fas fa-trash"></i> Decline </a>'+' '+
+                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'" idprod="'+data[i].id_produk+'"> <i class="fas fa-trash"></i> Decline </a>'+' '+
                                         '</td>'+
                                     '</tr>';
                         }
@@ -57,11 +57,13 @@
         // get decline
         $('#show_transaksi').on('click','.item_decline',function(){
             var id = $(this).attr('id');
+            var idprod = $(this).attr('idprod');
             var jml = $(this).attr('jml');
 
             $('#modalDecline').modal('show');
             $('#jmlJual').val(jml);
             $('#idDecline').val(id);
+            $('#idProd').val(idprod);
             $('#notifDecline').text('Yakin untuk menghapus transaksi ini?');
         })
 
@@ -93,16 +95,14 @@
         // aksi decline
         $('#btnDrop').on('click',function(){
             var id = $('#idDecline').val();
-            var jml = $('#jmlJual');
+            var jml = $('#jmlJual').val();
+            var idproduk = $('#idProd').val();
             $.ajax({
                 type : 'POST',
                 url : '<?php echo base_url('transaksi/hapus')?>',
-                data : {
-                    id:id,
-                    jml:jml
-                },
-                dataType : 'JSON',
-                success : function(data){
+                data : {id:id,jml:jml,idproduk:idproduk},
+                // dataType : 'JSON',
+                success : function(data){                    
                     alert('Transaksi berhasil dihapus!');
                     $('#modalDecline').modal('hide');
                     tampilTransaksi();

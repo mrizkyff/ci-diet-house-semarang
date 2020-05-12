@@ -14,11 +14,13 @@
         public function hapus(){
             $id = $this->input->post('id');
             $jmlBeli = $this->input->post('jml');
+            $idProduk = $this->input->post('idproduk');
             
             // update stok
-            $stok = ($this->Main->get_menu_by_code($id)[0]['stok']);
+            $stok = $this->Main->get_menu_by_code($idProduk)[0]["stok"];
             $stok = $stok + $jmlBeli;
-            $result = $this->Main->update_stok($id,$stok);
+            $this->Main->update_stok($idProduk,$stok);
+            
             
             // untuk log
             // $tanggal = date('Y-m-d H:i:s');

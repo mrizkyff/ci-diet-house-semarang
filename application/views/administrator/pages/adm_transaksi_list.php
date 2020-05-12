@@ -64,8 +64,9 @@
                 </button>
               </div>
               <div class="modal-body">
-                <input type="hidden" id="jmlJual">
-                <input type="hidden" id="idDecline">
+                <input type="text" id="jmlJual">
+                <input type="text" id="idDecline">
+                <input type="text" id="idProd">
                 <p id="notifDecline"></p>
               </div>
               <div class="modal-footer">
