@@ -1,5 +1,6 @@
 <script type="text/javascript">
     $(document).ready(function(){
+        tampilLog();
         $('#tableLogSys').dataTable();
 
         function tampilLog() {
