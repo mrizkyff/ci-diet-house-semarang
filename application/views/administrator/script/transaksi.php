@@ -17,18 +17,20 @@
                         var status = '';
                         var tombol1 = '';
                         var tombol2 = '';
-                        if(data[i].status == 1){
+                        if(data[i].stat == 1){
                             status = '<h6><span class="badge badge-warning text-light"><i class="fas fa-shopping-cart"></i>  Keranjang</span></h6>';
+                            // status = 'Keranjang'
                             tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
-                            tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent disabled  almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Approve   </a>';
+                            tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent disabled" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
                         }
-                        else if(data[i].status == 2){
+                        else if(data[i].stat == 2){
+                            // status = 'Terbayar'
                             status = '<h6><span class="badge badge-success text-light"><i class="fas fa-check"></i>  Terbayar</span></h6>';
                             tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve disabled" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
                             tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
-                            
                         }
-                        else if(data[i].status == 3){
+                        else if(data[i].stat == 3){
+                            // status = 'Terkirim'
                             status = '<h6><span class="badge badge-info text-light"><i class="fas fa-truck"></i>  Terkirim</span></h6>';
                         }
                             html += '<tr>'+
@@ -91,6 +93,7 @@
         // aksi decline
         $('#btnDrop').on('click',function(){
             var id = $('#idDecline').val();
+            var jml = $('#jmlJual');
             $.ajax({
                 type : 'POST',
                 url : '<?php echo base_url('transaksi/hapus')?>',

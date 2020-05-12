@@ -5,6 +5,7 @@
             parent::__construct();
             $this->load->model('M_Transaksi','Transaksi');
             $this->load->model('M_Main','Main');
+            $this->load->model('M_Logsys','Logs');
         }
         public function getAllTransaksi(){
             $result = $this->Transaksi->get_all_transaksi();
@@ -19,6 +20,17 @@
             $stok = $stok + $jmlBeli;
             $result = $this->Main->update_stok($id,$stok);
             
+            // untuk log
+            // $tanggal = date('Y-m-d H:i:s');
+            // $data = array(
+            //     'id_transaksi' => $id,
+            //     'id_user' => $this->session->datauser('idUser'),
+            //     'action' => 'Del Transaksi',
+            //     'tgl_action' => $tanggal
+            // );
+            // $result = $this->Logs->save_log('$data');
+
+
             $result = $this->Transaksi->delete($id);
             echo json_encode($result);
         }
@@ -27,7 +39,7 @@
             $id = $this->input->post('id');
             
             $data = array(
-                'status' => '2'
+                'stat' => '2'
             );
 
             $result = $this->Transaksi->paid($id,$data);
@@ -37,7 +49,7 @@
             $id = $this->input->post('id');
             
             $data = array(
-                'status' => '3'
+                'stat' => '3'
             );
 
             $result = $this->Transaksi->sent($id,$data);

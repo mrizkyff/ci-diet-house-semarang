@@ -27,7 +27,7 @@
 			$data = array(
 				'id_produk' => $id,
 				'id_user' => $id_user,
-				'status' => '1',
+				'stat' => '1',
 				'jmlJual' => $jmlBeli,
 				'tgl_transaksi' => $tanggal
 			);
