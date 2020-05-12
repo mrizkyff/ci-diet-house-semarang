@@ -16,3 +16,40 @@
         </div><!-- /.row -->
         <br>
         
+        <!-- card log system -->
+        <div class="card">
+            <div class="card-header bg-secondary">
+            Log System
+            </div>
+            <div class="card-body">
+            <table id="tableLogSys" class="table display nowrap dataTable dtr-inline collapsed">
+                <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>ID Log</th>
+                    <th>ID Transaksi</th>
+                    <th>Username</th>
+                    <th>Produk</th>
+                    <th>Qty</th>
+                    <th>Action</th>
+                    <th>Action Date</th>
+                </tr>
+                <tbody id="show_logSys">
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>No.</th>
+                    <th>ID Log</th>
+                    <th>ID Transaksi</th>
+                    <th>Username</th>
+                    <th>Produk</th>
+                    <th>Qty</th>
+                    <th>Action</th>
+                    <th>Action Date</th>
+                </tr>
+                </tfoot>
+                </thead>
+            </table>
+            </div>
+        </div>
+        <!-- akhir card log system -->
