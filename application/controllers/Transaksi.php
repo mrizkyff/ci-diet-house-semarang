@@ -26,7 +26,7 @@
             $tanggal = date('Y-m-d H:i:s');
             $data = array(
                 'id_transaksi' => $id,
-                'id_user' => $this->session->userdata('idUser'),
+                'edit_by' => $this->session->userdata('idUser'),
                 'action' => 'Del Transaksi',
                 'tgl_action' => $tanggal
             );
