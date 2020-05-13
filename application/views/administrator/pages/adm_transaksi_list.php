@@ -27,7 +27,7 @@
             <th>No</th>
             <th>ID Transaksi</th>
             <th>Nama Produk</th>
-            <th>Username</th>
+            <th>Buyer</th>
             <th>Jumlah</th>
             <th>Status</th>
             <th>Pengiriman</th>
@@ -40,7 +40,7 @@
             <th>No</th>
             <th>ID Transaksi</th>
             <th>Nama Produk</th>
-            <th>Username</th>
+            <th>Buyer</th>
             <th>Jumlah</th>
             <th>Status</th>
             <th>Pengiriman</th>
