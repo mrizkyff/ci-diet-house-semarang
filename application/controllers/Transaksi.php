@@ -22,7 +22,7 @@
             $this->Main->update_stok($idProduk,$stok);
             
             
-            // untuk log
+            // untuk log decline
             $tanggal = date('Y-m-d H:i:s');
             $data = array(
                 'id_transaksi' => $id,
@@ -44,6 +44,16 @@
         public function approve(){
             $id = $this->input->post('id');
             
+            // untuk log approve
+            $tanggal = date('Y-m-d H:i:s');
+            $data = array(
+                'id_transaksi' => $id,
+                'edit_by' => $this->session->userdata('idUser'),
+                'action' => 'Acc Transaksi',
+                'tgl_action' => $tanggal
+            );
+            $this->Logs->save_log($data);
+
             $data = array(
                 'stat' => '2'
             );
@@ -54,6 +64,17 @@
         public function sent(){
             $id = $this->input->post('id');
             
+            // untuk log sent delivery
+            $tanggal = date('Y-m-d H:i:s');
+            $data = array(
+                'id_transaksi' => $id,
+                'edit_by' => $this->session->userdata('idUser'),
+                'action' => 'Delivery',
+                'tgl_action' => $tanggal
+            );
+            $this->Logs->save_log($data);
+
+
             $data = array(
                 'stat' => '3'
             );
