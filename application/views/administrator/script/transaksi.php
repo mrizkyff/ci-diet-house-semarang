@@ -1,7 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         tampilTransaksi();
-        $('#tableTransaksi').dataTable();
+        $('#tableTransaksi').dataTable({
+            "order" : [[7, 'desc']]
+        });
 
 
         function tampilTransaksi(){
