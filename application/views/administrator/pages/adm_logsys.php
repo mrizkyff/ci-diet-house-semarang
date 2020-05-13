@@ -28,7 +28,8 @@
                     <th>No.</th>
                     <th>ID Log</th>
                     <th>ID Transaksi</th>
-                    <th>Username</th>
+                    <th>Act By</th>
+                    <th>Buyer</th>
                     <th>Produk</th>
                     <th>Qty</th>
                     <th>Action</th>
@@ -41,7 +42,8 @@
                     <th>No.</th>
                     <th>ID Log</th>
                     <th>ID Transaksi</th>
-                    <th>Username</th>
+                    <th>Act By</th>
+                    <th>Buyer</th>
                     <th>Produk</th>
                     <th>Qty</th>
                     <th>Action</th>
