@@ -1,7 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         tampilUser();
-        $('#tableUser').dataTable();
+        $('#tableUser').dataTable({
+            "order" : [[6, 'desc']]
+        });
         console.log('halo');
 
         function tampilUser(){

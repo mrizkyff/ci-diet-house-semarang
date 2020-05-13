@@ -1,7 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         tampilLog();
-        $('#tableLogSys').dataTable();
+        $('#tableLogSys').dataTable({
+            "order" : [[0,'desc']]
+        });
 
         function tampilLog() {
             $.ajax({

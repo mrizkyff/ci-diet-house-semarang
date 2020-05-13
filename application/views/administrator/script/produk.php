@@ -1,7 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         tampilProduk();
-        $('#tableProduk').DataTable();
+        $('#tableProduk').DataTable({
+            "order" : [[9, "desc"]]
+        });
         
         function tampilProduk(){
             $.ajax({
