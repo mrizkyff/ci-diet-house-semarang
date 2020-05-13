@@ -14,10 +14,6 @@
                     var html = '';
                     var i;
                     for(i=0;i<data.length; i++){
-                        if(data[i].stat == 13){
-
-                        }
-                        else{
 
                             var status = '';
                             var tombol1 = '';
@@ -60,7 +56,7 @@
                                                 tombol3+' '+
                                             '</td>'+
                                         '</tr>';
-                        }
+                        
                     }
                         $('#show_transaksi').html(html);
                 }
