@@ -6,7 +6,7 @@
         }
         public function getAllLog(){
             $data = $this->Logs->get_all_log();
-            return $data;
+            echo json_encode($data);
         }
     }
 ?>
