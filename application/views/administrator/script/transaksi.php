@@ -14,43 +14,56 @@
                     var html = '';
                     var i;
                     for(i=0;i<data.length; i++){
-                        var status = '';
-                        var tombol1 = '';
-                        var tombol2 = '';
-                        if(data[i].stat == 1){
-                            status = '<h6><span class="badge badge-warning text-light"><i class="fas fa-shopping-cart"></i>  Keranjang</span></h6>';
-                            // status = 'Keranjang'
-                            tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
-                            tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent disabled" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
+                        if(data[i].stat == 13){
+
                         }
-                        else if(data[i].stat == 2){
-                            // status = 'Terbayar'
-                            status = '<h6><span class="badge badge-success text-light"><i class="fas fa-check"></i>  Terbayar</span></h6>';
-                            tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve disabled" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
-                            tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
+                        else{
+
+                            var status = '';
+                            var tombol1 = '';
+                            var tombol2 = '';
+                            var tombol3 = '';
+                            if(data[i].stat == 1){
+                                status = '<h6><span class="badge badge-warning text-light"><i class="fas fa-shopping-cart"></i>  Keranjang</span></h6>';
+                                // status = 'Keranjang'
+                                tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
+                                tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent disabled" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
+                                tombol3 = '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'" idprod="'+data[i].id_produk+'"> <i class="fas fa-trash"></i> Decline </a>';
+                            }
+                            else if(data[i].stat == 2){
+                                // status = 'Terbayar'
+                                status = '<h6><span class="badge badge-success text-light"><i class="fas fa-check"></i>  Terbayar</span></h6>';
+                                tombol1 = '<a href="javascript:;" class="btn btn-success btn-xs item_approve disabled" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-check"></i> Approve   </a>';
+                                tombol2 = '<a href="javascript:;" class="btn btn-info btn-xs item_sent" almt="'+data[i].alamat+'" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'">   <i class="fas fa-truck"></i> Deliver   </a>';
+                                tombol3 = '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'" idprod="'+data[i].id_produk+'"> <i class="fas fa-trash"></i> Decline </a>';
+                            }
+                            else if(data[i].stat == 3){
+                                // status = 'Terkirim'
+                                status = '<h6><span class="badge badge-info text-light"><i class="fas fa-truck"></i>  Terkirim</span></h6>';
+                                tombol3 = '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'" idprod="'+data[i].id_produk+'"> <i class="fas fa-trash"></i> Decline </a>';
+                            }
+                            else if(data[i].stat == 13){
+                                status = '<h6><span class="badge badge-danger text-light"><i class="fas fa-ban"></i>  Declined</span></h6>';
+                            }
+                                html += '<tr>'+
+                                            '<td>'+(i+1)+'</td>'+
+                                            '<td>'+data[i].id_transaksi+'</td>'+
+                                            '<td>'+data[i].nmbrg+'</td>'+
+                                            '<td>'+data[i].username+'</td>'+
+                                            '<td>'+data[i].jmlJual+'</td>'+
+                                            '<td>'+status+'</td>'+
+                                            '<td>'+data[i].alamat+'</td>'+
+                                            '<td>'+data[i].tgl_transaksi+'</td>'+
+                                            '<td style "text-align:right;">'+
+                                                tombol1+' '+
+                                                tombol2+' '+
+                                                tombol3+' '+
+                                            '</td>'+
+                                        '</tr>';
                         }
-                        else if(data[i].stat == 3){
-                            // status = 'Terkirim'
-                            status = '<h6><span class="badge badge-info text-light"><i class="fas fa-truck"></i>  Terkirim</span></h6>';
-                        }
-                            html += '<tr>'+
-                                        '<td>'+(i+1)+'</td>'+
-                                        '<td>'+data[i].id_transaksi+'</td>'+
-                                        '<td>'+data[i].nmbrg+'</td>'+
-                                        '<td>'+data[i].username+'</td>'+
-                                        '<td>'+data[i].jmlJual+'</td>'+
-                                        '<td>'+status+'</td>'+
-                                        '<td>'+data[i].alamat+'</td>'+
-                                        '<td>'+data[i].tgl_transaksi+'</td>'+
-                                        '<td style "text-align:right;">'+
-                                            tombol1+' '+
-                                            tombol2+' '+
-                                            '<a href="javascript:;" class="btn btn-danger btn-xs item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'" idprod="'+data[i].id_produk+'"> <i class="fas fa-trash"></i> Decline </a>'+' '+
-                                        '</td>'+
-                                    '</tr>';
-                        }
-                        $('#show_transaksi').html(html);
                     }
+                        $('#show_transaksi').html(html);
+                }
             })
         }
 

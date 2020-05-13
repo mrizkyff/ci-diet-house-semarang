@@ -46,7 +46,4 @@
         }
     });
 </script>
-<div class='form-group'>
-    <label for='username'>Username</label>
-    <input type='text' id='username' name='username' class='form-control'>
-</div>
+

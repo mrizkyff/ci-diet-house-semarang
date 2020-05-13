@@ -20,6 +20,10 @@
             $this->db->where('id_transaksi',$id);
             return $this->db->update('tb_transaksi',$data);
         }
+        public function declined($id,$data){
+            $this->db->where('id_transaksi',$id);
+            return $this->db->update('tb_transaksi',$data);
+        }
     }
     
 ?>

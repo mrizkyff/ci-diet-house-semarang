@@ -23,17 +23,21 @@
             
             
             // untuk log
-            // $tanggal = date('Y-m-d H:i:s');
-            // $data = array(
-            //     'id_transaksi' => $id,
-            //     'id_user' => $this->session->datauser('idUser'),
-            //     'action' => 'Del Transaksi',
-            //     'tgl_action' => $tanggal
-            // );
-            // $result = $this->Logs->save_log('$data');
+            $tanggal = date('Y-m-d H:i:s');
+            $data = array(
+                'id_transaksi' => $id,
+                'id_user' => $this->session->userdata('idUser'),
+                'action' => 'Del Transaksi',
+                'tgl_action' => $tanggal
+            );
+            $this->Logs->save_log($data);
+            
+            // update status jadi declined
+            $data = array(
+                'stat' => '13'
+            );
+            $result = $this->Transaksi->declined($id,$data);
 
-
-            $result = $this->Transaksi->delete($id);
             echo json_encode($result);
         }
         
