@@ -75,6 +75,28 @@
                 });
             })
 
+            // aksi reset password
+            $('#btnReset').on('click',function(){
+                var id = $('#idUser').val();
+                var yakin = confirm('Yakin untuk reset password?');
+                if (yakin){
+                    var password = prompt('Masukkan password baru ');
+                    $.ajax({
+                        type: "POST",
+                        url: "<?= base_url('userlist/resetpassword')?>",
+                        data: {id:id,password:password},
+                        dataType: "JSON",
+                        success: function (response) {
+                            alert('Password berhasil di reset!');
+                        }
+                    });
+                    
+                }
+                else{
+
+                }
+            })
+
             // aksi edit user
             $('#btnEditUser').on('click',function(){
                 var id = $('#idUser').val();

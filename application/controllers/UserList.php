@@ -30,6 +30,21 @@
             $hasil = $this->User->update_user($where,$data);
             echo json_encode($hasil);
         }
+        public function resetpassword(){    
+            $id = $this->input->post('id');
+            $password = $this->input->post('password');
+
+            $where = array(
+                'id_user' => $id
+            );
+
+            $data = array(
+                'password' => $password
+            );
+
+            $hasil = $this->User->reset_password($where,$data);
+            echo json_encode($hasil);
+        }
     }
     
 ?>

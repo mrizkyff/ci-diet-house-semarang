@@ -12,6 +12,10 @@
             $this->db->where($where);
             return $this->db->update('tb_user',$data);
         }
+        public function reset_password($where,$data){
+            $this->db->where($where);
+            return $this->db->update('tb_user',$data);
+        }
     }
     
 ?>
