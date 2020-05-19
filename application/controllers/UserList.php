@@ -42,7 +42,7 @@
                 'password' => $password
             );
 
-            $hasil = $this->User->reset_password($where,$data);
+            $hasil = $this->User->update_user($where,$data);
             echo json_encode($hasil);
         }
     }
