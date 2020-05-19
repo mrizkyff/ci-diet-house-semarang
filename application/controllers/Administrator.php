@@ -44,6 +44,13 @@ class Administrator extends CI_Controller
         $this->load->view('administrator/templates/adm_footer');
         $this->load->view('administrator/script/setting');
     }
+    public function profile(){
+        $this->load->view('administrator/templates/adm_header');
+        $this->load->view('administrator/templates/adm_sidebar');
+        $this->load->view('administrator/pages/adm_profile');
+        $this->load->view('administrator/templates/adm_footer');
+        $this->load->view('administrator/script/profile');
+    }
         
 }
 
