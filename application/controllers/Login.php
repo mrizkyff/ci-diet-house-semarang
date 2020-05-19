@@ -37,7 +37,26 @@
     
                 $this->session->set_userdata($data_session);
                 if($level[0]->level == 2){
-                    redirect(base_url("main"));
+                    if($level[0]->status == 3){
+                        ?>
+                        <script type="text/javascript">
+                            alert('akun anda tersuspend! hubungi admin!')
+                            window.location = "<?= base_url()?>"
+                        </script>
+                        <?php
+                    }
+                    else if($level[0]->status == 2){
+                        $this->session->sess_destroy();
+                        ?>
+                        <script type="text/javascript">
+                            alert('akun anda tidak aktif! hubungi admin!')
+                            window.location = "<?= base_url()?>"
+                        </script>
+                        <?php
+                    }
+                    else{
+                        redirect(base_url("main"));
+                    }
                 }
                 elseif($level[0]->level == 1){
                     redirect(base_url("administrator"));

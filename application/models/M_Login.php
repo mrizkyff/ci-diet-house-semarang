@@ -14,6 +14,7 @@
             $this->db->where($data);
             $this->db->select('level');
             $this->db->select('foto');
+            $this->db->select('status');
             return $this->db->get('tb_user')->result();
         }
         
