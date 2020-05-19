@@ -8,6 +8,10 @@
             $this->db->where('id_user',$id);
             return $this->db->get('tb_user')->result();
         }
+        public function update_user($where,$data){
+            $this->db->where($where);
+            return $this->db->update('tb_user',$data);
+        }
     }
     
 ?>

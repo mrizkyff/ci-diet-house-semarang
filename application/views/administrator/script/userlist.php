@@ -61,6 +61,7 @@
                 username = $(this).attr('username')
                 $('#modalEditUser').modal('show');
                 $('#textEditUser').text("Form edit user "+username)
+                $('#idUser').val(id)
                 
                 $.ajax({
                     type: "POST",
@@ -70,7 +71,25 @@
                     success: function (response) {
                         $('#role').val(response[0]['level'])
                         $('#status').val(response[0]['status'])                      
-                        
+                    }
+                });
+            })
+
+            // aksi edit user
+            $('#btnEditUser').on('click',function(){
+                var id = $('#idUser').val();
+                var level = $('#role').val();
+                var status = $('#status').val();
+                // simpan
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url('userlist/updateUser')?>",
+                    data: {id:id,level:level, status:status},
+                    dataType: "JSON",
+                    success: function (response) {
+                        $('#modalEditUser').modal('hide');
+                        alert('Data user berhasil di update!');
+                        tampilUser();
                     }
                 });
             })

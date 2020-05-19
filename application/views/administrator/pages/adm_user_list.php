@@ -244,6 +244,7 @@
                             </button>
                     </div>
                     <div class="modal-body">
+                        <input type="hidden" name="idUser" id="idUser">
                         <div class="form-group">
                             <label for="role">Role</label>
                             <select class="custom-select" name="role" id="role">
@@ -265,7 +266,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary" id="btnEditUser">Simpan</button>
                     </div>
                 </div>
             </div>
