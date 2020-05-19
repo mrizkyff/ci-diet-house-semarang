@@ -159,7 +159,14 @@
 									        	<label for="jmlBeli">Jumlah Pembelian : </label>
 									        	<input type="text" name="jmlBeli" maxlength="10">
 												<input type="hidden" value="<?php echo $data['id_produk']?>" name="id" id="id">
-									        	<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;">
+												<?php 
+													if ($this->session->userdata('permition') == 3){
+														echo '<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;" disabled>';
+													}
+													else{
+														echo '<input type="submit" name="beli" value="Beli" class="btn btn-warning text-light" style="float:bottom;">';
+													}
+												?>
 												
 								        	</form>
 								        </div>

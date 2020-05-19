@@ -32,7 +32,8 @@
                     'username' => $username,
                     'status' => "login",
                     'foto' => $foto,
-                    'idUser' => $idUser[0]->id_user
+                    'idUser' => $idUser[0]->id_user,
+                    'permition' => $level[0]->status
                 );
     
                 $this->session->set_userdata($data_session);

@@ -12,7 +12,8 @@
             //     var_dump($stok);
             // };
             // var_dump($this->session->userdata());
-            echo '<pre>' ,var_dump($this->Logs->get_all_log()) ,'</pre>';
+            // echo '<pre>' ,var_dump($this->Logs->get_all_log()) ,'</pre>';
+            echo '<pre>' ,var_dump($this->session->userdata('permition')),'</pre>';
         }
     }
 ?>
