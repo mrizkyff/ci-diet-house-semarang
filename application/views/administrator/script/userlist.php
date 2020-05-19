@@ -46,13 +46,33 @@
                                         '<td>'+role+'</td>'+
                                         '<td style="width:100px;">'+status+'</td>'+
                                         '<td style "text-align:right;">'+
-                                            '<a href="javascript:;" class="text-info item_edit" id="'+data[i].id_produk+'">   <i class="fas fa-edit"></i>  </a>'+' '+
-                                            '<a href="javascript:;" class="text-danger item_hapus" id="'+data[i].id_produk+'" nama="'+data[i].nmbrg+'"> <i class="fas fa-trash"></i> </a>'+' '+
+                                            '<a href="javascript:;" class="text-info item_edit" id="'+data[i].id_user+'" username="'+data[i].username+'">   <i class="fas fa-edit"></i>  </a>'+' '+
+                                            '<a href="javascript:;" class="text-danger item_hapus" id="'+data[i].id_user+'" username="'+data[i].username+'"> <i class="fas fa-trash"></i> </a>'+' '+
                                         '</td>'+
                                     '</tr>';
                         }
                         $('#show_user_list').html(html);
                     }
+            })
+
+            // get edit user
+            $('#show_user_list').on('click','.item_edit',function(){
+                id = $(this).attr('id')
+                username = $(this).attr('username')
+                $('#modalEditUser').modal('show');
+                $('#textEditUser').text("Form edit user "+username)
+                
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url('userlist/getUserById')?>",
+                    data: {id:id},
+                    dataType: "JSON",
+                    success: function (response) {
+                        $('#role').val(response[0]['level'])
+                        $('#status').val(response[0]['status'])                      
+                        
+                    }
+                });
             })
         }
         

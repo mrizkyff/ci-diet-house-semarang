@@ -230,3 +230,44 @@
             </div>
         <!-- </div>      -->
         <!-- akhir tabel daftar user -->
+        
+        <!-- modal edit user -->
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><p id="textEditUser"></p></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <select class="custom-select" name="role" id="role">
+                                <option selected>Pilih Role</option>
+                                <option value="1">Admin</option>
+                                <option value="2">User</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select class="custom-select" name="status" id="status">
+                                <option selected>Pilih Status</option>
+                                <option value="1">Active</option>
+                                <option value="2">Nonactive</option>
+                                <option value="3">Suspend</option>
+                            </select>
+                        </div>
+                        <button type="button" name="btnReset" id="btnReset" class="btn btn-danger" btn-lg btn-block">Reset Password</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal akhir edit user -->

@@ -9,6 +9,11 @@
             $hasil = $this->User->get_all_user();
             echo json_encode($hasil);
         }
+        public function getUserById(){  
+            $id = $this->input->post('id');
+            $hasil = $this->User->get_by_id($id);
+            echo json_encode($hasil);
+        }
     }
     
 ?>
