@@ -12,6 +12,10 @@
             $this->db->where($where);
             return $this->db->update('tb_user',$data);
         }
+        public function delete_user($id){
+            $hasil = $this->db->delete('tb_user',array('id_user' => $id));
+            return $hasil;
+        }
     }
     
 ?>

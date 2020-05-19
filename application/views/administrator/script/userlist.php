@@ -75,6 +75,17 @@
                 });
             })
 
+            // get hapus user
+            $('#show_user_list').on('click','.item_hapus',function(){
+                id = $(this).attr('id')
+                username = $(this).attr('username')
+                
+                $('#modalHapusUser').modal('show');
+                $('#textHapusUser').text("yakin untuk meghapus "+username+'?')
+                $('#idUserx').val(id)
+            })
+
+
             // aksi reset password
             $('#btnReset').on('click',function(){
                 var id = $('#idUser').val();
@@ -112,6 +123,22 @@
                         $('#modalEditUser').modal('hide');
                         alert('Data user berhasil di update!');
                         tampilUser();
+                    }
+                });
+            })
+
+
+            // aksi hapus user
+            $('#btnHapusUser').on('click',function(){
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url('userlist/deleteUser')?>",
+                    data: {id:id},
+                    dataType: "JSON",
+                    success: function (response) {
+                        alert('User berhasil dihapus!');  
+                        $('#modalHapusUser').modal('hide');     
+                        tampilUser();                     
                     }
                 });
             })

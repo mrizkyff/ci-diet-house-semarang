@@ -45,6 +45,11 @@
             $hasil = $this->User->update_user($where,$data);
             echo json_encode($hasil);
         }
+        public function deleteUser(){
+            $id = $this->input->post('id');
+            $hasil = $this->User->delete_user($id);
+            echo json_encode($hasil);
+        }
     }
     
 ?>
