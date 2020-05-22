@@ -18,10 +18,10 @@
                             var cat  = 0
                             var jenis = 0
                             if (data[i].kategori == 1){
-                                cat = 'Weight Gain';
+                                cat = 'Weight Loss';
                             }
                             else if (data[i].kategori == 2){
-                                cat = 'Weight Loss';
+                                cat = 'Weight Gain';
                             }
                             else if (data[i].kategori == 3){
                                 cat = 'Muscle Building';
