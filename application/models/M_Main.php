@@ -5,7 +5,14 @@
 	 */
 	class M_Main extends CI_Model
 	{
+		// ini buat panggil semua menu
 		public function get_menu(){
+			$query = $this->db->get('tb_item');
+			return $query->result_array();
+		}
+		// ini buat panggil kategori tertentu
+		public function get_category($category){
+			$this->db->where('kategori',$category);
 			$query = $this->db->get('tb_item');
 			return $query->result_array();
 		}
@@ -24,7 +31,23 @@
 			);
 			return $this->db->update('tb_item',$stock);
 		}
-		
+
+		// rest api
+		public function getMenu($id = null){
+			if($id===null){
+				return $this->db->get('tb_item')->result_array();
+			}
+			else{
+				return $this->db->get_where('tb_item',['id_produk' => $id])->result_array();
+			}
+		}
+		public function deleteMenu($id){
+			$this->db->delete('tb_item',['id_produk' => $id]);
+			return $this->db->affected_rows();
+		}
+		public function index_post(){
+			
+		}
 		
 	}
  ?>
