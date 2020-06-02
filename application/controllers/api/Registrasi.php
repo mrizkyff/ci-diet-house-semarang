@@ -17,14 +17,14 @@ class Registrasi extends REST_Controller
     public function index_post(){
         $tanggal = date('Y-m-d H:i:s');
         $data = [
-            'f_name' => $this->input->post('firstname'),
-            'l_name' => $this->input->post('lastname'),
-            'username' => $this->input->post('username'),
-            'password' => $this->input->post('password'),
-            'email' => $this->input->post('email'),
-            'telp' => $this->input->post('telp'),
+            'f_name' => $this->post('firstname'),
+            'l_name' => $this->post('lastname'),
+            'username' => $this->post('username'),
+            'password' => $this->post('password'),
+            'email' => $this->post('email'),
+            'telp' => $this->post('telp'),
             'level' => '2',
-            'alamat' => $this->input->post('alamat'),
+            'alamat' => $this->post('alamat'),
             'tgl_registrasi' => $tanggal,
             'status' => '1'
         ];
