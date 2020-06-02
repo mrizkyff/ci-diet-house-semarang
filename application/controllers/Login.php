@@ -10,7 +10,7 @@
             $this->load->view('public/template/header');
             $this->load->view('public/page/pageLogin');
 			$this->load->view('public/template/footer');
-			$this->load->view('public/script/login');
+			// $this->load->view('public/script/login');
         }
         public function act_login(){
             $username = $this->input->post('username');
