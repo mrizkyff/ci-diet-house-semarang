@@ -70,9 +70,10 @@
                         cache: false,
                         asycn: false,
                         success: function (response) {
-                            alert('Profil berhasil diperbarui!');
+                            alert('Profil berhasil diperbarui, silakan login!');
                             // console.log(response);
-                            tampilProfile();
+                            // tampilProfile();
+                            window.location = "<?= base_url('Login') ?>";
                         }
                     });
                 });
