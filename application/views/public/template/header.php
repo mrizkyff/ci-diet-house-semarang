@@ -36,7 +36,6 @@
 	        <a class="nav-link" href="<?php echo base_url('main') ?>">Home <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-<<<<<<< HEAD
 	        <a class="nav-link" href="<?php echo base_url() ?>main?category=1">Weight Loss <span class="sr-only"></span></a>
 	      </li>
 	      <li class="nav-item">
@@ -44,34 +43,17 @@
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="<?php echo base_url() ?>main?category=3">Muscle Building <span class="sr-only"></span></a>
-=======
-	        <a class="nav-link" href="<?php echo base_url() ?>">Weight Loss <span class="sr-only"></span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Weight Gain <span class="sr-only"></span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo base_url() ?>">Muscle Building <span class="sr-only"></span></a>
->>>>>>> 18040548ca0b5be4319b858291d621895dcaa4d7
 	      </li>
 	      <li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Special Needs
 			</a>
 			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-<<<<<<< HEAD
 			<a class="dropdown-item" href="<?php echo base_url() ?>main?category=4">Pregnancy</a>
 			<a class="dropdown-item" href="<?php echo base_url() ?>main?category=5">Stroke</a>
 			<a class="dropdown-item" href="<?php echo base_url() ?>main?category=6">Diabetes</a>
 			<a class="dropdown-item" href="<?php echo base_url() ?>main?category=7">Cholesterol</a>
 			<a class="dropdown-item" href="<?php echo base_url() ?>main?category=8">Hypertensi</a>
-=======
-			<a class="dropdown-item" href="#">Pregnancy</a>
-			<a class="dropdown-item" href="#">Stroke</a>
-			<a class="dropdown-item" href="#">Diabetes</a>
-			<a class="dropdown-item" href="#">Cholesterol</a>
-			<a class="dropdown-item" href="#">Hypertensi</a>
->>>>>>> 18040548ca0b5be4319b858291d621895dcaa4d7
 			</div>
 		</li>
 		<?php
