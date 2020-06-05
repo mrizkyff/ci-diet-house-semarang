@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  <?php 
+=======
+<?php 
+>>>>>>> 18040548ca0b5be4319b858291d621895dcaa4d7
 	defined('BASEPATH') OR exit('No direct script access allowed');
 	/**
 	 * 
@@ -12,6 +16,7 @@
 			$this->load->model('M_Main','Main');
 		}
 		public function index(){
+<<<<<<< HEAD
 			$category = $this->input->get('category');
 			if(isset($category)){
 				$data['menu'] = $this->Main->get_category($category);
@@ -19,6 +24,9 @@
 			else{
 					$data['menu'] = $this->Main->get_menu();	
 			}
+=======
+			$data['menu'] = $this->Main->get_menu();
+>>>>>>> 18040548ca0b5be4319b858291d621895dcaa4d7
 			$this->load->view('public/template/header');
 			$this->load->view('public/home/index',$data);
 			$this->load->view('public/template/footer');
