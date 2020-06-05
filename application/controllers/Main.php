@@ -53,5 +53,12 @@
 			}
 			// proses pembelian
 		}
+
+		public function profile(){
+			$this->load->view('public/template/header');
+			$this->load->view('public/page/pageProfile');
+			$this->load->view('public/template/footer');
+			$this->load->view('public/script/Profile');
+		}
 	}
  ?>
