@@ -2,7 +2,7 @@
     $(document).ready(function(){
         tampilTransaksi();
         $('#tableTransaksi').dataTable({
-            "order" : [[7, 'desc']]
+            "order" : [[5, 'desc']]
         });
 
 
@@ -35,9 +35,7 @@
                             }
                                 html += '<tr>'+
                                             '<td>'+(i+1)+'</td>'+
-                                            '<td>'+data[i].id_transaksi+'</td>'+
                                             '<td>'+data[i].nmbrg+'</td>'+
-                                            '<td>'+data[i].username+'</td>'+
                                             '<td>'+data[i].jmlJual+'</td>'+
                                             '<td>'+status+'</td>'+
                                             '<td>'+data[i].alamat+'</td>'+

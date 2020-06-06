@@ -10,9 +10,7 @@
                 <table id="tableTransaksi" class="table table-stripped">
                 <thead>
                     <th>No</th>
-                    <th>ID Transaksi</th>
                     <th>Nama Produk</th>
-                    <th>Buyer</th>
                     <th>Jumlah</th>
                     <th>Status</th>
                     <th>Pengiriman</th>
@@ -22,9 +20,7 @@
                 </tbody>
                 <tfoot>
                     <th>No</th>
-                    <th>ID Transaksi</th>
                     <th>Nama Produk</th>
-                    <th>Buyer</th>
                     <th>Jumlah</th>
                     <th>Status</th>
                     <th>Pengiriman</th>
