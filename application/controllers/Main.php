@@ -60,5 +60,11 @@
 			$this->load->view('public/template/footer');
 			$this->load->view('public/script/Profile');
 		}
+		public function myCart(){
+			$this->load->view('public/template/header');
+			$this->load->view('public/page/pageCart');
+			$this->load->view('public/template/footer');
+			$this->load->view('public/script/MyCart');
+		}
 	}
  ?>
