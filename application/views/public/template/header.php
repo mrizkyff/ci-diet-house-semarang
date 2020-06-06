@@ -66,7 +66,7 @@
 			  </a>
 			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			  <a class="dropdown-item" href="<?= base_url('main/profile') ?>">Akun Saya</a>
-			  <a class="dropdown-item" href="#">Keranjang Saya</a>
+			  <a class="dropdown-item" href="<?= base_url('main/myCart') ?>">Keranjang Saya</a>
 			  <a class="dropdown-item" href="<?php echo base_url('login/logout') ?>">Logout</a>
 			  </div>
 		  </li>
