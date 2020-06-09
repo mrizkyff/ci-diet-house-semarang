@@ -48,96 +48,10 @@
             })
         }
 
-        // get decline
-        $('#show_transaksi').on('click','.item_decline',function(){
-            var id = $(this).attr('id');
-            var idprod = $(this).attr('idprod');
-            var jml = $(this).attr('jml');
-
-            $('#modalDecline').modal('show');
-            $('#jmlJual').val(jml);
-            $('#idDecline').val(id);
-            $('#idProd').val(idprod);
-            $('#notifDecline').text('Yakin untuk menghapus transaksi ini?');
-        })
-
-        // get approve
-        $('#show_transaksi').on('click','.item_approve',function(){
-            var id = $(this).attr('id');
-            var jml = $(this).attr('jml');
-
-            $('#modalApprove').modal('show');
-            $('#jmlJualx').val(jml);
-            $('#idDeclinex').val(id);
-            $('#notifApprove').text('Yakin untuk setujui transaksi ini telah terbayar?');
-        })
-
-        // get sent
-        $('#show_transaksi').on('click','.item_sent',function(){
-            var id = $(this).attr('id');
-            var jml = $(this).attr('jml');
-            var almt = $(this).attr('almt');            
-            
-            $('#modalSent').modal('show');
-            $('#jmlJualxx').val(jml);
-            $('#idDeclinexx').val(id);
-            $('#notifSent').text('Yakin untuk melekukan pengiriman ke '+almt+'?');
-        })
-
-      
-
-        // aksi decline
-        $('#btnDrop').on('click',function(){
-            var id = $('#idDecline').val();
-            var jml = $('#jmlJual').val();
-            var idproduk = $('#idProd').val();
-            $.ajax({
-                type : 'POST',
-                url : '<?php echo base_url('transaksi/hapus')?>',
-                data : {id:id,jml:jml,idproduk:idproduk},
-                // dataType : 'JSON',
-                success : function(data){                    
-                    alert('Transaksi berhasil dihapus!');
-                    $('#modalDecline').modal('hide');
-                    tampilTransaksi();
-                }
-            })
-        })
-
-        // aksi approve
-        $('#btnApprove').on('click',function(){
-            var id = $('#idDeclinex').val();
-            $.ajax({
-                type : 'POST',
-                url : '<?php echo base_url('transaksi/approve')?>',
-                data : {
-                    id:id
-                },
-                dataType : 'JSON',
-                success : function(data){
-                    alert('Transaksi berhasil disetujui!');
-                    $('#modalApprove').modal('hide');
-                    tampilTransaksi();
-                }
-            })
-        })
-
-        // aksi sent
-        $('#btnSent').on('click',function(){
-            var id = $('#idDeclinexx').val();
-            $.ajax({
-                type : 'POST',
-                url : '<?php echo base_url('transaksi/sent')?>',
-                data : {
-                    id:id
-                },
-                dataType : 'JSON',
-                success : function(data){
-                    alert('Barang harus segera dikirim!');
-                    $('#modalSent').modal('hide');
-                    tampilTransaksi();
-                }
-            })
+        
+        // get upload bukti tf
+        $('#btnCheckout').on('click', function(){
+            $('#modalUpload').modal('show')
         })
 
         
