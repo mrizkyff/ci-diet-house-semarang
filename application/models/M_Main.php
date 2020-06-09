@@ -48,6 +48,10 @@
 		public function index_post(){
 			
 		}
+
+		public function getBanner(){
+			return $this->db->get('tb_banner')->result_array();
+		}
 		
 	}
  ?>
