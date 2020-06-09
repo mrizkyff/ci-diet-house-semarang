@@ -1,13 +1,18 @@
 <?php
     class M_Transaksi extends CI_Model
     {
-        public function get_all_transaksi(){
+        public function get_all_transaksi($id = null){
             $this->db->select('*');
             $this->db->from('tb_transaksi');
             $this->db->join('tb_item','tb_transaksi.id_produk = tb_item.id_produk');
             $this->db->join('tb_user','tb_transaksi.id_user = tb_user.id_user');
             // 13 adalah transaksi yang terdecline
             $this->db->where('stat !=','13');
+            if($id === null){
+            }
+            else{
+                $this->db->where('tb_transaksi.id_user',$id);
+            }
             return $this->db->get()->result();
         }
         public function delete($id){
