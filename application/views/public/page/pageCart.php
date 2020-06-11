@@ -58,11 +58,20 @@
                         </button>
                 </div>
                 <div class="modal-body">
-                    Body
+                    <form id="submitPembayaran">
+                        <div class='form-group'>
+                            <label for='total' id="labelTotal"></label>
+                            <input type='hidden' id='total' name='total' class='form-control'>
+                        </div>
+                        <div class='form-group'>
+                            <label for='foto'>Bukti Pembayaran</label>
+                            <input type='file' id='foto' name='foto' class='form-control'>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-warning">Kirim</button>
+                    <button type="submit" class="btn btn-warning text-light">Kirim</button>
+                    </form>
                 </div>
             </div>
         </div>
