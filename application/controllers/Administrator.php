@@ -2,6 +2,15 @@
 
 class Administrator extends CI_Controller
 {
+    public function __construct(){
+        parent::__construct();
+        if($this->session->userdata('status') !== 'login'){
+            if($this->session->userdata('level') !== '1'){
+                echo 'anda harus login sebagai admin';
+                redirect('login');
+            }
+        }
+    }
     public function index(){
         $this->load->view('administrator/templates/adm_header');
         $this->load->view('administrator/templates/adm_sidebar');
