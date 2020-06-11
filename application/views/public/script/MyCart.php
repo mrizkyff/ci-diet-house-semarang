@@ -1,5 +1,6 @@
 <script type="text/javascript">
     $(document).ready(function(){
+        var sum = 0;
         tampilTransaksi();
         $('#tableTransaksi').dataTable({
             "order" : [[5, 'desc']]
@@ -15,7 +16,6 @@
                 success : function(data){
                     var html = '';
                     var i;
-                    var sum = 0;
                     for(i=0;i<data.length; i++){
 
                             total = (data[i].harga * data[i].jmlJual)
@@ -59,8 +59,10 @@
         }
 
         
-        // get upload bukti tf
+        // get upload bukti tf (checkout)
         $('#btnCheckout').on('click', function(){
+            $('#total').val(sum);
+            $('#labelTotal').text('Tagihan Sebesar Rp '+sum);
             $('#modalUpload').modal('show')
         })
 
@@ -93,6 +95,29 @@
                 }
             })
         })
+
+        // aksi checkout
+        $(document).ready(function(){ 
+            // upload foto
+            $('#submitPembayaran').submit(function(e){
+                e.preventDefault(); 
+                    $.ajax({
+                        url : '<?php echo base_url('pembayaran/do_upload')?>',
+                        type: "post",
+                        data: new FormData(this),
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        asycn: false,
+                        success: function (response) {
+                            alert('Sukses! Pembayaran akan dikonfirmasi dalam waktu 1x24 jam!');
+                            console.log(response);
+                            $('#modalUpload').modal('hide');
+                        }
+                    });
+                });
+
+            });
 
         
     })
