@@ -32,7 +32,7 @@
                <h5><b> <p id='fieldTotal'></p></b></h5>
                 <!-- akhir tabel transaksi -->
                     <!-- tombol checkout -->
-                    <button type="button" class="btn btn-warning text-light" style="float:right;" id="btnCheckout">Checkout</button>
+                    <button type="button" class="btn btn-warning text-light" style="float:right;" id="btnCheckout">Checkout <i class="fas fa-shopping-bag"></i></button>
                     <!-- tombol checkout -->
                 </div>
             </div>
