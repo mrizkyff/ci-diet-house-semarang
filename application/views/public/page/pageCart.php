@@ -11,7 +11,8 @@
                 <thead>
                     <th>No</th>
                     <th>Nama Produk</th>
-                    <th>Jumlah</th>
+                    <th>Qty x Harga</th>
+                    <th>Total</th>
                     <th>Status</th>
                     <th>Pengiriman</th>
                     <th>Date</th>
@@ -21,12 +22,14 @@
                 <tfoot>
                     <th>No</th>
                     <th>Nama Produk</th>
-                    <th>Jumlah</th>
+                    <th>Qty x Harga</th>
+                    <th>Total</th>
                     <th>Status</th>
                     <th>Pengiriman</th>
                     <th>Date</th>
                 </tfoot>
                 </table>
+               <h5><b> <p id='fieldTotal'></p></b></h5>
                 <!-- akhir tabel transaksi -->
                     <!-- tombol checkout -->
                     <button type="button" class="btn btn-warning text-light" style="float:right;" id="btnCheckout">Checkout</button>
@@ -66,5 +69,29 @@
     </div>
     <!-- modal upload bukti tf -->
 
-   
+     <!-- modal decline -->
+     <div class="modal fade" id="modalDecline" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Decline Transaksi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <input type="hidden" id="jmlJual">
+                <input type="hidden" id="idDecline">
+                <input type="hidden" id="idProd">
+                <p id="notifDecline"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="btnDrop">Drop</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- akhir modal decline -->
+
 	</p></div></div></div></p>
