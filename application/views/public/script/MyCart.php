@@ -10,7 +10,7 @@
         function tampilTransaksi(){
             $.ajax({
                 type: 'GET',
-                url: '<?php echo base_url('transaksi/getAllTransaksi') ?>',
+                url: '<?php echo base_url('transaksi/getTransaksi') ?>',
                 async: false,
                 dataType: 'JSON',
                 success : function(data){

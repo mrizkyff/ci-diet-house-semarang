@@ -9,6 +9,7 @@
             // 13 adalah transaksi yang terdecline
             $this->db->where('stat !=','13');
             if($id === null){
+                return $this->db->get()->result();
             }
             else{
                 $this->db->where('tb_transaksi.id_user',$id);

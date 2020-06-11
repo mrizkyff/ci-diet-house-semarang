@@ -8,13 +8,12 @@
             $this->load->model('M_Logsys','Logs');
         }
         public function getAllTransaksi(){
+            $result = $this->Transaksi->get_all_transaksi();
+            echo json_encode($result);
+        }
+        public function getTransaksi(){
             $id = $this->session->userdata('idUser');
-            if($id === null){
-                $result = $this->Transaksi->get_all_transaksi();
-            }
-            else{
-                $result = $this->Transaksi->get_all_transaksi($id);
-            }
+            $result = $this->Transaksi->get_all_transaksi($id);
             echo json_encode($result);
         }
         public function hapus(){
