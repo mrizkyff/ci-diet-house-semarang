@@ -16,6 +16,12 @@
             }
             return $this->db->get()->result();
         }
+        public function get_all_pembayaran(){
+            $this->db->select('*');
+            $this->db->from('tb_pembayaran');
+            $this->db->join('tb_user','tb_pembayaran.id_user = tb_user.id_user');
+            return $this->db->get()->result();
+        }
         public function delete($id){
             $this->db->where('id_transaksi',$id);
             return $this->db->delete('tb_transaksi');
@@ -31,6 +37,13 @@
         public function declined($id,$data){
             $this->db->where('id_transaksi',$id);
             return $this->db->update('tb_transaksi',$data);
+        }
+        public function do_bayar($id){
+            $this->db->where('id_checkout',$id);
+            $data = array(
+                'acc_status' => 1,
+            );
+            return $this->db->update('tb_pembayaran',$data);
         }
     }
     
