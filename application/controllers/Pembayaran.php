@@ -30,6 +30,7 @@
                         'id_user' => $id,
                         'total_pembayaran' => $total,
                         'tanggal_checkout' => $tanggal,
+                        'acc_status' => 0,
                     );
                     $hasil = $this->Pembayaran->submit_pembayaran($data);
                     echo json_encode($hasil);
