@@ -115,7 +115,21 @@ class Menu extends REST_Controller
         }
     }
     public function category_get(){
-        
+        $id_kategori = $this->get('category');
+        if($id_kategori === null){
+            $this->response([
+                'status' => false,
+                'message' => 'id kategori tidak tersedia',
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+        else{
+            $menu_by_kategory = $this->menu->get_category($id_kategori);
+            $this->response([
+                'status' => true,
+                'message' => 'sukses fetch menu by kategori',
+                'data' => $menu_by_kategory,
+            ], REST_Controller::HTTP_OK);
+        }
     }
 }
 
