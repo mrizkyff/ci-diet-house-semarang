@@ -61,20 +61,19 @@ class Profile extends REST_Controller
         else{
             // var_dump($id, $password, $email, $telp, $alamat);
             $profile = $this->Profile->update($id, $data);
-            var_dump($profile);
-            // if($profile){
-            //     $this->response([
-            //         'status' => true,
-            //         'data' => $profile,
-            //         'message' => 'update sukses',
-            //     ], REST_Controller::HTTP_OK);
-            // }
-            // else{
-            //     $this->response([
-            //         'status' => false,
-            //         'message' => 'id tidak ditemukan'
-            //     ], REST_Controller::HTTP_NOT_FOUND);
-            // }
+            if($profile){
+                $this->response([
+                    'status' => true,
+                    'data' => $profile,
+                    'message' => 'update sukses',
+                ], REST_Controller::HTTP_OK);
+            }
+            else{
+                $this->response([
+                    'status' => false,
+                    'message' => 'id tidak ditemukan'
+                ], REST_Controller::HTTP_NOT_FOUND);
+            }
         }
     }
 }
