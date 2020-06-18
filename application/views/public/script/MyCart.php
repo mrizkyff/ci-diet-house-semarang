@@ -1,5 +1,6 @@
 <script type="text/javascript">
     $(document).ready(function(){
+        var sum = 0;
         tampilTransaksi();
         $('#tableTransaksi').dataTable({
             "order" : [[5, 'desc']]
@@ -9,13 +10,16 @@
         function tampilTransaksi(){
             $.ajax({
                 type: 'GET',
-                url: '<?php echo base_url('transaksi/getAllTransaksi') ?>',
+                url: '<?php echo base_url('transaksi/getTransaksi') ?>',
                 async: false,
                 dataType: 'JSON',
                 success : function(data){
                     var html = '';
                     var i;
                     for(i=0;i<data.length; i++){
+
+                            total = (data[i].harga * data[i].jmlJual)
+                            sum = sum + total;
 
                             var status = '';
                             if(data[i].stat == 1){
@@ -34,21 +38,34 @@
                                 status = '<h6><span class="badge badge-danger text-light"><i class="fas fa-ban"></i>  Declined</span></h6>';
                             }
                                 html += '<tr>'+
-                                            '<td>'+(i+1)+'</td>'+
+                                            '<td>'
+                                            +'<a href="javascript:;" class="text-danger item_decline" id="'+data[i].id_transaksi+'" jml="'+data[i].jmlJual+'" idprod="'+data[i].id_produk+'"> <i class="fas fa-times">  &nbsp</i></a>'+
+                                            +(i+1)+
+                                            '</td>'+
                                             '<td>'+data[i].nmbrg+'</td>'+
-                                            '<td>'+data[i].jmlJual+'</td>'+
+                                            '<td>'+data[i].jmlJual+' x '+data[i].harga+'</td>'+
+                                            '<td>'+total+'</td>'+
                                             '<td>'+status+'</td>'+
                                             '<td>'+data[i].alamat+'</td>'+
                                             '<td>'+data[i].tgl_transaksi+'</td>'+
                                         '</tr>';
                         
                     }
+                        // cetak total keranjang
+                        $('#fieldTotal').text('Total: Rp '+sum);
                         $('#show_transaksi').html(html);
                 }
             })
         }
 
-        // get decline
+        
+        // get upload bukti tf (checkout)
+        $('#btnCheckout').on('click', function(){
+            $('#total').val(sum);
+            $('#labelTotal').text('Tagihan Sebesar Rp '+sum);
+            $('#modalUpload').modal('show')
+        })
+
         $('#show_transaksi').on('click','.item_decline',function(){
             var id = $(this).attr('id');
             var idprod = $(this).attr('idprod');
@@ -60,31 +77,6 @@
             $('#idProd').val(idprod);
             $('#notifDecline').text('Yakin untuk menghapus transaksi ini?');
         })
-
-        // get approve
-        $('#show_transaksi').on('click','.item_approve',function(){
-            var id = $(this).attr('id');
-            var jml = $(this).attr('jml');
-
-            $('#modalApprove').modal('show');
-            $('#jmlJualx').val(jml);
-            $('#idDeclinex').val(id);
-            $('#notifApprove').text('Yakin untuk setujui transaksi ini telah terbayar?');
-        })
-
-        // get sent
-        $('#show_transaksi').on('click','.item_sent',function(){
-            var id = $(this).attr('id');
-            var jml = $(this).attr('jml');
-            var almt = $(this).attr('almt');            
-            
-            $('#modalSent').modal('show');
-            $('#jmlJualxx').val(jml);
-            $('#idDeclinexx').val(id);
-            $('#notifSent').text('Yakin untuk melekukan pengiriman ke '+almt+'?');
-        })
-
-      
 
         // aksi decline
         $('#btnDrop').on('click',function(){
@@ -104,41 +96,28 @@
             })
         })
 
-        // aksi approve
-        $('#btnApprove').on('click',function(){
-            var id = $('#idDeclinex').val();
-            $.ajax({
-                type : 'POST',
-                url : '<?php echo base_url('transaksi/approve')?>',
-                data : {
-                    id:id
-                },
-                dataType : 'JSON',
-                success : function(data){
-                    alert('Transaksi berhasil disetujui!');
-                    $('#modalApprove').modal('hide');
-                    tampilTransaksi();
-                }
-            })
-        })
+        // aksi checkout
+        $(document).ready(function(){ 
+            // upload foto
+            $('#submitPembayaran').submit(function(e){
+                e.preventDefault(); 
+                    $.ajax({
+                        url : '<?php echo base_url('pembayaran/do_upload')?>',
+                        type: "post",
+                        data: new FormData(this),
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        asycn: false,
+                        success: function (response) {
+                            alert('Sukses! Pembayaran akan dikonfirmasi dalam waktu 1x24 jam!');
+                            console.log(response);
+                            $('#modalUpload').modal('hide');
+                        }
+                    });
+                });
 
-        // aksi sent
-        $('#btnSent').on('click',function(){
-            var id = $('#idDeclinexx').val();
-            $.ajax({
-                type : 'POST',
-                url : '<?php echo base_url('transaksi/sent')?>',
-                data : {
-                    id:id
-                },
-                dataType : 'JSON',
-                success : function(data){
-                    alert('Barang harus segera dikirim!');
-                    $('#modalSent').modal('hide');
-                    tampilTransaksi();
-                }
-            })
-        })
+            });
 
         
     })

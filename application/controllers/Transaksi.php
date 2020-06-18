@@ -11,6 +11,15 @@
             $result = $this->Transaksi->get_all_transaksi();
             echo json_encode($result);
         }
+        public function getAllPembayaran(){
+            $result = $this->Transaksi->get_all_pembayaran();
+            echo json_encode($result);
+        }
+        public function getTransaksi(){
+            $id = $this->session->userdata('idUser');
+            $result = $this->Transaksi->get_all_transaksi($id);
+            echo json_encode($result);
+        }
         public function hapus(){
             $id = $this->input->post('id');
             $jmlBeli = $this->input->post('jml');
@@ -81,6 +90,11 @@
 
             $result = $this->Transaksi->sent($id,$data);
             echo json_encode($result);
+        }
+        public function bayar_pembayaran(){ 
+            $id = $this->input->post('id');
+            $data = $this->Transaksi->do_bayar($id);
+            echo json_encode($data);
         }
         
     }

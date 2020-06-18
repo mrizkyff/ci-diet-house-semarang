@@ -50,8 +50,38 @@
         </table>
         <!-- akhir tabel transaksi -->
         </div>
+      
+      <br>
+          
+          <div class="card-body"> 
+        <!-- tabel pembayaran -->
+        <table id="tablePembayaran" class="table table-stripped">
+          <thead>
+            <th>No</th>
+            <th>Bukti Pembayaran</th>
+            <th>Nama User</th>
+            <th>Total</th>
+            <th>Date Checkout</th>
+            <th>Aksi</th>
+          </thead>
+          <tbody id="show_pembayaran">
+          </tbody>
+          <tfoot>
+            <th>No</th>
+            <th>Bukti Pembayaran</th>
+            <th>Nama User</th>
+            <th>Total</th>
+            <th>Date Checkout</th>
+            <th>Aksi</th>
+          </tfoot>
+        </table>
+        <!-- akhir tabel pembayaran -->
+        </div>
       </div>
-      <!-- akhir card transaksi -->
+      <!-- akhir card pembayaran -->
+
+
+
 
         <!-- modal decline -->
         <div class="modal fade" id="modalDecline" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,3 +156,26 @@
           </div>
         </div>
         <!-- akhir modal sent -->
+
+        <!-- modal foto pembayaran -->
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="modalFotoPembayaran" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Detail Foto Pembayaran</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+              <img id='fotoDetail' src="" alt="" class="img-thumbnail" style="width: 500px; height:auto;">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <!-- akhir modal foto pembayaran -->
