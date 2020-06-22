@@ -41,8 +41,9 @@ class Profile extends REST_Controller
         }
     }
     public function profile_put(){
-        $id = $this->put('id');
+        $id = $this->put('id_user');
         $password = $this->put('password');
+        $username = $this->put('username');
         $email = $this->put('email');
         $telp = $this->put('telp');
         $alamat = $this->put('alamat');
@@ -50,6 +51,7 @@ class Profile extends REST_Controller
             'password' => $password,
             'email' => $email,
             'telp' => $telp,
+            'username' => $username,
             'alamat' => $alamat,
         );
         if($id === null){
