@@ -26,11 +26,13 @@ use Restserver\Libraries\REST_Controller;
             // data session
             
             $cek = $this->Login->cek_login($where)->num_rows();
+            $userInfo = $this->Login->cek_login($where)->result_array();
 
             if($cek >0){
                 $this->response([
                     'status' => true,
-                    'message' => 'Login Sukses!'
+                    'message' => 'Login Sukses!',
+                    'data' => $userInfo
                 ], REST_Controller::HTTP_OK);
             }
             else{
