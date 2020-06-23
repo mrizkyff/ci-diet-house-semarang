@@ -35,8 +35,8 @@ class Transaksi extends REST_Controller
             else{
                 $this->response([
                     'status' => false,
-                    'message' => 'id tidak ditemukan'
-                ], REST_Controller::HTTP_NOT_FOUND);
+                    'message' => 'transaksi kosong'
+                ], REST_Controller::HTTP_OK);
             }
         }
         
