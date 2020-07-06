@@ -24,6 +24,7 @@
             $desc = $this->input->post('desc');
             $kategori = $this->input->post('kategori');
             $jenis = $this->input->post('jenis');
+            $cal = $this->input->post('cal');
 
             // membuat kombinasi kode
             $kode = date('Ymd');
@@ -52,7 +53,8 @@
                         'deskripsi' => $desc,
                         'tgl_stok' => $tanggal,
                         'kategori' => $kategori,
-                        'gambar' => $nama
+                        'gambar' => $nama,
+                        'kalori' => $cal
                     );
                     
                     
@@ -75,6 +77,7 @@
             $jml = $this->input->post('jml');
             $hrg = $this->input->post('hrg');
             $desc = $this->input->post('desc');
+            $cal = $this->input->post('calx');
 
             $data = array(
                 'nmbrg' => $nmbrg,
@@ -83,7 +86,8 @@
                 'stok' => $jml,
                 'harga' => $hrg,
                 'deskripsi' => $desc,
-                'tgl_stok' => $tanggal
+                'tgl_stok' => $tanggal,
+                'kalori' => $cal
             );
             $result = $this->M_Product->update_product($data,$id);
             echo json_encode($result);
