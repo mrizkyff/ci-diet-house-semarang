@@ -77,7 +77,7 @@
             $jml = $this->input->post('jml');
             $hrg = $this->input->post('hrg');
             $desc = $this->input->post('desc');
-            $cal = $this->input->post('calx');
+            $cal = $this->input->post('cal');
 
             $data = array(
                 'nmbrg' => $nmbrg,

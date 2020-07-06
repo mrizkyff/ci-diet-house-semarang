@@ -95,6 +95,7 @@
                             $('#hrg').val('');
                             $('#desc').val('');
                             $('#kategori').val('');
+                            $('#cal').val('');
                             alert('Produk Berhasil Ditambahkan');
                             tampilProduk();
                         }
@@ -128,6 +129,7 @@
                     $('#kategorix').val(data[0]['kategori'])
                     $('#jenisx').val(data[0]['jenis'])
                     $('#jmlx').val(data[0]['stok'])
+                    $('#calx').val(data[0]['kalori'])
                     $('#hrgx').val(data[0]['harga'])
                     $('#descx').val(data[0]['deskripsi'])
                     console.log(data[0]['nmbrg']);
@@ -166,6 +168,7 @@
             var jml = $('#jmlx').val();
             var hrg = $('#hrgx').val();
             var desc = $('#descx').val();
+            var cal = $('#calx').val();
             
             $.ajax({
                 type :'POST',
@@ -178,11 +181,20 @@
                     jenis:jenis,
                     jml:jml,
                     hrg:hrg,
-                    desc:desc
+                    desc:desc,
+                    cal:cal,
                 },
                 success : function(data){
                     alert('Produk berhasil di update!');
                     tampilProduk();
+                    $('#nmbrgx').val('');
+                    $('#kategorix').val('');
+                    $('#jenisx').val('');
+                    $('#jmlx').val('');
+                    $('#hrgx').val('');
+                    $('#descx').val('');
+                    $('#kategorix').val('');
+                    $('#calx').val('');
                     $('#modalEdit').modal('hide');
                 }
             })
