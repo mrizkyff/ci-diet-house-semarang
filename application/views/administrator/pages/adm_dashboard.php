@@ -1,8 +1,8 @@
 <?php
-    $perencanaan = 0;
-    $baru = 0;
-    $register = 0;
-    $rusak = 0;
+    $perencanaan = 12;
+    $baru = 12;
+    $register = 12;
+    $rusak = 13;
     
 ?>
 <!-- <?php echo var_dump($idUser[0]->id) ?> -->
