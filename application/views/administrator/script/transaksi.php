@@ -53,7 +53,7 @@
                             '<td>'+data[i].id_transaksi+'</td>'+
                             '<td>'+data[i].nmbrg+'</td>'+
                             '<td>'+data[i].username+'</td>'+
-                            '<td>'+data[i].jmlJual+'</td>'+
+                            '<td>'+data[i].jmlJual+' * '+data[i].harga+'</td>'+
                             '<td>'+status+'</td>'+
                             '<td>'+data[i].alamat+'</td>'+
                                             '<td>'+data[i].tgl_transaksi+'</td>'+

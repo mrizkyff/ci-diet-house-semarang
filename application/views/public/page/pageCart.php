@@ -3,7 +3,7 @@
     	<div class="container">
             <!-- card transaksi -->
                 <div class="card">
-                <h1 class="text-center">Riwayat Pembelian level</h1>
+                <h1 class="text-center">Riwayat Pembelian</h1>
                 <div class="card-body">
                 
                 <!-- tabel transaksi -->

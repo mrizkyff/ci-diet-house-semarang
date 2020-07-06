@@ -40,7 +40,7 @@
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
-            <th>Deskripsi</th>
+            <th style="width: 300px">Deskripsi</th>
             <th>Tanggal Stok</th>
             <th>Foto</th>
             <th>Action</th>
@@ -57,7 +57,7 @@
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
-            <th>Deskripsi</th>
+            <th style="width: 300px">Deskripsi</th>
             <th>Tanggal Stok</th>
             <th>Foto</th>
             <th>Action</th>

@@ -108,7 +108,7 @@
 	    				?>
 						<!-- thumbnail -->
 						<div class="col-sm-4">
-			    			<div class="card" style="width: 19rem; height: 600px;margin-top: 50px;">
+			    			<div class="card" style="width: 19rem; height: 670px;margin-top: 50px;">
 							  <img src="asset/img/food/<?php echo $data['gambar'] ?>" class="card-img-top" alt="..." style="height:300px; width:auto;">
 							  <div class="card-body">
 								<div class="container text-dark text-left">
