@@ -36,6 +36,7 @@
             <th>Kode Barang</th>
             <th>Kategori</th>
             <th>Jenis</th>
+            <th>Kalori</th>
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
@@ -52,6 +53,7 @@
             <th>Kode Barang</th>
             <th>Kategori</th>
             <th>Jenis</th>
+            <th>Kalori</th>
             <th>Nama Barang</th>
             <th>Jumlah</th>
             <th>Harga</th>
@@ -108,6 +110,10 @@
                       <option value="1">1. Makanan</option>
                       <option value="2">2. Minuman</option>
                     </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="cal">Kalori</label>
+                    <input type="text" class="form-control" id="cal" name="cal" placeholder="Kalori Produk(Kcal)">
                   </div>
                   <div class="form-group">
                     <label for="jml">Jumlah</label>
@@ -201,6 +207,10 @@
                       <option value="1">1. Makanan</option>
                       <option value="2">2. Minuman</option>
                     </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="calx">Kalori</label>
+                    <input type="text" class="form-control" id="calx" name="calx" placeholder="Kalori Produk(Kcal)">
                   </div>
                   <div class="form-group">
                     <label for="jmlx">Jumlah</label>
