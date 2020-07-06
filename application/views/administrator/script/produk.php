@@ -2,7 +2,7 @@
     $(document).ready(function(){
         tampilProduk();
         $('#tableProduk').DataTable({
-            "order" : [[9, "desc"]]
+            "order" : [[10, "desc"]]
         });
         
         function tampilProduk(){
@@ -54,6 +54,7 @@
                                         '<td>'+data[i].kdbrg+'</td>'+
                                         '<td>'+cat+'</td>'+
                                         '<td>'+jenis+'</td>'+
+                                        '<td>'+data[i].kalori+'</td>'+
                                         '<td>'+data[i].nmbrg+'</td>'+
                                         '<td>'+data[i].stok+'</td>'+
                                         '<td>'+data[i].harga+'</td>'+
